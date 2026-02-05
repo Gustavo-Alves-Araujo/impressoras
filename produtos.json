@@ -1,0 +1,148 @@
+{
+  "impressoras": [
+    {
+      "id": "aluguel-c558",
+      "nome": "Konica Minolta bizhub C558",
+      "categoria": "aluguel",
+      "descricao": "Impressora colorida de alta velocidade com finalizador integrado para produtividade máxima",
+      "velocidade": "55 ppm",
+      "features": [
+        "Finalizador com grampeamento",
+        "Ideal para impressão de exames de alta resolução",
+        "Alta qualidade para fotos e exames"
+      ],
+      "imagem": "https://www.theikossolucoes.com.br/tonner/c558.jpg",
+      "link": "https://theikossolucoes.com.br/tonner/wpp.php?id=aluguel-c558"
+    },
+    {
+      "id": "aluguel-c458",
+      "nome": "Konica Minolta bizhub C458",
+      "categoria": "aluguel",
+      "descricao": "Multifuncional colorida com excelente relação custo-benefício e recursos profissionais",
+      "velocidade": "45 ppm",
+      "features": [
+        "Finalizador com grampeamento e dobra",
+        "Impressão de alta resolução",
+        "Digitalização avançada"
+      ],
+      "imagem": "https://www.theikossolucoes.com.br/tonner/c368.jpg",
+      "link": "https://theikossolucoes.com.br/tonner/wpp.php?id=aluguel-c458"
+    },
+    {
+      "id": "aluguel-c368",
+      "nome": "Konica Minolta bizhub C368",
+      "categoria": "aluguel",
+      "descricao": "Compacta e eficiente, ideal para escritórios que necessitam de recursos profissionais",
+      "velocidade": "36 ppm",
+      "features": [
+        "Finalizador opcional disponível",
+        "Excelente qualidade de imagem",
+        "Design compacto e eficiente"
+      ],
+      "imagem": "https://www.theikossolucoes.com.br/tonner/c368.jpg",
+      "link": "https://theikossolucoes.com.br/tonner/wpp.php?id=aluguel-c368"
+    }
+  ],
+  "toners": [
+    {
+      "id": "tn711",
+      "nome": "Toner Konica Minolta TN711",
+      "categoria": "toner",
+      "descricao": "Obtenha o melhor rendimento e performance com o toner original Konica Minolta TN711",
+      "compatibilidade": "Bizhub 600, Bizhub 750",
+      "rendimento": "Até 30.000 páginas",
+      "imagem": "https://theikossolucoes.com.br/tn711.jpg",
+      "link": "https://theikossolucoes.com.br/tonner/wpp.php?id=tn711"
+    },
+    {
+      "id": "tn627",
+      "nome": "Toner Konica Minolta TN627",
+      "categoria": "toner",
+      "descricao": "Toner original com melhor rendimento e performance",
+      "compatibilidade": "BizHub C12000, C14000",
+      "rendimento": "Até 30.000 páginas",
+      "imagem": "https://theikossolucoes.com.br/tonerkonicaminolta627.jpeg",
+      "link": "https://theikossolucoes.com.br/tonner/wpp.php?id=tn627"
+    },
+    {
+      "id": "tn622",
+      "nome": "Toner TN622",
+      "categoria": "toner",
+      "descricao": "Toner original alto rendimento para impressoras Konica Minolta",
+      "compatibilidade": "Bizhub Press C1085, C1100, AccurioPress C6085, C6100",
+      "rendimento": "Até 30.000 páginas",
+      "imagem": "https://www.theikossolucoes.com.br/uploads/1755279322-TN622.JPG",
+      "link": "https://theikossolucoes.com.br/tonner/wpp.php?id=Toner+TN622"
+    },
+    {
+      "id": "tn619",
+      "nome": "TONER TN619",
+      "categoria": "toner",
+      "descricao": "Toner original para impressoras Konica Minolta série Press",
+      "compatibilidade": "Bizhub PRESS C1060, C1070, AccurioPress C2060, C2070, C3070, C3080",
+      "rendimento": "Até 30.000 páginas",
+      "imagem": "https://www.theikossolucoes.com.br/uploads/1755279699-619.jpg",
+      "link": "https://theikossolucoes.com.br/tonner/wpp.php?id=TONER+TN619"
+    },
+    {
+      "id": "tn620",
+      "nome": "Toner TN 620 - TN620",
+      "categoria": "toner",
+      "descricao": "Toner original TN620 para modelos AccurioPrint",
+      "compatibilidade": "AccurioPrint C3070L, C4065, Bizhub Pro C1060L, C1070L, C2060L, C2070L, C3080L",
+      "rendimento": "Até 30.000 páginas",
+      "imagem": "https://www.theikossolucoes.com.br/uploads/1755867759-tn620.jfif",
+      "link": "https://theikossolucoes.com.br/tonner/wpp.php?id=Toner+TN+620+-+TN620"
+    },
+    {
+      "id": "tn616",
+      "nome": "Toner TN616 Original",
+      "categoria": "toner",
+      "descricao": "Toner TN616 original de fábrica com garantia",
+      "compatibilidade": "Bizhub Press C6000, C6000 Pro, C7000, C7000P",
+      "rendimento": "Até 30.000 páginas",
+      "imagem": "https://www.theikossolucoes.com.br/uploads/1755868003-tonertn616.jfif",
+      "link": "https://theikossolucoes.com.br/tonner/wpp.php?id=Toner+TN616%2F+TN616+Original+de+fabrica"
+    },
+    {
+      "id": "tn615",
+      "nome": "Toner TN615 Original",
+      "categoria": "toner",
+      "descricao": "Toner TN615 original para modelos Bizhub Pro",
+      "compatibilidade": "Bizhub Pro C8000, C7000, C6500, C6501, C5500, C224, C228",
+      "rendimento": "Até 30.000 páginas",
+      "imagem": "https://www.theikossolucoes.com.br/uploads/1755868193-tn615.jfif",
+      "link": "https://theikossolucoes.com.br/tonner/wpp.php?id=Toner+TN615+tn615+Original"
+    },
+    {
+      "id": "dr313",
+      "nome": "TONER DR 313CMYK",
+      "categoria": "toner",
+      "descricao": "Drum Unit DR-313 CMYK para linha multifuncional Konica colorida",
+      "compatibilidade": "Bizhub PRESS C1070, C1070P, C1060, C1060L, C7000, C8000",
+      "rendimento": "Até 25.000 páginas",
+      "imagem": "https://www.theikossolucoes.com.br/uploads/1755872834-tonerdr313.png",
+      "link": "https://theikossolucoes.com.br/tonner/wpp.php?id=TONER+DR+313CMYK"
+    },
+    {
+      "id": "tn514",
+      "nome": "TONER TN514 ORIGINAL",
+      "categoria": "toner",
+      "descricao": "Toner TN514 original Konica para modelos C458, C558, C658",
+      "compatibilidade": "Bizhub C458, C558, C658",
+      "rendimento": "Até 30.000 páginas",
+      "imagem": "https://www.theikossolucoes.com.br/uploads/1756127286-tn514.jpeg",
+      "link": "https://theikossolucoes.com.br/tonner/wpp.php?id=TONER+TN514%2F+ORIGINAL"
+    },
+    {
+      "id": "tn512",
+      "nome": "TONER TN 512 Original",
+      "categoria": "toner",
+      "descricao": "Toner TN512 original para múltiplos modelos Konica Minolta",
+      "compatibilidade": "Bizhub C454, C454e, C554, C554e, C258, C308, C368, C458, C558, C658",
+      "rendimento": "Até 30.000 páginas",
+      "imagem": "https://www.theikossolucoes.com.br/uploads/1756132006-tn514.jpeg",
+      "link": "https://theikossolucoes.com.br/tonner/wpp.php?id=TONER+TN+512%2F+KONICA+MINOLTA+TN+512-Original"
+    }
+  ]
+}

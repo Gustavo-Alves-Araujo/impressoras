@@ -1,0 +1,24 @@
+# Robots.txt for Theikos Soluções
+# Allow search engines to crawl all content except admin area
+
+User-agent: *
+Allow: /
+Disallow: /admin.html
+Disallow: /*.json
+Disallow: /images/temp/
+
+# Sitemap location
+Sitemap: https://theikossolucoes.com.br/sitemap.xml
+
+# Specific crawl delay to prevent server overload
+Crawl-delay: 1
+
+# Google specific rules
+User-agent: Googlebot
+Allow: /
+Disallow: /admin.html
+
+# Bing specific rules
+User-agent: Bingbot
+Allow: /
+Disallow: /admin.html
