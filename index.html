@@ -176,485 +176,1152 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="relative pt-32 pb-24 lg:pt-48 lg:pb-32 overflow-hidden">
+    <section id="home" class="relative pt-24 pb-12 lg:pt-32 lg:pb-24 overflow-hidden bg-gradient-to-br from-white via-secondary-50/30 to-white">
         <div class="absolute inset-0 hero-pattern z-0"></div>
-        <div class="absolute top-20 right-0 w-96 h-96 bg-secondary-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob"></div>
-        <div class="absolute top-40 left-0 w-96 h-96 bg-primary-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob animation-delay-2000"></div>
+        
+        <!-- Floating Elements -->
+        <div class="absolute top-20 right-1/4 w-72 h-72 bg-primary-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+        <div class="absolute bottom-20 left-1/4 w-96 h-96 bg-secondary-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center max-w-5xl mx-auto">
-                <div class="inline-flex items-center px-4 py-2 rounded-full bg-primary-50 text-secondary-900 font-semibold text-sm mb-8 border border-primary-100 shadow-sm">
-                    <span class="flex h-2 w-2 relative mr-3">
-                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-2 w-2 bg-primary-500"></span>
-                    </span>
-                    Soluções Premium em Impressão
-                </div>
-                <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-secondary-900 mb-8 leading-tight">
-                    Deixando sempre a <br class="hidden md:block" /> <span class="gradient-text">melhor Impressão</span>
-                </h1>
-                <p class="text-xl text-secondary-900 mb-12 leading-relaxed max-w-3xl mx-auto font-medium">
-                    Toners de alta qualidade e aluguel de impressoras Konica Minolta com finalizadores profissionais para seu escritório, clínica ou grande empresa.
-                </p>
-                <div class="flex flex-col sm:flex-row justify-center gap-5">
-                    <a href="#aluguel" class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-xl text-white bg-primary-600 hover:bg-primary-700 transition shadow-xl shadow-primary-600/20 transform hover:-translate-y-1">
-                        <i class="fas fa-print mr-3"></i> Alugar Impressora
-                    </a>
-                    <a href="#toners" class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-xl text-secondary-900 bg-white hover:bg-gray-50 border border-secondary-200 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                        <i class="fas fa-shopping-cart mr-3 text-primary-600"></i> Comprar Toners
-                    </a>
+            <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+                
+                <!-- Left Content -->
+                <div class="mb-12 lg:mb-0">
+                    <div class="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-primary-50 to-secondary-50 text-secondary-900 font-semibold text-sm mb-8 border border-primary-100 shadow-sm">
+                        <span class="flex h-2 w-2 relative mr-3">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-primary-500"></span>
+                        </span>
+                        Soluções Premium em Impressão
+                    </div>
+                    
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-secondary-900 mb-6 leading-[1.1]">
+                        Deixando sempre a
+                        <span class="block mt-2 gradient-text">melhor Impressão</span>
+                    </h1>
+                    
+                    <p class="text-xl text-secondary-700 mb-10 leading-relaxed font-medium">
+                        Aluguel de impressoras Konica Minolta e toners originais para escritórios, clínicas e escolas. 
+                        <span class="text-secondary-900 font-bold">Economize até 70%</span> com nossas soluções.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 mb-12">
+                        <a href="#aluguel" class="group inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-xl text-white bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 transition-all shadow-xl shadow-primary-600/30 transform hover:-translate-y-1 hover:shadow-2xl">
+                            <i class="fas fa-print mr-3 group-hover:scale-110 transition-transform"></i> 
+                            Solicitar Orçamento
+                        </a>
+                        <a href="#toners" class="group inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-xl text-secondary-900 bg-white hover:bg-gray-50 border-2 border-secondary-200 hover:border-primary-300 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                            <i class="fas fa-shopping-cart mr-3 text-primary-600 group-hover:scale-110 transition-transform"></i> 
+                            Ver Produtos
+                        </a>
+                    </div>
+                    
+                    <!-- Stats -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                        <div class="text-center md:text-left">
+                            <div class="text-3xl md:text-4xl font-extrabold text-primary-600 mb-1">10k+</div>
+                            <div class="text-xs md:text-sm text-secondary-600 font-medium uppercase tracking-wide">Clientes</div>
+                        </div>
+                        <div class="text-center md:text-left">
+                            <div class="text-3xl md:text-4xl font-extrabold text-primary-600 mb-1">24/7</div>
+                            <div class="text-xs md:text-sm text-secondary-600 font-medium uppercase tracking-wide">Suporte</div>
+                        </div>
+                        <div class="text-center md:text-left">
+                            <div class="text-3xl md:text-4xl font-extrabold text-primary-600 mb-1">15+</div>
+                            <div class="text-xs md:text-sm text-secondary-600 font-medium uppercase tracking-wide">Anos</div>
+                        </div>
+                        <div class="text-center md:text-left">
+                            <div class="text-3xl md:text-4xl font-extrabold text-primary-600 mb-1">100%</div>
+                            <div class="text-xs md:text-sm text-secondary-600 font-medium uppercase tracking-wide">Original</div>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="mt-16 pt-8 border-t border-secondary-200/60 max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
-                     <div class="flex flex-col items-center">
-                         <span class="text-3xl font-bold text-secondary-900 mb-1">10k+</span>
-                         <span class="text-sm text-secondary-900 font-medium uppercase tracking-wide">Clientes Atendidos</span>
-                     </div>
-                     <div class="flex flex-col items-center">
-                         <span class="text-3xl font-bold text-secondary-900 mb-1">24h</span>
-                         <span class="text-sm text-secondary-900 font-medium uppercase tracking-wide">Suporte Garantido</span>
-                     </div>
-                     <div class="flex flex-col items-center">
-                         <span class="text-3xl font-bold text-secondary-900 mb-1">BR</span>
-                         <span class="text-sm text-secondary-900 font-medium uppercase tracking-wide">Atendimento Nacional</span>
-                     </div>
-                     <div class="flex flex-col items-center">
-                         <span class="text-3xl font-bold text-secondary-900 mb-1">100%</span>
-                         <span class="text-sm text-secondary-900 font-medium uppercase tracking-wide">Originalidade</span>
-                     </div>
+                <!-- Right Image -->
+                <div class="relative">
+                    <div class="relative z-10">
+                        <!-- Hero Image -->
+                        <div class="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
+                            <img src="image copy.png" 
+                                 alt="Impressoras Konica Minolta - Theikos Soluções" 
+                                 class="w-full h-auto object-cover">
+                            
+                            <!-- Floating Badge -->
+                            <div class="absolute top-6 right-6 bg-gradient-to-r from-primary-500 to-primary-600 text-white px-6 py-3 rounded-2xl shadow-xl font-bold text-sm backdrop-blur-sm">
+                                <i class="fas fa-certificate mr-2"></i>
+                                Certificado Oficial
+                            </div>
+                            
+                            <!-- Floating Card -->
+                            <div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl transform hover:scale-105 transition-transform">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-700 rounded-xl flex items-center justify-center">
+                                        <i class="fas fa-award text-white text-xl"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="text-sm font-bold text-secondary-900">Konica Minolta Partner</div>
+                                        <div class="text-xs text-secondary-600">Distribuidor Autorizado</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Decorative Elements -->
+                        <div class="absolute -top-6 -right-6 w-24 h-24 bg-primary-400 rounded-2xl opacity-20 blur-xl"></div>
+                        <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-secondary-400 rounded-2xl opacity-20 blur-xl"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Rental Section -->
-    <section id="aluguel" class="py-24 bg-white relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Rental Section - COMPLETELY NEW DESIGN -->
+    <section id="aluguel" class="py-32 relative overflow-hidden bg-gradient-to-br from-secondary-950 via-secondary-900 to-secondary-950">
+        <!-- Animated Background -->
+        <div class="absolute inset-0">
+            <div class="absolute top-20 left-10 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-primary-600/10 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary-500/5 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Header with unique style -->
             <div class="text-center mb-20">
-                <h2 class="text-3xl font-bold text-secondary-900 sm:text-4xl lg:text-5xl mb-6">Aluguel Corporativo</h2>
-                <p class="text-xl text-secondary-900 max-w-2xl mx-auto">Equipamentos Konica Minolta de alta performance para otimizar o fluxo de trabalho da sua empresa.</p>
+                <div class="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-primary-500/20 to-primary-600/20 backdrop-blur-xl rounded-full border border-primary-500/30 mb-8">
+                    <div class="w-2 h-2 bg-primary-500 rounded-full animate-pulse"></div>
+                    <span class="text-primary-400 font-bold tracking-widest uppercase text-sm">Soluções Corporativas</span>
+                </div>
+                
+                <h2 class="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight">
+                    <span class="text-white">Impressoras </span>
+                    <span class="bg-gradient-to-r from-primary-400 via-primary-500 to-primary-600 bg-clip-text text-transparent">Konica Minolta</span>
+                </h2>
+                
+                <p class="text-xl md:text-2xl text-secondary-300 max-w-4xl mx-auto leading-relaxed">
+                    Tecnologia de ponta com <span class="text-white font-bold">manutenção inclusa</span> e suporte especializado
+                </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <!-- Product Cards with UNIQUE Design -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <!-- Bizhub C558 -->
-                <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl overflow-hidden card-hover border border-secondary-100 flex flex-col h-full">
-                    <div class="h-72 bg-white overflow-hidden flex items-center justify-center p-8 relative">
-                         <div class="absolute top-4 right-4 bg-primary-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider z-10">Top de Linha</div>
-                        <img src="https://www.theikossolucoes.com.br/tonner/c558.jpg" alt="Konica Minolta bizhub C558" class="h-full object-contain transform group-hover:scale-110 transition duration-500">
-                    </div>
-                    <div class="p-8 flex flex-col flex-grow">
-                        <h3 class="text-2xl font-bold text-secondary-900 mb-2">Bizhub C558</h3>
-                        <p class="text-secondary-900 mb-6 text-sm">Impressora colorida de alta velocidade com finalizador integrado.</p>
-                        <div class="space-y-4 mb-8 flex-grow">
-                            <div class="flex items-center p-3 bg-secondary-50 rounded-lg">
-                                <i class="fas fa-bolt text-yellow-500 mr-3 text-lg"></i>
-                                <span class="text-secondary-900 font-medium">55 ppm</span>
-                            </div>
-                            <div class="flex items-center p-3 bg-secondary-50 rounded-lg">
-                                <i class="fas fa-layer-group text-primary-500 mr-3 text-lg"></i>
-                                <span class="text-secondary-900 font-medium">Grampeamento</span>
-                            </div>
-                            <div class="flex items-center p-3 bg-secondary-50 rounded-lg">
-                                <i class="fas fa-image text-green-500 mr-3 text-lg"></i>
-                                <span class="text-secondary-900 font-medium">Alta Resolução</span>
+                <div class="group relative">
+                    <!-- Glow Effect -->
+                    <div class="absolute -inset-1 bg-gradient-to-r from-primary-500 to-primary-600 rounded-3xl opacity-0 group-hover:opacity-20 blur-xl transition duration-500"></div>
+                    
+                    <div class="relative bg-gradient-to-br from-secondary-900 to-secondary-800 rounded-3xl overflow-hidden border border-secondary-700/50 backdrop-blur-xl">
+                        <!-- Top Badge -->
+                        <div class="absolute top-6 right-6 z-20">
+                            <div class="bg-gradient-to-r from-amber-500 to-orange-600 text-white px-4 py-2 rounded-2xl shadow-xl font-bold text-xs uppercase tracking-wider flex items-center gap-2">
+                                <i class="fas fa-crown"></i>
+                                Premium
                             </div>
                         </div>
-                        <a href="https://wa.me/5531975050034?text=Tenho%20interesse%20na%20bizhub%20C558" target="_blank" class="block w-full text-center bg-secondary-900 text-white font-bold py-4 rounded-xl hover:bg-primary-600 transition shadow-lg">
-                            Solicitar Orçamento
-                        </a>
+                        
+                        <!-- Image Section with Unique Background -->
+                        <div class="relative h-80 flex items-center justify-center p-8 overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-transparent"></div>
+                            <img src="https://www.theikossolucoes.com.br/tonner/c558.jpg" 
+                                 alt="Konica Minolta bizhub C558" 
+                                 class="relative z-10 h-full object-contain transform group-hover:scale-110 transition duration-700 drop-shadow-2xl">
+                        </div>
+                        
+                        <!-- Content -->
+                        <div class="p-8 border-t border-secondary-700/50">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-3xl font-extrabold text-white">C558</h3>
+                                <div class="px-4 py-1 bg-primary-500/20 rounded-full">
+                                    <span class="text-primary-400 font-bold text-sm">55 ppm</span>
+                                </div>
+                            </div>
+                            
+                            <p class="text-secondary-400 mb-6 leading-relaxed">
+                                Alta velocidade com finalizador profissional integrado
+                            </p>
+                            
+                            <!-- Features Grid -->
+                            <div class="grid grid-cols-2 gap-3 mb-8">
+                                <div class="flex items-center gap-2 p-3 bg-secondary-800/50 rounded-xl border border-secondary-700/30">
+                                    <div class="w-8 h-8 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-bolt text-white text-sm"></i>
+                                    </div>
+                                    <span class="text-white text-sm font-medium">Veloz</span>
+                                </div>
+                                <div class="flex items-center gap-2 p-3 bg-secondary-800/50 rounded-xl border border-secondary-700/30">
+                                    <div class="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-layer-group text-white text-sm"></i>
+                                    </div>
+                                    <span class="text-white text-sm font-medium">Grampo</span>
+                                </div>
+                                <div class="flex items-center gap-2 p-3 bg-secondary-800/50 rounded-xl border border-secondary-700/30 col-span-2">
+                                    <div class="w-8 h-8 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-image text-white text-sm"></i>
+                                    </div>
+                                    <span class="text-white text-sm font-medium">Alta Resolução 4K</span>
+                                </div>
+                            </div>
+                            
+                            <!-- CTA Button -->
+                            <a href="https://wa.me/5531975050034?text=Tenho%20interesse%20na%20bizhub%20C558" 
+                               target="_blank" 
+                               class="group/btn relative block w-full overflow-hidden">
+                                <div class="absolute inset-0 bg-gradient-to-r from-primary-600 to-primary-500 transform group-hover/btn:scale-105 transition duration-300"></div>
+                                <div class="relative px-8 py-4 flex items-center justify-center gap-3">
+                                    <span class="text-white font-bold text-lg">Solicitar Proposta</span>
+                                    <i class="fas fa-arrow-right text-white transform group-hover/btn:translate-x-2 transition duration-300"></i>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Bizhub C458 -->
-                <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl overflow-hidden card-hover border border-secondary-100 flex flex-col h-full">
-                    <div class="h-72 bg-white overflow-hidden flex items-center justify-center p-6 relative">
-                        <img src="https://www.theikossolucoes.com.br/tonner/c368.jpg" alt="Konica Minolta bizhub C458" class="h-full object-contain transform group-hover:scale-110 transition duration-500">
-                    </div>
-                    <div class="p-8 flex flex-col flex-grow">
-                        <h3 class="text-2xl font-bold text-secondary-900 mb-2">Bizhub C458</h3>
-                        <p class="text-secondary-900 mb-6 text-sm">Multifuncional com excelente relação custo-benefício.</p>
-                        <div class="space-y-4 mb-8 flex-grow">
-                            <div class="flex items-center p-3 bg-secondary-50 rounded-lg">
-                                <i class="fas fa-bolt text-yellow-500 mr-3 text-lg"></i>
-                                <span class="text-secondary-900 font-medium">45 ppm</span>
-                            </div>
-                            <div class="flex items-center p-3 bg-secondary-50 rounded-lg">
-                                <i class="fas fa-tools text-primary-500 mr-3 text-lg"></i>
-                                <span class="text-secondary-900 font-medium">Finalizador Incluso</span>
-                            </div>
-                            <div class="flex items-center p-3 bg-secondary-50 rounded-lg">
-                                <i class="fas fa-print text-green-500 mr-3 text-lg"></i>
-                                <span class="text-secondary-900 font-medium">Scanner Avançado</span>
+                <div class="group relative">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-3xl opacity-0 group-hover:opacity-20 blur-xl transition duration-500"></div>
+                    
+                    <div class="relative bg-gradient-to-br from-secondary-900 to-secondary-800 rounded-3xl overflow-hidden border border-secondary-700/50 backdrop-blur-xl">
+                        <!-- Top Badge -->
+                        <div class="absolute top-6 right-6 z-20">
+                            <div class="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-4 py-2 rounded-2xl shadow-xl font-bold text-xs uppercase tracking-wider flex items-center gap-2">
+                                <i class="fas fa-star"></i>
+                                Popular
                             </div>
                         </div>
-                        <a href="https://wa.me/5531975050034?text=Tenho%20interesse%20na%20bizhub%20C458" target="_blank" class="block w-full text-center bg-secondary-900 text-white font-bold py-4 rounded-xl hover:bg-primary-600 transition shadow-lg">
-                            Solicitar Orçamento
-                        </a>
+                        
+                        <div class="relative h-80 flex items-center justify-center p-8 overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent"></div>
+                            <img src="https://www.theikossolucoes.com.br/tonner/c368.jpg" 
+                                 alt="Konica Minolta bizhub C458" 
+                                 class="relative z-10 h-full object-contain transform group-hover:scale-110 transition duration-700 drop-shadow-2xl">
+                        </div>
+                        
+                        <div class="p-8 border-t border-secondary-700/50">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-3xl font-extrabold text-white">C458</h3>
+                                <div class="px-4 py-1 bg-blue-500/20 rounded-full">
+                                    <span class="text-blue-400 font-bold text-sm">45 ppm</span>
+                                </div>
+                            </div>
+                            
+                            <p class="text-secondary-400 mb-6 leading-relaxed">
+                                Excelente custo-benefício para empresas médias
+                            </p>
+                            
+                            <div class="grid grid-cols-2 gap-3 mb-8">
+                                <div class="flex items-center gap-2 p-3 bg-secondary-800/50 rounded-xl border border-secondary-700/30">
+                                    <div class="w-8 h-8 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-bolt text-white text-sm"></i>
+                                    </div>
+                                    <span class="text-white text-sm font-medium">Rápida</span>
+                                </div>
+                                <div class="flex items-center gap-2 p-3 bg-secondary-800/50 rounded-xl border border-secondary-700/30">
+                                    <div class="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-tools text-white text-sm"></i>
+                                    </div>
+                                    <span class="text-white text-sm font-medium">Completa</span>
+                                </div>
+                                <div class="flex items-center gap-2 p-3 bg-secondary-800/50 rounded-xl border border-secondary-700/30 col-span-2">
+                                    <div class="w-8 h-8 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-print text-white text-sm"></i>
+                                    </div>
+                                    <span class="text-white text-sm font-medium">Scanner Profissional</span>
+                                </div>
+                            </div>
+                            
+                            <a href="https://wa.me/5531975050034?text=Tenho%20interesse%20na%20bizhub%20C458" 
+                               target="_blank" 
+                               class="group/btn relative block w-full overflow-hidden">
+                                <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-600 transform group-hover/btn:scale-105 transition duration-300"></div>
+                                <div class="relative px-8 py-4 flex items-center justify-center gap-3">
+                                    <span class="text-white font-bold text-lg">Solicitar Proposta</span>
+                                    <i class="fas fa-arrow-right text-white transform group-hover/btn:translate-x-2 transition duration-300"></i>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Bizhub C368 -->
-                <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl overflow-hidden card-hover border border-secondary-100 flex flex-col h-full">
-                    <div class="h-72 bg-white overflow-hidden flex items-center justify-center p-6 relative">
-                        <div class="absolute top-4 right-4 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider z-10">Custo Benefício</div>
-                        <img src="https://www.theikossolucoes.com.br/tonner/c368.jpg" alt="Konica Minolta bizhub C368" class="h-full object-contain transform group-hover:scale-110 transition duration-500">
-                    </div>
-                    <div class="p-8 flex flex-col flex-grow">
-                        <h3 class="text-2xl font-bold text-secondary-900 mb-2">Bizhub C368</h3>
-                        <p class="text-secondary-900 mb-6 text-sm">Compacta e eficiente, ideal para escritórios.</p>
-                        <div class="space-y-4 mb-8 flex-grow">
-                             <div class="flex items-center p-3 bg-secondary-50 rounded-lg">
-                                <i class="fas fa-bolt text-yellow-500 mr-3 text-lg"></i>
-                                <span class="text-secondary-900 font-medium">36 ppm</span>
-                            </div>
-                            <div class="flex items-center p-3 bg-secondary-50 rounded-lg">
-                                <i class="fas fa-expand text-primary-500 mr-3 text-lg"></i>
-                                <span class="text-secondary-900 font-medium">Compacta</span>
-                            </div>
-                             <div class="flex items-center p-3 bg-secondary-50 rounded-lg">
-                                <i class="fas fa-star text-green-500 mr-3 text-lg"></i>
-                                <span class="text-secondary-900 font-medium">Alta Qualidade</span>
+                <div class="group relative">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-green-500 to-emerald-600 rounded-3xl opacity-0 group-hover:opacity-20 blur-xl transition duration-500"></div>
+                    
+                    <div class="relative bg-gradient-to-br from-secondary-900 to-secondary-800 rounded-3xl overflow-hidden border border-secondary-700/50 backdrop-blur-xl">
+                        <!-- Top Badge -->
+                        <div class="absolute top-6 right-6 z-20">
+                            <div class="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-2xl shadow-xl font-bold text-xs uppercase tracking-wider flex items-center gap-2">
+                                <i class="fas fa-check-circle"></i>
+                                Ideal
                             </div>
                         </div>
-                        <a href="https://wa.me/5531975050034?text=Tenho%20interesse%20na%20bizhub%20C368" target="_blank" class="block w-full text-center bg-secondary-900 text-white font-bold py-4 rounded-xl hover:bg-primary-600 transition shadow-lg">
-                            Solicitar Orçamento
-                        </a>
+                        
+                        <div class="relative h-80 flex items-center justify-center p-8 overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-green-500/5 to-transparent"></div>
+                            <img src="https://www.theikossolucoes.com.br/tonner/c368.jpg" 
+                                 alt="Konica Minolta bizhub C368" 
+                                 class="relative z-10 h-full object-contain transform group-hover:scale-110 transition duration-700 drop-shadow-2xl">
+                        </div>
+                        
+                        <div class="p-8 border-t border-secondary-700/50">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-3xl font-extrabold text-white">C368</h3>
+                                <div class="px-4 py-1 bg-green-500/20 rounded-full">
+                                    <span class="text-green-400 font-bold text-sm">36 ppm</span>
+                                </div>
+                            </div>
+                            
+                            <p class="text-secondary-400 mb-6 leading-relaxed">
+                                Compacta e eficiente, perfeita para escritórios
+                            </p>
+                            
+                            <div class="grid grid-cols-2 gap-3 mb-8">
+                                <div class="flex items-center gap-2 p-3 bg-secondary-800/50 rounded-xl border border-secondary-700/30">
+                                    <div class="w-8 h-8 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-bolt text-white text-sm"></i>
+                                    </div>
+                                    <span class="text-white text-sm font-medium">Ágil</span>
+                                </div>
+                                <div class="flex items-center gap-2 p-3 bg-secondary-800/50 rounded-xl border border-secondary-700/30">
+                                    <div class="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-expand text-white text-sm"></i>
+                                    </div>
+                                    <span class="text-white text-sm font-medium">Compacta</span>
+                                </div>
+                                <div class="flex items-center gap-2 p-3 bg-secondary-800/50 rounded-xl border border-secondary-700/30 col-span-2">
+                                    <div class="w-8 h-8 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-star text-white text-sm"></i>
+                                    </div>
+                                    <span class="text-white text-sm font-medium">Qualidade Superior</span>
+                                </div>
+                            </div>
+                            
+                            <a href="https://wa.me/5531975050034?text=Tenho%20interesse%20na%20bizhub%20C368" 
+                               target="_blank" 
+                               class="group/btn relative block w-full overflow-hidden">
+                                <div class="absolute inset-0 bg-gradient-to-r from-green-600 to-emerald-600 transform group-hover/btn:scale-105 transition duration-300"></div>
+                                <div class="relative px-8 py-4 flex items-center justify-center gap-3">
+                                    <span class="text-white font-bold text-lg">Solicitar Proposta</span>
+                                    <i class="fas fa-arrow-right text-white transform group-hover/btn:translate-x-2 transition duration-300"></i>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Medical Exams Section (NEW!) -->
-    <section id="vantagens" class="py-24 bg-gradient-to-br from-secondary-50 via-white to-secondary-50 relative overflow-hidden">
-        <!-- Decorative Elements -->
-        <div class="absolute top-0 right-0 w-96 h-96 bg-primary-100 rounded-full blur-3xl opacity-20"></div>
-        <div class="absolute bottom-0 left-0 w-80 h-80 bg-secondary-100 rounded-full blur-3xl opacity-30"></div>
-        
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16">
-                <span class="text-secondary-900 font-bold tracking-widest uppercase text-sm bg-white px-4 py-2 rounded-full shadow-md border border-primary-100">Comparativo Inteligente</span>
-                <h2 class="text-3xl font-bold text-secondary-900 sm:text-4xl lg:text-5xl mt-6 leading-tight">Alugar ou Comprar?</h2>
-                <p class="text-secondary-900 mt-4 max-w-2xl mx-auto text-lg">Veja por que grandes empresas preferem o modelo de locação estratégica.</p>
             </div>
             
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <!-- Advantages of Renting -->
-                <div class="bg-gradient-to-br from-white to-green-50 rounded-3xl p-10 border-2 border-green-200 shadow-2xl relative overflow-hidden group hover:shadow-green-200/50 transition duration-300">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-green-100 rounded-full -mr-16 -mt-16 opacity-40"></div>
-                    <div class="flex items-center mb-8 relative z-10">
-                        <div class="w-16 h-16 bg-green-500 rounded-2xl flex items-center justify-center text-white text-3xl mr-5 shadow-lg group-hover:scale-110 transition duration-300">
-                            <i class="fas fa-rocket"></i>
+            <!-- Bottom Info Banner -->
+            <div class="mt-16 p-8 bg-gradient-to-r from-primary-500/10 to-primary-600/10 backdrop-blur-xl rounded-3xl border border-primary-500/30">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div>
+                        <div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-tools text-white text-2xl"></i>
                         </div>
-                        <div>
-                            <h3 class="text-3xl font-extrabold text-secondary-900">Alugar com Theikos</h3>
-                            <p class="text-green-600 font-bold text-sm">Inteligência Financeira</p>
+                        <h4 class="text-white font-bold text-lg mb-2">Manutenção Inclusa</h4>
+                        <p class="text-secondary-400 text-sm">Suporte completo sem custos adicionais</p>
+                    </div>
+                    <div>
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-headset text-white text-2xl"></i>
                         </div>
+                        <h4 class="text-white font-bold text-lg mb-2">Suporte 24/7</h4>
+                        <p class="text-secondary-400 text-sm">Atendimento rápido quando precisar</p>
                     </div>
-                    <ul class="space-y-6 relative z-10">
-                        <li class="flex items-start bg-white/70 p-4 rounded-xl border border-green-100">
-                            <i class="fas fa-check-circle text-green-500 text-2xl mt-1 mr-4 flex-shrink-0"></i>
-                            <div>
-                                <h4 class="font-bold text-secondary-900 text-lg">Tecnologia Sempre Atualizada</h4>
-                                <p class="text-secondary-900 mt-1 text-sm">Troca gratuita por modelos mais modernos a cada ciclo.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start bg-white/70 p-4 rounded-xl border border-green-100">
-                            <i class="fas fa-check-circle text-green-500 text-2xl mt-1 mr-4 flex-shrink-0"></i>
-                            <div>
-                                <h4 class="font-bold text-secondary-900 text-lg">Manutenção 100% Inclusa</h4>
-                                <p class="text-secondary-900 mt-1 text-sm">Peças, técnicos e suporte sem custo extra. Tudo no contrato.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start bg-white/70 p-4 rounded-xl border border-green-100">
-                            <i class="fas fa-check-circle text-green-500 text-2xl mt-1 mr-4 flex-shrink-0"></i>
-                            <div>
-                                <h4 class="font-bold text-secondary-900 text-lg">Fluxo de Caixa Preservado</h4>
-                                <p class="text-secondary-900 mt-1 text-sm">Investimento inicial zero. Transforme CAPEX em despesa dedutível.</p>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="mt-8 p-4 bg-green-500 text-white rounded-xl text-center font-bold relative z-10">
-                        <i class="fas fa-trophy mr-2"></i> Escolha de 87% das Empresas
-                    </div>
-                </div>
-
-                <!-- Disadvantages of Buying -->
-                <div class="bg-gradient-to-br from-white to-red-50 rounded-3xl p-10 border-2 border-red-200 shadow-xl relative overflow-hidden hover:shadow-red-200/50 transition duration-300">
-                    <div class="absolute top-0 left-0 w-32 h-32 bg-red-100 rounded-full -ml-16 -mt-16 opacity-40"></div>
-                    <div class="flex items-center mb-8 relative z-10">
-                        <div class="w-16 h-16 bg-red-500 rounded-2xl flex items-center justify-center text-white text-3xl mr-5 shadow-lg">
-                            <i class="fas fa-exclamation-triangle"></i>
+                    <div>
+                        <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-shield-alt text-white text-2xl"></i>
                         </div>
-                        <div>
-                            <h3 class="text-3xl font-extrabold text-secondary-900">Comprar Equipamento</h3>
-                            <p class="text-red-600 font-bold text-sm">Riscos Elevados</p>
-                        </div>
-                    </div>
-                    <ul class="space-y-6 relative z-10">
-                        <li class="flex items-start bg-white/70 p-4 rounded-xl border border-red-100">
-                            <i class="fas fa-times-circle text-red-500 text-2xl mt-1 mr-4 flex-shrink-0"></i>
-                            <div>
-                                <h4 class="font-bold text-secondary-900 text-lg">Alto Investimento Inicial</h4>
-                                <p class="text-secondary-900 mt-1 text-sm">Descapitaliza a empresa e compromete o caixa para emergências.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start bg-white/70 p-4 rounded-xl border border-red-100">
-                            <i class="fas fa-times-circle text-red-500 text-2xl mt-1 mr-4 flex-shrink-0"></i>
-                            <div>
-                                <h4 class="font-bold text-secondary-900 text-lg">Custos Imprevisíveis</h4>
-                                <p class="text-secondary-900 mt-1 text-sm">Manutenções corretivas podem custar até 40% do valor do equipamento.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start bg-white/70 p-4 rounded-xl border border-red-100">
-                            <i class="fas fa-times-circle text-red-500 text-2xl mt-1 mr-4 flex-shrink-0"></i>
-                            <div>
-                                <h4 class="font-bold text-secondary-900 text-lg">Depreciação Rápida</h4>
-                                <p class="text-secondary-900 mt-1 text-sm">Equipamento perde valor e fica obsoleto em 2-3 anos.</p>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="mt-8 p-4 bg-red-500 text-white rounded-xl text-center font-bold relative z-10">
-                        <i class="fas fa-chart-line-down mr-2"></i> Modelo em Declínio
-                    </div>
-                </div>
-            </div>
-
-            <div class="mt-16 flex flex-col sm:flex-row justify-center gap-6">
-                <a href="#aluguel" class="inline-flex items-center justify-center px-8 py-4 bg-secondary-900 text-white font-bold rounded-xl hover:bg-primary-600 transition shadow-lg">
-                    <i class="fas fa-arrow-left mr-2"></i> Voltar aos Produtos
-                </a>
-                <a href="https://wa.me/5531975050034?text=Gostaria%20de%20saber%20mais%20sobre%20aluguel" target="_blank" class="inline-flex items-center justify-center px-8 py-4 bg-primary-600 text-white font-bold rounded-xl hover:bg-primary-700 transition shadow-lg">
-                    <i class="fas fa-phone mr-2"></i> Solicitar Orçamento
-                </a>
-            </div>
-        </div>
-    </section>
-    <section id="toners" class="py-24 bg-gradient-to-br from-white to-secondary-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <span class="inline-block px-4 py-2 bg-primary-50 text-secondary-900 font-bold tracking-widest uppercase text-sm rounded-full border border-primary-100 mb-4">Loja Online</span>
-                <h2 class="text-4xl font-extrabold text-secondary-900 sm:text-5xl">Suprimentos Originais</h2>
-                <p class="text-lg text-secondary-900 mt-4 max-w-2xl mx-auto">Toners Konica Minolta com garantia de fábrica. Qualidade premium para suas impressões.</p>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Toner Item 1 -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 group border border-secondary-100 flex flex-col">
-                    <div class="h-56 bg-white overflow-hidden flex items-center justify-center p-6 relative">
-                         <img src="https://theikossolucoes.com.br/tn711.jpg" alt="Toner TN711" class="h-full object-contain transform group-hover:scale-110 transition duration-500">
-                        <div class="absolute top-3 right-3 bg-primary-600 text-white text-xs font-bold px-3 py-1 rounded-full">Original</div>
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <div class="text-xs font-bold text-secondary-900 mb-2 uppercase tracking-wide">Alta Capacidade</div>
-                        <h4 class="font-bold text-xl text-secondary-900 mb-2">Toner TN711</h4>
-                        <p class="text-secondary-900 text-sm mb-6 flex-grow">Para bizhub 600 / 750.</p>
-                        <a href="https://wa.me/5531975050034?text=Olá,%20gostaria%20de%20orçamento%20para%20Toner%20TN711" class="block w-full py-3 px-4 bg-primary-600 text-white font-bold rounded-xl text-center hover:bg-primary-700 transition shadow-lg">
-                            Cotar Agora
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Toner Item 2 -->
-                 <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 group border border-secondary-100 flex flex-col">
-                    <div class="h-56 bg-white overflow-hidden flex items-center justify-center p-6 relative">
-                         <img src="https://theikossolucoes.com.br/tonerkonicaminolta627.jpeg" alt="Toner TN627" class="h-full object-contain transform group-hover:scale-110 transition duration-500">
-                        <div class="absolute top-3 right-3 bg-primary-600 text-white text-xs font-bold px-3 py-1 rounded-full">Original</div>
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                         <div class="text-xs font-bold text-secondary-900 mb-2 uppercase tracking-wide">Produção</div>
-                        <h4 class="font-bold text-xl text-secondary-900 mb-2">Toner TN627</h4>
-                         <p class="text-secondary-900 text-sm mb-6 flex-grow">Para BizHub C12000/C14000.</p>
-                        <a href="https://wa.me/5531975050034?text=Olá,%20gostaria%20de%20orçamento%20para%20Toner%20TN627" class="block w-full py-3 px-4 bg-primary-600 text-white font-bold rounded-xl text-center hover:bg-primary-700 transition shadow-lg">
-                            Cotar Agora
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Toner Item 3 -->
-                 <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 group border border-secondary-100 flex flex-col">
-                    <div class="h-56 bg-white overflow-hidden flex items-center justify-center p-6 relative">
-                         <img src="https://www.theikossolucoes.com.br/uploads/1755279322-TN622.JPG" alt="Toner TN622" class="h-full object-contain transform group-hover:scale-110 transition duration-500">
-                        <div class="absolute top-3 right-3 bg-primary-600 text-white text-xs font-bold px-3 py-1 rounded-full">Original</div>
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                         <div class="text-xs font-bold text-secondary-900 mb-2 uppercase tracking-wide">Digital Press</div>
-                        <h4 class="font-bold text-xl text-secondary-900 mb-2">Toner TN622</h4>
-                         <p class="text-secondary-900 text-sm mb-6 flex-grow">Bizhub Press C1085/C1100.</p>
-                        <a href="https://wa.me/5531975050034?text=Olá,%20gostaria%20de%20orçamento%20para%20Toner%20TN622" class="block w-full py-3 px-4 bg-primary-600 text-white font-bold rounded-xl text-center hover:bg-primary-700 transition shadow-lg">
-                            Cotar Agora
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Toner Item 4 -->
-                 <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 group border border-secondary-100 flex flex-col">
-                    <div class="h-56 bg-white overflow-hidden flex items-center justify-center p-6 relative">
-                        <img src="https://www.theikossolucoes.com.br/uploads/1755867759-tn620.jfif" alt="Toner TN620" class="h-full object-contain transform group-hover:scale-110 transition duration-500">
-                        <div class="absolute top-3 right-3 bg-primary-600 text-white text-xs font-bold px-3 py-1 rounded-full">Original</div>
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                         <div class="text-xs font-bold text-secondary-900 mb-2 uppercase tracking-wide">AccurioPrint</div>
-                        <h4 class="font-bold text-xl text-secondary-900 mb-2">Toner TN620</h4>
-                         <p class="text-secondary-900 text-sm mb-6 flex-grow">C3070L e similares.</p>
-                        <a href="https://wa.me/5531975050034?text=Olá,%20gostaria%20de%20orçamento%20para%20Toner%20TN620" class="block w-full py-3 px-4 bg-primary-600 text-white font-bold rounded-xl text-center hover:bg-primary-700 transition shadow-lg">
-                            Cotar Agora
-                        </a>
+                        <h4 class="text-white font-bold text-lg mb-2">Garantia Total</h4>
+                        <p class="text-secondary-400 text-sm">Equipamentos 100% garantidos</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Our Space Section (NEW) -->
-    <section id="exames" class="py-24 bg-gradient-to-br from-secondary-50 to-white relative overflow-hidden">
-        <!-- decorative blobs -->
-        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-secondary-100 opacity-60 blur-3xl"></div>
-        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-primary-100 opacity-60 blur-3xl"></div>
+    <!-- Rent vs Buy Comparison -->
+    <section id="vantagens" class="py-24 bg-white relative overflow-hidden">
+        <!-- Background Decoration -->
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-1/4 right-0 w-96 h-96 bg-green-300 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-1/4 left-0 w-96 h-96 bg-red-300 rounded-full blur-3xl"></div>
+        </div>
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="lg:grid lg:grid-cols-12 lg:gap-20 items-center">
-                <div class="lg:col-span-6 mb-12 lg:mb-0">
-                    <div class="inline-flex items-center px-4 py-1.5 rounded-full bg-white text-secondary-700 font-bold text-xs uppercase tracking-widest mb-6 border border-secondary-100 shadow-sm">
-                        <i class="fas fa-heartbeat mr-2 text-primary-500"></i> Solução Especializada
+            <div class="text-center mb-20">
+                <span class="inline-block px-5 py-2 bg-gradient-to-r from-primary-50 to-secondary-50 text-secondary-900 font-bold tracking-widest uppercase text-sm rounded-full border border-primary-100 mb-6">
+                    <i class="fas fa-balance-scale mr-2"></i>Comparativo Inteligente
+                </span>
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-secondary-900 leading-tight mb-4">
+                    Alugar ou <span class="gradient-text">Comprar?</span>
+                </h2>
+                <p class="text-xl text-secondary-700 max-w-3xl mx-auto">
+                    Descubra por que <span class="font-bold text-secondary-900">87% das empresas</span> preferem o modelo de locação inteligente.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <!-- Rent Column -->
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-green-400 to-green-600 rounded-3xl blur opacity-25 group-hover:opacity-40 transition"></div>
+                    <div class="relative bg-white rounded-3xl p-8 md:p-10 shadow-xl border-2 border-green-100 hover:border-green-300 transition">
+                        <!-- Header -->
+                        <div class="flex items-center gap-4 mb-8">
+                            <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-2xl flex items-center justify-center text-white shadow-lg">
+                                <i class="fas fa-rocket text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl md:text-3xl font-extrabold text-secondary-900">Alugar</h3>
+                                <p class="text-green-600 font-bold text-sm">Modelo Inteligente</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Benefits -->
+                        <div class="space-y-5 mb-8">
+                            <div class="flex items-start gap-4 p-4 bg-green-50/50 rounded-xl hover:bg-green-50 transition">
+                                <div class="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-check text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-secondary-900 mb-1">Tecnologia Atualizada</h4>
+                                    <p class="text-sm text-secondary-700">Troca gratuita por modelos mais modernos</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4 p-4 bg-green-50/50 rounded-xl hover:bg-green-50 transition">
+                                <div class="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-check text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-secondary-900 mb-1">Manutenção Inclusa</h4>
+                                    <p class="text-sm text-secondary-700">Peças, técnicos e suporte sem custo extra</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4 p-4 bg-green-50/50 rounded-xl hover:bg-green-50 transition">
+                                <div class="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-check text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-secondary-900 mb-1">Investimento Zero</h4>
+                                    <p class="text-sm text-secondary-700">Preserve seu capital de giro</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4 p-4 bg-green-50/50 rounded-xl hover:bg-green-50 transition">
+                                <div class="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-check text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-secondary-900 mb-1">Suporte 24/7</h4>
+                                    <p class="text-sm text-secondary-700">Assistência técnica especializada</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Badge -->
+                        <div class="bg-gradient-to-r from-green-500 to-green-600 text-white rounded-xl p-4 text-center font-bold shadow-lg">
+                            <i class="fas fa-trophy mr-2"></i> Escolha de 87% das Empresas
+                        </div>
                     </div>
-                    <h2 class="text-4xl lg:text-5xl font-extrabold text-secondary-900 leading-[1.15] mb-6">
-                        Impressoras para <br>
-                        <span class="text-secondary-900">Exames Médicos</span>
-                    </h2>
-                    <h3 class="text-xl text-secondary-700 font-bold mb-6 flex items-center">
-                       <span class="w-8 h-1 bg-primary-600 mr-4 rounded-full"></span> Revolucione sua Clínica
+                </div>
+
+                <!-- Buy Column -->
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-red-400 to-red-600 rounded-3xl blur opacity-20 group-hover:opacity-30 transition"></div>
+                    <div class="relative bg-white rounded-3xl p-8 md:p-10 shadow-xl border-2 border-red-100 hover:border-red-300 transition">
+                        <!-- Header -->
+                        <div class="flex items-center gap-4 mb-8">
+                            <div class="w-16 h-16 bg-gradient-to-br from-red-400 to-red-600 rounded-2xl flex items-center justify-center text-white shadow-lg">
+                                <i class="fas fa-exclamation-triangle text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl md:text-3xl font-extrabold text-secondary-900">Comprar</h3>
+                                <p class="text-red-600 font-bold text-sm">Riscos Elevados</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Disadvantages -->
+                        <div class="space-y-5 mb-8">
+                            <div class="flex items-start gap-4 p-4 bg-red-50/50 rounded-xl hover:bg-red-50 transition">
+                                <div class="w-8 h-8 bg-red-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-times text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-secondary-900 mb-1">Alto Investimento Inicial</h4>
+                                    <p class="text-sm text-secondary-700">Descapitaliza a empresa imediatamente</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4 p-4 bg-red-50/50 rounded-xl hover:bg-red-50 transition">
+                                <div class="w-8 h-8 bg-red-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-times text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-secondary-900 mb-1">Custos Imprevisíveis</h4>
+                                    <p class="text-sm text-secondary-700">Manutenções podem custar até 40% do valor</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4 p-4 bg-red-50/50 rounded-xl hover:bg-red-50 transition">
+                                <div class="w-8 h-8 bg-red-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-times text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-secondary-900 mb-1">Depreciação Rápida</h4>
+                                    <p class="text-sm text-secondary-700">Equipamento obsoleto em 2-3 anos</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4 p-4 bg-red-50/50 rounded-xl hover:bg-red-50 transition">
+                                <div class="w-8 h-8 bg-red-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-times text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-secondary-900 mb-1">Sem Garantias</h4>
+                                    <p class="text-sm text-secondary-700">Você assume todos os riscos</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Badge -->
+                        <div class="bg-gradient-to-r from-red-500 to-red-600 text-white rounded-xl p-4 text-center font-bold shadow-lg">
+                            <i class="fas fa-chart-line-down mr-2"></i> Modelo em Declínio
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="mt-16 flex flex-col sm:flex-row justify-center gap-5">
+                <a href="https://wa.me/5531975050034?text=Gostaria%20de%20saber%20mais%20sobre%20aluguel" 
+                   target="_blank" 
+                   class="group inline-flex items-center justify-center px-10 py-5 bg-gradient-to-r from-primary-600 to-primary-700 text-white font-bold text-lg rounded-xl hover:from-primary-700 hover:to-primary-800 transition-all shadow-xl shadow-primary-600/30 transform hover:-translate-y-1">
+                    <i class="fas fa-phone mr-3 group-hover:rotate-12 transition-transform"></i> 
+                    Solicitar Orçamento
+                </a>
+                <a href="#aluguel" 
+                   class="group inline-flex items-center justify-center px-10 py-5 bg-white text-secondary-900 font-bold text-lg rounded-xl border-2 border-secondary-200 hover:border-primary-300 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                    <i class="fas fa-arrow-left mr-3 group-hover:-translate-x-1 transition-transform"></i> 
+                    Ver Produtos
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Toners Section - COMPLETELY REDESIGNED -->
+    <section id="toners" class="py-32 relative overflow-hidden bg-white">
+        <!-- Premium Background Pattern -->
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute inset-0" style="background-image: radial-gradient(circle at 2px 2px, #0E0553 1px, transparent 0); background-size: 40px 40px;"></div>
+        </div>
+        
+        <!-- Animated Gradients -->
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-primary-300/20 to-transparent rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-tl from-secondary-300/20 to-transparent rounded-full blur-3xl"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Premium Header -->
+            <div class="text-center mb-20">
+                <div class="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-white to-secondary-50 rounded-full border-2 border-secondary-100 shadow-lg mb-8">
+                    <div class="w-3 h-3 bg-primary-500 rounded-full animate-pulse"></div>
+                    <span class="text-secondary-900 font-extrabold tracking-widest uppercase text-sm">Loja Online</span>
+                    <i class="fas fa-shopping-cart text-primary-600"></i>
+                </div>
+                
+                <h2 class="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-8 leading-tight">
+                    <span class="text-secondary-900">Suprimentos</span><br>
+                    <span class="bg-gradient-to-r from-primary-500 via-primary-600 to-primary-700 bg-clip-text text-transparent">Originais Konica Minolta</span>
+                </h2>
+                
+                <p class="text-xl md:text-2xl text-secondary-700 max-w-3xl mx-auto leading-relaxed">
+                    Qualidade <span class="font-bold text-secondary-900">premium</span> com garantia de fábrica. Rendimento superior e impressões impecáveis.
+                </p>
+                
+                <!-- Trust Badges -->
+                <div class="flex flex-wrap items-center justify-center gap-6 mt-8">
+                    <div class="flex items-center gap-2 px-4 py-2 bg-white rounded-xl shadow-md border border-secondary-100">
+                        <i class="fas fa-shield-alt text-green-600"></i>
+                        <span class="text-sm font-bold text-secondary-900">100% Original</span>
+                    </div>
+                    <div class="flex items-center gap-2 px-4 py-2 bg-white rounded-xl shadow-md border border-secondary-100">
+                        <i class="fas fa-truck text-primary-600"></i>
+                        <span class="text-sm font-bold text-secondary-900">Entrega Rápida</span>
+                    </div>
+                    <div class="flex items-center gap-2 px-4 py-2 bg-white rounded-xl shadow-md border border-secondary-100">
+                        <i class="fas fa-certificate text-amber-600"></i>
+                        <span class="text-sm font-bold text-secondary-900">Garantia Oficial</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Products Grid - UNIQUE DESIGN -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Toner TN711 -->
+                <div class="group relative">
+                    <!-- Hover Glow -->
+                    <div class="absolute -inset-2 bg-gradient-to-br from-primary-400 to-primary-600 rounded-3xl opacity-0 group-hover:opacity-20 blur-2xl transition duration-500"></div>
+                    
+                    <div class="relative bg-white rounded-3xl overflow-hidden border-2 border-secondary-100 group-hover:border-primary-200 transition-all duration-300 shadow-lg group-hover:shadow-2xl transform group-hover:-translate-y-2">
+                        <!-- Original Badge -->
+                        <div class="absolute top-4 right-4 z-20 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-3 py-1.5 rounded-full text-xs font-bold flex items-center gap-1 shadow-lg">
+                            <i class="fas fa-check-circle"></i>
+                            Original
+                        </div>
+                        
+                        <!-- Category Tag -->
+                        <div class="absolute top-4 left-4 z-20 bg-white/95 backdrop-blur-sm px-3 py-1.5 rounded-full text-xs font-bold text-secondary-900 border border-secondary-200">
+                            Alta Capacidade
+                        </div>
+                        
+                        <!-- Image Container -->
+                        <div class="relative h-72 bg-gradient-to-br from-secondary-50 to-white flex items-center justify-center p-8 overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-primary-50/30 to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                            <img src="https://theikossolucoes.com.br/tn711.jpg" 
+                                 alt="Toner TN711" 
+                                 class="relative z-10 h-full object-contain transform group-hover:scale-110 group-hover:rotate-2 transition duration-700 drop-shadow-xl">
+                        </div>
+                        
+                        <!-- Content -->
+                        <div class="p-6 bg-gradient-to-b from-white to-secondary-50/30">
+                            <h4 class="font-extrabold text-2xl text-secondary-900 mb-2">Toner TN711</h4>
+                            <p class="text-secondary-600 text-sm mb-4 leading-relaxed">Para bizhub 600 / 750</p>
+                            
+                            <!-- Features -->
+                            <div class="flex items-center gap-2 mb-6 flex-wrap">
+                                <span class="px-3 py-1 bg-primary-50 text-primary-700 rounded-lg text-xs font-bold border border-primary-100">
+                                    <i class="fas fa-print mr-1"></i>47.200 páginas
+                                </span>
+                                <span class="px-3 py-1 bg-green-50 text-green-700 rounded-lg text-xs font-bold border border-green-100">
+                                    <i class="fas fa-leaf mr-1"></i>Eco
+                                </span>
+                            </div>
+                            
+                            <!-- CTA -->
+                            <a href="https://wa.me/5531975050034?text=Olá,%20gostaria%20de%20orçamento%20para%20Toner%20TN711" 
+                               class="group/btn relative block w-full overflow-hidden rounded-xl">
+                                <div class="absolute inset-0 bg-gradient-to-r from-primary-600 to-primary-500 transform group-hover/btn:scale-105 transition duration-300"></div>
+                                <div class="relative px-6 py-3.5 flex items-center justify-center gap-2">
+                                    <span class="text-white font-bold">Cotar Agora</span>
+                                    <i class="fas fa-arrow-right text-white transform group-hover/btn:translate-x-1 transition duration-300"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toner TN627 -->
+                <div class="group relative">
+                    <div class="absolute -inset-2 bg-gradient-to-br from-blue-400 to-cyan-600 rounded-3xl opacity-0 group-hover:opacity-20 blur-2xl transition duration-500"></div>
+                    
+                    <div class="relative bg-white rounded-3xl overflow-hidden border-2 border-secondary-100 group-hover:border-blue-200 transition-all duration-300 shadow-lg group-hover:shadow-2xl transform group-hover:-translate-y-2">
+                        <div class="absolute top-4 right-4 z-20 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-3 py-1.5 rounded-full text-xs font-bold flex items-center gap-1 shadow-lg">
+                            <i class="fas fa-check-circle"></i>
+                            Original
+                        </div>
+                        
+                        <div class="absolute top-4 left-4 z-20 bg-white/95 backdrop-blur-sm px-3 py-1.5 rounded-full text-xs font-bold text-secondary-900 border border-secondary-200">
+                            Produção
+                        </div>
+                        
+                        <div class="relative h-72 bg-gradient-to-br from-secondary-50 to-white flex items-center justify-center p-8 overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-50/30 to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                            <img src="https://theikossolucoes.com.br/tonerkonicaminolta627.jpeg" 
+                                 alt="Toner TN627" 
+                                 class="relative z-10 h-full object-contain transform group-hover:scale-110 group-hover:rotate-2 transition duration-700 drop-shadow-xl">
+                        </div>
+                        
+                        <div class="p-6 bg-gradient-to-b from-white to-secondary-50/30">
+                            <h4 class="font-extrabold text-2xl text-secondary-900 mb-2">Toner TN627</h4>
+                            <p class="text-secondary-600 text-sm mb-4 leading-relaxed">Para BizHub C12000/C14000</p>
+                            
+                            <div class="flex items-center gap-2 mb-6 flex-wrap">
+                                <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-lg text-xs font-bold border border-blue-100">
+                                    <i class="fas fa-industry mr-1"></i>Produção
+                                </span>
+                                <span class="px-3 py-1 bg-amber-50 text-amber-700 rounded-lg text-xs font-bold border border-amber-100">
+                                    <i class="fas fa-tachometer-alt mr-1"></i>Alto Volume
+                                </span>
+                            </div>
+                            
+                            <a href="https://wa.me/5531975050034?text=Olá,%20gostaria%20de%20orçamento%20para%20Toner%20TN627" 
+                               class="group/btn relative block w-full overflow-hidden rounded-xl">
+                                <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-600 transform group-hover/btn:scale-105 transition duration-300"></div>
+                                <div class="relative px-6 py-3.5 flex items-center justify-center gap-2">
+                                    <span class="text-white font-bold">Cotar Agora</span>
+                                    <i class="fas fa-arrow-right text-white transform group-hover/btn:translate-x-1 transition duration-300"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toner TN622 -->
+                <div class="group relative">
+                    <div class="absolute -inset-2 bg-gradient-to-br from-purple-400 to-pink-600 rounded-3xl opacity-0 group-hover:opacity-20 blur-2xl transition duration-500"></div>
+                    
+                    <div class="relative bg-white rounded-3xl overflow-hidden border-2 border-secondary-100 group-hover:border-purple-200 transition-all duration-300 shadow-lg group-hover:shadow-2xl transform group-hover:-translate-y-2">
+                        <div class="absolute top-4 right-4 z-20 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-3 py-1.5 rounded-full text-xs font-bold flex items-center gap-1 shadow-lg">
+                            <i class="fas fa-check-circle"></i>
+                            Original
+                        </div>
+                        
+                        <div class="absolute top-4 left-4 z-20 bg-white/95 backdrop-blur-sm px-3 py-1.5 rounded-full text-xs font-bold text-secondary-900 border border-secondary-200">
+                            Digital Press
+                        </div>
+                        
+                        <div class="relative h-72 bg-gradient-to-br from-secondary-50 to-white flex items-center justify-center p-8 overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-purple-50/30 to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                            <img src="https://www.theikossolucoes.com.br/uploads/1755279322-TN622.JPG" 
+                                 alt="Toner TN622" 
+                                 class="relative z-10 h-full object-contain transform group-hover:scale-110 group-hover:rotate-2 transition duration-700 drop-shadow-xl">
+                        </div>
+                        
+                        <div class="p-6 bg-gradient-to-b from-white to-secondary-50/30">
+                            <h4 class="font-extrabold text-2xl text-secondary-900 mb-2">Toner TN622</h4>
+                            <p class="text-secondary-600 text-sm mb-4 leading-relaxed">Bizhub Press C1085/C1100</p>
+                            
+                            <div class="flex items-center gap-2 mb-6 flex-wrap">
+                                <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-lg text-xs font-bold border border-purple-100">
+                                    <i class="fas fa-gem mr-1"></i>Premium
+                                </span>
+                                <span class="px-3 py-1 bg-pink-50 text-pink-700 rounded-lg text-xs font-bold border border-pink-100">
+                                    <i class="fas fa-palette mr-1"></i>Cores Vivas
+                                </span>
+                            </div>
+                            
+                            <a href="https://wa.me/5531975050034?text=Olá,%20gostaria%20de%20orçamento%20para%20Toner%20TN622" 
+                               class="group/btn relative block w-full overflow-hidden rounded-xl">
+                                <div class="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 transform group-hover/btn:scale-105 transition duration-300"></div>
+                                <div class="relative px-6 py-3.5 flex items-center justify-center gap-2">
+                                    <span class="text-white font-bold">Cotar Agora</span>
+                                    <i class="fas fa-arrow-right text-white transform group-hover/btn:translate-x-1 transition duration-300"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toner TN620 -->
+                <div class="group relative">
+                    <div class="absolute -inset-2 bg-gradient-to-br from-amber-400 to-orange-600 rounded-3xl opacity-0 group-hover:opacity-20 blur-2xl transition duration-500"></div>
+                    
+                    <div class="relative bg-white rounded-3xl overflow-hidden border-2 border-secondary-100 group-hover:border-amber-200 transition-all duration-300 shadow-lg group-hover:shadow-2xl transform group-hover:-translate-y-2">
+                        <div class="absolute top-4 right-4 z-20 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-3 py-1.5 rounded-full text-xs font-bold flex items-center gap-1 shadow-lg">
+                            <i class="fas fa-check-circle"></i>
+                            Original
+                        </div>
+                        
+                        <div class="absolute top-4 left-4 z-20 bg-white/95 backdrop-blur-sm px-3 py-1.5 rounded-full text-xs font-bold text-secondary-900 border border-secondary-200">
+                            AccurioPrint
+                        </div>
+                        
+                        <div class="relative h-72 bg-gradient-to-br from-secondary-50 to-white flex items-center justify-center p-8 overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-amber-50/30 to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                            <img src="https://www.theikossolucoes.com.br/uploads/1755867759-tn620.jfif" 
+                                 alt="Toner TN620" 
+                                 class="relative z-10 h-full object-contain transform group-hover:scale-110 group-hover:rotate-2 transition duration-700 drop-shadow-xl">
+                        </div>
+                        
+                        <div class="p-6 bg-gradient-to-b from-white to-secondary-50/30">
+                            <h4 class="font-extrabold text-2xl text-secondary-900 mb-2">Toner TN620</h4>
+                            <p class="text-secondary-600 text-sm mb-4 leading-relaxed">C3070L e similares</p>
+                            
+                            <div class="flex items-center gap-2 mb-6 flex-wrap">
+                                <span class="px-3 py-1 bg-amber-50 text-amber-700 rounded-lg text-xs font-bold border border-amber-100">
+                                    <i class="fas fa-fire mr-1"></i>Performance
+                                </span>
+                                <span class="px-3 py-1 bg-orange-50 text-orange-700 rounded-lg text-xs font-bold border border-orange-100">
+                                    <i class="fas fa-bolt mr-1"></i>Rápido
+                                </span>
+                            </div>
+                            
+                            <a href="https://wa.me/5531975050034?text=Olá,%20gostaria%20de%20orçamento%20para%20Toner%20TN620" 
+                               class="group/btn relative block w-full overflow-hidden rounded-xl">
+                                <div class="absolute inset-0 bg-gradient-to-r from-amber-600 to-orange-600 transform group-hover/btn:scale-105 transition duration-300"></div>
+                                <div class="relative px-6 py-3.5 flex items-center justify-center gap-2">
+                                    <span class="text-white font-bold">Cotar Agora</span>
+                                    <i class="fas fa-arrow-right text-white transform group-hover/btn:translate-x-1 transition duration-300"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bottom Banner -->
+            <div class="mt-20 p-10 bg-gradient-to-r from-secondary-900 via-secondary-800 to-secondary-900 rounded-3xl relative overflow-hidden">
+                <div class="absolute inset-0 opacity-10">
+                    <div class="absolute top-0 left-1/4 w-64 h-64 bg-primary-500 rounded-full blur-3xl"></div>
+                    <div class="absolute bottom-0 right-1/4 w-64 h-64 bg-primary-400 rounded-full blur-3xl"></div>
+                </div>
+                
+                <div class="relative z-10 text-center">
+                    <h3 class="text-3xl md:text-4xl font-extrabold text-white mb-4">
+                        Precisa de <span class="text-primary-400">outro modelo</span>?
                     </h3>
-                    <p class="text-lg text-secondary-900 mb-8 leading-relaxed">
-                        Encontre a solução completa de impressão para sua clínica ou laboratório. Elimine o trabalho manual, reduza custos e entregue laudos profissionais em minutos com nossas impressoras especializadas para exames médicos.
+                    <p class="text-xl text-secondary-300 mb-8 max-w-3xl mx-auto">
+                        Trabalhamos com toda a linha Konica Minolta. Entre em contato e solicite um orçamento personalizado.
+                    </p>
+                    <a href="https://wa.me/5531975050034?text=Olá,%20preciso%20de%20um%20orçamento%20personalizado%20de%20toner" 
+                       class="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-primary-500 to-primary-600 text-white font-bold text-lg rounded-xl hover:scale-105 transition-transform shadow-2xl shadow-primary-500/30">
+                        <i class="fas fa-whatsapp text-2xl"></i>
+                        Falar com Especialista
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Healthcare Section - COMPLETELY REDESIGNED -->
+    <section id="exames" class="py-32 relative overflow-hidden">
+        <!-- Premium Medical Gradient Background -->
+        <div class="absolute inset-0 bg-gradient-to-br from-cyan-50 via-blue-50 to-white"></div>
+        
+        <!-- Animated Medical Cross Pattern -->
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute inset-0" style="background-image: repeating-linear-gradient(0deg, transparent, transparent 50px, #0E0553 50px, #0E0553 51px), repeating-linear-gradient(90deg, transparent, transparent 50px, #0E0553 50px, #0E0553 51px);"></div>
+        </div>
+        
+        <!-- Floating Orbs -->
+        <div class="absolute top-20 right-20 w-72 h-72 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div class="absolute bottom-20 left-20 w-96 h-96 bg-gradient-to-tr from-blue-400/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Left Content -->
+                <div class="order-2 lg:order-1">
+                    <!-- Medical Badge -->
+                    <div class="inline-flex items-center gap-3 px-5 py-3 bg-white rounded-2xl shadow-xl border border-cyan-100 mb-8">
+                        <div class="w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-heartbeat text-white text-lg"></i>
+                        </div>
+                        <span class="text-secondary-900 font-extrabold tracking-wider uppercase text-sm">Solução Médica Especializada</span>
+                    </div>
+                    
+                    <h2 class="text-5xl lg:text-6xl font-extrabold leading-tight mb-8">
+                        <span class="text-secondary-900">Impressoras para</span><br>
+                        <span class="bg-gradient-to-r from-cyan-600 via-blue-600 to-cyan-700 bg-clip-text text-transparent">Exames Médicos</span>
+                    </h2>
+                    
+                    <!-- Benefit Highlight -->
+                    <div class="flex items-center gap-4 mb-8 p-5 bg-gradient-to-r from-cyan-50 to-blue-50 rounded-2xl border border-cyan-100">
+                        <div class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                            <i class="fas fa-rocket text-white text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-extrabold text-secondary-900 mb-1">Revolucione sua Clínica</h3>
+                            <p class="text-secondary-600 text-sm">Tecnologia que transforma processos</p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-xl text-secondary-700 mb-10 leading-relaxed">
+                        <span class="font-bold text-secondary-900">Elimine o trabalho manual</span>, reduza custos operacionais e entregue <span class="font-bold text-cyan-700">laudos profissionais</span> em minutos com nossas impressoras especializadas.
                     </p>
 
-                    <div class="grid grid-cols-3 gap-8 py-8 border-t border-secondary-200/60">
-                        <div class="text-center lg:text-left">
-                            <div class="text-4xl lg:text-5xl font-extrabold text-secondary-900 mb-2 tracking-tight">+80%</div>
-                            <div class="text-sm text-secondary-900 font-semibold uppercase tracking-wide">Produtividade</div>
+                    <!-- Stats Grid - Modern Design -->
+                    <div class="grid grid-cols-3 gap-4 mb-10">
+                        <div class="relative group">
+                            <div class="absolute -inset-1 bg-gradient-to-r from-green-400 to-emerald-600 rounded-2xl opacity-20 group-hover:opacity-30 blur transition"></div>
+                            <div class="relative bg-white p-5 rounded-2xl border border-secondary-100 shadow-lg text-center">
+                                <div class="text-4xl font-extrabold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent mb-2">+80%</div>
+                                <div class="text-xs font-bold text-secondary-600 uppercase tracking-wider">Produtividade</div>
+                            </div>
                         </div>
-                        <div class="text-center lg:text-left">
-                            <div class="text-4xl lg:text-5xl font-extrabold text-secondary-900 mb-2 tracking-tight">-75%</div>
-                            <div class="text-sm text-secondary-900 font-semibold uppercase tracking-wide">Trabalho Manual</div>
+                        <div class="relative group">
+                            <div class="absolute -inset-1 bg-gradient-to-r from-amber-400 to-orange-600 rounded-2xl opacity-20 group-hover:opacity-30 blur transition"></div>
+                            <div class="relative bg-white p-5 rounded-2xl border border-secondary-100 shadow-lg text-center">
+                                <div class="text-4xl font-extrabold bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent mb-2">-75%</div>
+                                <div class="text-xs font-bold text-secondary-600 uppercase tracking-wider">Trabalho Manual</div>
+                            </div>
                         </div>
-                        <div class="text-center lg:text-left">
-                            <div class="text-4xl lg:text-5xl font-extrabold text-secondary-900 mb-2 tracking-tight">100%</div>
-                            <div class="text-sm text-secondary-900 font-semibold uppercase tracking-wide">Satisfação</div>
+                        <div class="relative group">
+                            <div class="absolute -inset-1 bg-gradient-to-r from-cyan-400 to-blue-600 rounded-2xl opacity-20 group-hover:opacity-30 blur transition"></div>
+                            <div class="relative bg-white p-5 rounded-2xl border border-secondary-100 shadow-lg text-center">
+                                <div class="text-4xl font-extrabold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent mb-2">100%</div>
+                                <div class="text-xs font-bold text-secondary-600 uppercase tracking-wider">Satisfação</div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="mt-8 flex flex-col sm:flex-row gap-4">
-                         <a href="https://wa.me/5531975050034?text=Tenho%20interesse%20nas%20impressoras%20para%20exames%20médicos" class="inline-flex items-center justify-center px-8 py-4 text-base font-bold rounded-xl text-white bg-primary-600 hover:bg-primary-700 transition shadow-lg hover:shadow-primary-500/30">
-                            Solicitar Consultoria <i class="fas fa-arrow-right ml-2"></i>
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://wa.me/5531975050034?text=Tenho%20interesse%20nas%20impressoras%20para%20exames%20médicos" 
+                           class="group/btn relative inline-flex items-center justify-center px-8 py-5 overflow-hidden rounded-2xl">
+                            <div class="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-600 transform group-hover/btn:scale-105 transition duration-300"></div>
+                            <div class="relative flex items-center gap-3 text-white font-bold text-lg">
+                                <i class="fas fa-stethoscope"></i>
+                                Solicitar Consultoria
+                                <i class="fas fa-arrow-right transform group-hover/btn:translate-x-1 transition duration-300"></i>
+                            </div>
                         </a>
-                        <a href="#contato" class="inline-flex items-center justify-center px-8 py-4 text-base font-bold rounded-xl text-secondary-700 bg-secondary-50 hover:bg-secondary-100 transition border border-secondary-200">
+                        <a href="#contato" 
+                           class="inline-flex items-center justify-center px-8 py-5 text-lg font-bold rounded-2xl text-secondary-900 bg-white hover:bg-secondary-50 transition border-2 border-secondary-200 hover:border-cyan-300 shadow-lg">
+                            <i class="fas fa-info-circle mr-2"></i>
                             Ver Detalhes
                         </a>
                     </div>
                 </div>
                 
-                <div class="lg:col-span-6 relative perspective-1000">
-                     <div class="relative bg-white rounded-2xl shadow-2xl p-2 border border-secondary-100 z-10 max-w-md mx-auto">
-                        <!-- Video Presentation -->
-                        <video controls class="w-full h-86 object-cover rounded-xl shadow-inner bg-black">
-                            <source src="https://www.theikossolucoes.com.br/tonner/apre.mp4" type="video/mp4">
-                            Seu navegador não suporta a visualização deste vídeo.
-                        </video>
+                <!-- Right Video Section -->
+                <div class="order-1 lg:order-2 relative">
+                    <div class="relative group">
+                        <!-- Glow Effect -->
+                        <div class="absolute -inset-4 bg-gradient-to-r from-cyan-400 to-blue-600 rounded-3xl opacity-20 group-hover:opacity-30 blur-2xl transition duration-500"></div>
                         
-                        <!-- Floating Badge -->
-                        <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-2xl shadow-xl border border-secondary-100 animate-bounce-slow">
-                             <div class="flex items-center gap-3">
-                                <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-green-600">
-                                    <i class="fas fa-check-circle text-2xl"></i>
+                        <!-- Video Container -->
+                        <div class="relative bg-white rounded-3xl p-3 shadow-2xl border-2 border-secondary-100">
+                            <video controls 
+                                   class="w-full rounded-2xl shadow-inner bg-gradient-to-br from-secondary-900 to-secondary-800"
+                                   poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect fill='%230E0553' width='800' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='system-ui' font-size='24' fill='white'%3EAssista à Demonstração%3C/text%3E%3C/svg%3E">
+                                <source src="https://www.theikossolucoes.com.br/tonner/apre.mp4" type="video/mp4">
+                                Seu navegador não suporta a visualização deste vídeo.
+                            </video>
+                            
+                            <!-- Play Button Overlay (only shown before playing) -->
+                            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                                <div class="w-20 h-20 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-2xl">
+                                    <i class="fas fa-play text-cyan-600 text-2xl ml-1"></i>
                                 </div>
-                                
-                             </div>
+                            </div>
                         </div>
-                     </div>
-                     <!-- Decorative shape behind -->
-                     <div class="absolute top-10 right-10 w-full h-full bg-gradient-to-br from-primary-600 to-primary-700 rounded-2xl -z-10 transform translate-x-4 translate-y-4 opacity-10"></div>
+                        
+                        <!-- Floating Success Badge -->
+                        <div class="absolute -bottom-6 -left-6 bg-white p-5 rounded-2xl shadow-2xl border border-secondary-100 transform hover:scale-105 transition duration-300">
+                            <div class="flex items-center gap-4">
+                                <div class="w-14 h-14 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center">
+                                    <i class="fas fa-check-double text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-extrabold text-secondary-900">Certificado</div>
+                                    <div class="text-xs text-secondary-600 font-bold">Anvisa</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Floating Feature Card -->
+                        <div class="absolute -top-6 -right-6 bg-gradient-to-br from-cyan-500 to-blue-600 p-5 rounded-2xl shadow-2xl transform hover:rotate-3 transition duration-300">
+                            <div class="flex items-center gap-3">
+                                <i class="fas fa-bolt text-white text-2xl"></i>
+                                <div>
+                                    <div class="text-white font-extrabold text-lg">3 min</div>
+                                    <div class="text-cyan-100 text-xs font-bold">Por laudo</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Decorative Medical Icons -->
+                    <div class="absolute top-1/4 -left-8 w-16 h-16 bg-cyan-100 rounded-2xl flex items-center justify-center transform rotate-12 opacity-50">
+                        <i class="fas fa-microscope text-cyan-600 text-xl"></i>
+                    </div>
+                    <div class="absolute bottom-1/4 -right-8 w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center transform -rotate-12 opacity-50">
+                        <i class="fas fa-user-md text-blue-600 text-xl"></i>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Schools Section (NEW) -->
-    <!-- Problemas & Vantagens Merged Section -->
-    <section id="problemas" class="py-24 bg-white relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Problems & Solutions Section - COMPLETELY REDESIGNED -->
+    <section id="problemas" class="py-32 relative overflow-hidden bg-gradient-to-br from-white via-secondary-50/30 to-white">
+        <!-- Animated Background -->
+        <div class="absolute inset-0">
+            <div class="absolute top-1/4 left-10 w-96 h-96 bg-red-300/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-1/4 right-10 w-96 h-96 bg-green-300/10 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Premium Header -->
             <div class="text-center mb-20">
-                <span class="inline-block px-4 py-2 bg-red-50 text-red-600 font-bold tracking-widest uppercase text-sm rounded-full border border-red-100 mb-4">Solução Completa</span>
-                <h2 class="text-4xl font-extrabold text-secondary-900 sm:text-5xl leading-tight mb-4">Desafios e Soluções para Clínicas e Laboratórios</h2>
-                <p class="text-secondary-900 max-w-3xl mx-auto text-lg">Identifique os problemas que sua clínica enfrenta e descubra como o aluguel de impressoras resolve cada um deles</p>
+                <div class="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-red-50 to-green-50 rounded-2xl border border-secondary-200 shadow-lg mb-8">
+                    <div class="flex items-center gap-2">
+                        <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                        <span class="text-red-700 font-extrabold tracking-widest uppercase text-xs">Desafios</span>
+                    </div>
+                    <div class="w-px h-6 bg-secondary-300"></div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                        <span class="text-green-700 font-extrabold tracking-widest uppercase text-xs">Soluções</span>
+                    </div>
+                </div>
+                
+                <h2 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
+                    <span class="text-secondary-900">Transforme sua </span>
+                    <span class="bg-gradient-to-r from-red-600 via-primary-600 to-green-600 bg-clip-text text-transparent">Clínica</span>
+                </h2>
+                
+                <p class="text-xl text-secondary-700 max-w-3xl mx-auto leading-relaxed">
+                    Identifique os <span class="font-bold text-red-600">problemas</span> e descubra as <span class="font-bold text-green-600">soluções</span> que vão revolucionar seu dia a dia
+                </p>
             </div>
 
-            <!-- Two-Column Layout -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-                <!-- Left Column: Problems -->
-                <div>
-                    <div class="flex items-center gap-3 mb-8">
-                        <div class="w-1 h-8 bg-red-600 rounded"></div>
-                        <h3 class="text-2xl font-bold text-secondary-900">Desafios Atuais</h3>
+            <!-- Split Layout with Modern Cards -->
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- PROBLEMS Column -->
+                <div class="relative">
+                    <!-- Column Header -->
+                    <div class="sticky top-24 z-20 bg-white/90 backdrop-blur-xl rounded-3xl p-6 shadow-xl border-2 border-red-200 mb-8">
+                        <div class="flex items-center gap-4">
+                            <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center shadow-lg">
+                                <i class="fas fa-exclamation-triangle text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-3xl font-extrabold text-secondary-900">Desafios</h3>
+                                <p class="text-sm text-red-600 font-bold">Realidade atual das clínicas</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="space-y-4">
-                        <!-- Problem 1 -->
-                        <div class="bg-gradient-to-r from-red-50 to-transparent rounded-lg p-5 border-l-4 border-red-600 hover:shadow-md transition">
-                            <div class="flex gap-4">
-                                <div class="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center text-red-600 flex-shrink-0 text-lg">
-                                    <i class="fas fa-hourglass-end"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-secondary-900 mb-1">Tempo Excessivo em Tarefas Manuais</h4>
-                                    <p class="text-sm text-secondary-900">Funcionários gastam 15-20 min organizando, grampeando e preparando laudos manualmente.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Problem 2 -->
-                        <div class="bg-gradient-to-r from-red-50 to-transparent rounded-lg p-5 border-l-4 border-red-600 hover:shadow-md transition">
-                            <div class="flex gap-4">
-                                <div class="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center text-red-600 flex-shrink-0 text-lg">
-                                    <i class="fas fa-money-bill-wave"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-secondary-900 mb-1">Custos Ocultos com Gráfica</h4>
-                                    <p class="text-sm text-secondary-900">Gastos constantes em capas personalizadas e desperdício de papel e toner.</p>
+                    
+                    <div class="space-y-6">
+                        <!-- Problem Card 1 -->
+                        <div class="group relative">
+                            <div class="absolute -inset-1 bg-gradient-to-r from-red-400 to-red-600 rounded-3xl opacity-20 group-hover:opacity-30 blur transition"></div>
+                            <div class="relative bg-white rounded-3xl p-8 border-2 border-red-100 hover:border-red-300 transition-all shadow-lg hover:shadow-2xl transform hover:-translate-y-1">
+                                <div class="flex gap-5">
+                                    <div class="flex-shrink-0">
+                                        <div class="w-14 h-14 bg-gradient-to-br from-red-100 to-red-200 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                            <i class="fas fa-hourglass-end text-red-600 text-2xl"></i>
+                                        </div>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="text-xl font-extrabold text-secondary-900 mb-3">Tempo Excessivo em Tarefas Manuais</h4>
+                                        <p class="text-secondary-600 leading-relaxed">Funcionários gastam <span class="font-bold text-red-600">15-20 minutos</span> organizando, grampeando e preparando laudos manualmente</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Problem 3 -->
-                        <div class="bg-gradient-to-r from-red-50 to-transparent rounded-lg p-5 border-l-4 border-red-600 hover:shadow-md transition">
-                            <div class="flex gap-4">
-                                <div class="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center text-red-600 flex-shrink-0 text-lg">
-                                    <i class="fas fa-frustrated"></i>
+                        <!-- Problem Card 2 -->
+                        <div class="group relative">
+                            <div class="absolute -inset-1 bg-gradient-to-r from-red-400 to-red-600 rounded-3xl opacity-20 group-hover:opacity-30 blur transition"></div>
+                            <div class="relative bg-white rounded-3xl p-8 border-2 border-red-100 hover:border-red-300 transition-all shadow-lg hover:shadow-2xl transform hover:-translate-y-1">
+                                <div class="flex gap-5">
+                                    <div class="flex-shrink-0">
+                                        <div class="w-14 h-14 bg-gradient-to-br from-red-100 to-red-200 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                            <i class="fas fa-money-bill-wave text-red-600 text-2xl"></i>
+                                        </div>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="text-xl font-extrabold text-secondary-900 mb-3">Custos Ocultos com Gráfica</h4>
+                                        <p class="text-secondary-600 leading-relaxed">Gastos constantes em <span class="font-bold text-red-600">capas personalizadas</span> e desperdício de papel e toner</p>
+                                    </div>
                                 </div>
-                                <div>
-                                    <h4 class="font-bold text-secondary-900 mb-1">Pacientes Insatisfeitos</h4>
-                                    <p class="text-sm text-secondary-900">Longos tempos de espera e apresentação pouco profissional dos laudos.</p>
+                            </div>
+                        </div>
+
+                        <!-- Problem Card 3 -->
+                        <div class="group relative">
+                            <div class="absolute -inset-1 bg-gradient-to-r from-red-400 to-red-600 rounded-3xl opacity-20 group-hover:opacity-30 blur transition"></div>
+                            <div class="relative bg-white rounded-3xl p-8 border-2 border-red-100 hover:border-red-300 transition-all shadow-lg hover:shadow-2xl transform hover:-translate-y-1">
+                                <div class="flex gap-5">
+                                    <div class="flex-shrink-0">
+                                        <div class="w-14 h-14 bg-gradient-to-br from-red-100 to-red-200 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                            <i class="fas fa-user-injured text-red-600 text-2xl"></i>
+                                        </div>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="text-xl font-extrabold text-secondary-900 mb-3">Pacientes Insatisfeitos</h4>
+                                        <p class="text-secondary-600 leading-relaxed">Longos <span class="font-bold text-red-600">tempos de espera</span> e apresentação pouco profissional dos laudos</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Right Column: Solutions/Advantages -->
-                <div>
-                    <div class="flex items-center gap-3 mb-8">
-                        <div class="w-1 h-8 bg-green-600 rounded"></div>
-                        <h3 class="text-2xl font-bold text-secondary-900">Nossas Soluções</h3>
+                <!-- SOLUTIONS Column -->
+                <div class="relative">
+                    <!-- Column Header -->
+                    <div class="sticky top-24 z-20 bg-white/90 backdrop-blur-xl rounded-3xl p-6 shadow-xl border-2 border-green-200 mb-8">
+                        <div class="flex items-center gap-4">
+                            <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center shadow-lg">
+                                <i class="fas fa-check-circle text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-3xl font-extrabold text-secondary-900">Soluções</h3>
+                                <p class="text-sm text-green-600 font-bold">Como podemos ajudar</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="space-y-4">
-                        <!-- Advantage 1 -->
-                        <div class="bg-gradient-to-r from-green-50 to-transparent rounded-lg p-5 border-l-4 border-green-600 hover:shadow-md transition">
-                            <div class="flex gap-4">
-                                <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center text-green-600 flex-shrink-0 text-lg">
-                                    <i class="fas fa-sync-alt"></i>
+                    
+                    <div class="space-y-6">
+                        <!-- Solution Card 1 -->
+                        <div class="group relative">
+                            <div class="absolute -inset-1 bg-gradient-to-r from-green-400 to-emerald-600 rounded-3xl opacity-20 group-hover:opacity-30 blur transition"></div>
+                            <div class="relative bg-white rounded-3xl p-8 border-2 border-green-100 hover:border-green-300 transition-all shadow-lg hover:shadow-2xl transform hover:-translate-y-1">
+                                <div class="flex gap-5">
+                                    <div class="flex-shrink-0">
+                                        <div class="w-14 h-14 bg-gradient-to-br from-green-100 to-emerald-200 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                            <i class="fas fa-sync-alt text-green-600 text-2xl"></i>
+                                        </div>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="text-xl font-extrabold text-secondary-900 mb-3">Manutenção Incluída</h4>
+                                        <p class="text-secondary-600 leading-relaxed">Assistência técnica <span class="font-bold text-green-600">especializada 24/7</span> e manutenção preventiva sem custos extras</p>
+                                    </div>
                                 </div>
-                                <div>
-                                    <h4 class="font-bold text-secondary-900 mb-1">Manutenção Incluída</h4>
-                                    <p class="text-sm text-secondary-900">Assistência técnica especializada e manutenção preventiva sem custos extras.</p>
+                            </div>
+                        </div>
+
+                        <!-- Solution Card 2 -->
+                        <div class="group relative">
+                            <div class="absolute -inset-1 bg-gradient-to-r from-green-400 to-emerald-600 rounded-3xl opacity-20 group-hover:opacity-30 blur transition"></div>
+                            <div class="relative bg-white rounded-3xl p-8 border-2 border-green-100 hover:border-green-300 transition-all shadow-lg hover:shadow-2xl transform hover:-translate-y-1">
+                                <div class="flex gap-5">
+                                    <div class="flex-shrink-0">
+                                        <div class="w-14 h-14 bg-gradient-to-br from-green-100 to-emerald-200 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                            <i class="fas fa-bolt text-green-600 text-2xl"></i>
+                                        </div>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="text-xl font-extrabold text-secondary-900 mb-3">Automação Completa</h4>
+                                        <p class="text-secondary-600 leading-relaxed">Impressão, grampeamento e acabamento <span class="font-bold text-green-600">automático</span> em minutos</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Solution Card 3 -->
+                        <div class="group relative">
+                            <div class="absolute -inset-1 bg-gradient-to-r from-green-400 to-emerald-600 rounded-3xl opacity-20 group-hover:opacity-30 blur transition"></div>
+                            <div class="relative bg-white rounded-3xl p-8 border-2 border-green-100 hover:border-green-300 transition-all shadow-lg hover:shadow-2xl transform hover:-translate-y-1">
+                                <div class="flex gap-5">
+                                    <div class="flex-shrink-0">
+                                        <div class="w-14 h-14 bg-gradient-to-br from-green-100 to-emerald-200 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                            <i class="fas fa-smile-beam text-green-600 text-2xl"></i>
+                                        </div>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="text-xl font-extrabold text-secondary-900 mb-3">Experiência Premium</h4>
+                                        <p class="text-secondary-600 leading-relaxed">Laudos <span class="font-bold text-green-600">profissionais</span> entregues rapidamente, aumentando a satisfação</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom CTA -->
+            <div class="mt-20 relative">
+                <div class="absolute -inset-4 bg-gradient-to-r from-primary-400 to-primary-600 rounded-3xl opacity-20 blur-2xl"></div>
+                <div class="relative bg-gradient-to-r from-secondary-900 to-secondary-800 rounded-3xl p-12 text-center">
+                    <h3 class="text-4xl font-extrabold text-white mb-4">
+                        Pronto para <span class="text-primary-400">Resolver</span> esses Desafios?
+                    </h3>
+                    <p class="text-xl text-secondary-300 mb-8 max-w-2xl mx-auto">
+                        Agende uma auditoria gratuita e descubra como podemos transformar sua clínica
+                    </p>
+                    <a href="https://wa.me/5531975050034?text=Quero%20resolver%20os%20desafios%20da%20minha%20clínica" 
+                       class="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-primary-500 to-primary-600 text-white font-bold text-lg rounded-2xl hover:scale-105 transition-transform shadow-2xl shadow-primary-500/30">
+                        <i class="fas fa-calendar-check text-2xl"></i>
+                        Agendar Auditoria Gratuita
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
                                 </div>
                             </div>
                         </div>
@@ -1213,18 +1880,64 @@
     </section>
 
     <!-- CTA / Contact -->
-    <section id="contato" class="py-24 bg-secondary-900 relative overflow-hidden">
-        <div class="absolute inset-0 bg-secondary-800 opacity-50 pattern-grid-lg"></div>
-        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
-            <h2 class="text-4xl lg:text-5xl font-extrabold text-white mb-8">Vamos impulsionar seu negócio?</h2>
-            <p class="text-secondary-100 text-xl mb-12 max-w-2xl mx-auto">Fale com nossos consultores e descubra quanto sua empresa pode economizar mensalmente com aluguel de impressoras.</p>
-            <div class="flex flex-col sm:flex-row justify-center gap-6">
-                <a href="https://wa.me/5531975050034" target="_blank" class="inline-flex items-center justify-center px-10 py-5 bg-green-500 text-white font-bold text-lg rounded-xl shadow-lg hover:bg-green-600 transition transform hover:-translate-y-1">
-                    <i class="fab fa-whatsapp mr-2 text-2xl"></i> Falar Agora no WhatsApp
+    <section id="contato" class="py-32 bg-gradient-to-br from-secondary-900 via-secondary-800 to-secondary-900 relative overflow-hidden">
+        <!-- Animated Background -->
+        <div class="absolute inset-0">
+            <div class="absolute top-10 left-10 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-10 right-10 w-80 h-80 bg-primary-600/10 rounded-full blur-3xl animate-pulse animation-delay-1000"></div>
+        </div>
+        
+        <div class="max-w-5xl mx-auto px-4 text-center relative z-10">
+            <h2 class="text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight">
+                Pronto para otimizar sua<br class="hidden md:block"/> 
+                <span class="bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent">impressão?</span>
+            </h2>
+            <p class="text-secondary-200 text-xl md:text-2xl mb-12 max-w-2xl mx-auto font-light">
+                Solicite hoje mesmo uma auditoria gratuita.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-5">
+                <a href="https://wa.me/5531975050034?text=Olá!%20Gostaria%20de%20solicitar%20uma%20auditoria%20gratuita" 
+                   target="_blank" 
+                   class="group inline-flex items-center justify-center px-10 py-5 bg-gradient-to-r from-primary-500 to-primary-600 text-white font-bold text-lg rounded-2xl shadow-2xl shadow-primary-500/50 hover:shadow-primary-500/70 hover:from-primary-600 hover:to-primary-700 transition-all transform hover:-translate-y-1">
+                    <i class="fab fa-whatsapp mr-3 text-2xl group-hover:scale-110 transition-transform"></i> 
+                    WhatsApp
                 </a>
-                <a href="mailto:contato@theikossolucoes.com.br" class="inline-flex items-center justify-center px-10 py-5 bg-white/10 backdrop-blur border border-white/30 text-white font-bold text-lg rounded-xl hover:bg-white/20 transition">
-                    <i class="fas fa-envelope mr-2"></i> Solicitar E-mail
+                <a href="mailto:contato@theikossolucoes.com.br?subject=Solicitar%20Auditoria%20Gratuita" 
+                   class="group inline-flex items-center justify-center px-10 py-5 bg-secondary-800/80 backdrop-blur-sm border-2 border-secondary-700 text-white font-bold text-lg rounded-2xl hover:bg-secondary-700/80 hover:border-secondary-600 transition-all transform hover:-translate-y-1 shadow-xl">
+                    <i class="fas fa-envelope mr-3 group-hover:scale-110 transition-transform"></i> 
+                    E-mail
                 </a>
+            </div>
+            
+            <!-- Trust Indicators -->
+            <div class="mt-16 pt-12 border-t border-white/10">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 bg-primary-500/20 rounded-2xl flex items-center justify-center mb-4">
+                            <i class="fas fa-shield-alt text-primary-400 text-2xl"></i>
+                        </div>
+                        <div class="text-sm text-secondary-300 font-medium">Garantia Total</div>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 bg-primary-500/20 rounded-2xl flex items-center justify-center mb-4">
+                            <i class="fas fa-clock text-primary-400 text-2xl"></i>
+                        </div>
+                        <div class="text-sm text-secondary-300 font-medium">Resposta em 24h</div>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 bg-primary-500/20 rounded-2xl flex items-center justify-center mb-4">
+                            <i class="fas fa-tools text-primary-400 text-2xl"></i>
+                        </div>
+                        <div class="text-sm text-secondary-300 font-medium">Manutenção Inclusa</div>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 bg-primary-500/20 rounded-2xl flex items-center justify-center mb-4">
+                            <i class="fas fa-headset text-primary-400 text-2xl"></i>
+                        </div>
+                        <div class="text-sm text-secondary-300 font-medium">Suporte 24/7</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
