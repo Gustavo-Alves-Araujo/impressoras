@@ -7,6 +7,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Supabase JS Client -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -17,7 +19,7 @@
                             100: '#ffe4e1',
                             400: '#ff8a75',
                             500: '#ff6242',
-                            600: '#F84428', // Core Primary
+                            600: '#F84428',
                             700: '#c22d16',
                         },
                         secondary: {
@@ -25,7 +27,7 @@
                             100: '#e6e6e9',
                             500: '#545470',
                             600: '#343455',
-                            900: '#0E0553', // Core Secondary
+                            900: '#0E0553',
                         }
                     }
                 }
@@ -107,44 +109,154 @@
             <!-- Add Product View -->
             <div id="view-add-product" class="hidden">
                  <h2 class="text-3xl font-bold mb-8">Cadastrar Novo Produto</h2>
-                 <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 max-w-2xl">
+                 <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 max-w-3xl">
                     <form id="product-form" class="space-y-6">
-                        <div>
-                            <label class="block text-sm font-bold text-gray-700 mb-2">Nome do Produto</label>
-                            <input type="text" id="prod-name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 outline-none" placeholder="Ex: Bizhub C224e" required>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-bold text-gray-700 mb-2">Descrição Curta</label>
-                            <input type="text" id="prod-desc" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 outline-none" placeholder="Ex: Ideal para pequenos escritórios" required>
-                        </div>
-                        <div class="grid grid-cols-2 gap-4">
-                             <div>
-                                <label class="block text-sm font-bold text-gray-700 mb-2">Velocidade (PPM)</label>
-                                <input type="text" id="prod-speed" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 outline-none" placeholder="Ex: 22 ppm" required>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="md:col-span-2">
+                                <label class="block text-sm font-bold text-gray-700 mb-2">Nome do Produto *</label>
+                                <input type="text" id="prod-nome" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 outline-none" placeholder="Ex: Toner TN-324K Preto" required>
+                            </div>
+                            <div class="md:col-span-2">
+                                <label class="block text-sm font-bold text-gray-700 mb-2">Descrição *</label>
+                                <textarea id="prod-descricao" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 outline-none" placeholder="Descrição detalhada do produto..." required></textarea>
                             </div>
                             <div>
-                                <label class="block text-sm font-bold text-gray-700 mb-2">Categoria</label>
-                                <select id="prod-cat" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 outline-none">
-                                    <option value="aluguel">Aluguel (Impressora)</option>
-                                    <option value="toner">Venda (Toner)</option>
+                                <label class="block text-sm font-bold text-gray-700 mb-2">Preço Normal (R$) *</label>
+                                <input type="number" step="0.01" id="prod-preco" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 outline-none" placeholder="450.00" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-2">Preço Promocional (R$)</label>
+                                <input type="number" step="0.01" id="prod-preco-promo" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 outline-none" placeholder="389.90">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-2">Categoria *</label>
+                                <select id="prod-categoria" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 outline-none" required>
+                                    <option value="toner">Toner</option>
+                                    <option value="impressora">Impressora</option>
+                                    <option value="suprimento">Suprimento</option>
                                 </select>
                             </div>
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-2">Ordem de Exibição</label>
+                                <input type="number" id="prod-ordem" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 outline-none" placeholder="0" value="0">
+                            </div>
+                            <div class="md:col-span-2">
+                                <label class="block text-sm font-bold text-gray-700 mb-2">URL da Imagem *</label>
+                                <input type="url" id="prod-imagem" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 outline-none" placeholder="https://..." required>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="checkbox" id="prod-destaque" class="w-4 h-4 text-primary-600 focus:ring-primary-600 rounded">
+                                <label for="prod-destaque" class="ml-2 text-sm font-bold text-gray-700">Produto em Destaque</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="checkbox" id="prod-ativo" class="w-4 h-4 text-primary-600 focus:ring-primary-600 rounded" checked>
+                                <label for="prod-ativo" class="ml-2 text-sm font-bold text-gray-700">Produto Ativo</label>
+                            </div>
                         </div>
-                         <div>
-                            <label class="block text-sm font-bold text-gray-700 mb-2">URL da Imagem</label>
-                            <input type="url" id="prod-img" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 outline-none" placeholder="https://..." required>
+                        
+                        <div class="border-t pt-6">
+                            <h3 class="text-sm font-bold text-gray-700 mb-4">Especificações Técnicas (Opcional)</h3>
+                            <div id="specs-container" class="space-y-3">
+                                <!-- Specs dinâmicos -->
+                            </div>
+                            <button type="button" onclick="addSpecField()" class="mt-3 text-primary-600 hover:text-primary-700 font-semibold text-sm">
+                                <i class="fas fa-plus-circle mr-1"></i> Adicionar Especificação
+                            </button>
                         </div>
-                        <button type="submit" class="w-full bg-secondary-900 text-white font-bold py-3 rounded-lg hover:bg-secondary-700 transition">
-                            Cadastrar Produto
-                        </button>
+
+                        <div class="flex gap-4">
+                            <button type="submit" class="flex-1 bg-primary-600 text-white font-bold py-3 rounded-lg hover:bg-primary-700 transition">
+                                <i class="fas fa-save mr-2"></i> Cadastrar Produto
+                            </button>
+                            <button type="button" onclick="resetForm()" class="px-6 bg-gray-200 text-gray-700 font-bold py-3 rounded-lg hover:bg-gray-300 transition">
+                                Limpar
+                            </button>
+                        </div>
                     </form>
                  </div>
+            </div>
+
+            <!-- Edit Product Modal -->
+            <div id="edit-modal" class="hidden fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
+                <div class="bg-white rounded-2xl shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto">
+                    <div class="sticky top-0 bg-white border-b px-6 py-4 flex justify-between items-center">
+                        <h2 class="text-2xl font-bold">Editar Produto</h2>
+                        <button onclick="closeEditModal()" class="text-gray-500 hover:text-gray-700">
+                            <i class="fas fa-times text-2xl"></i>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <form id="edit-product-form" class="space-y-6">
+                            <input type="hidden" id="edit-prod-id">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="md:col-span-2">
+                                    <label class="block text-sm font-bold text-gray-700 mb-2">Nome do Produto *</label>
+                                    <input type="text" id="edit-prod-nome" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 outline-none" required>
+                                </div>
+                                <div class="md:col-span-2">
+                                    <label class="block text-sm font-bold text-gray-700 mb-2">Descrição *</label>
+                                    <textarea id="edit-prod-descricao" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 outline-none" required></textarea>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-bold text-gray-700 mb-2">Preço Normal (R$) *</label>
+                                    <input type="number" step="0.01" id="edit-prod-preco" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 outline-none" required>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-bold text-gray-700 mb-2">Preço Promocional (R$)</label>
+                                    <input type="number" step="0.01" id="edit-prod-preco-promo" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 outline-none">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-bold text-gray-700 mb-2">Categoria *</label>
+                                    <select id="edit-prod-categoria" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 outline-none" required>
+                                        <option value="toner">Toner</option>
+                                        <option value="impressora">Impressora</option>
+                                        <option value="suprimento">Suprimento</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-bold text-gray-700 mb-2">Ordem de Exibição</label>
+                                    <input type="number" id="edit-prod-ordem" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 outline-none">
+                                </div>
+                                <div class="md:col-span-2">
+                                    <label class="block text-sm font-bold text-gray-700 mb-2">URL da Imagem *</label>
+                                    <input type="url" id="edit-prod-imagem" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 outline-none" required>
+                                </div>
+                                <div class="flex items-center">
+                                    <input type="checkbox" id="edit-prod-destaque" class="w-4 h-4 text-primary-600 focus:ring-primary-600 rounded">
+                                    <label for="edit-prod-destaque" class="ml-2 text-sm font-bold text-gray-700">Produto em Destaque</label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input type="checkbox" id="edit-prod-ativo" class="w-4 h-4 text-primary-600 focus:ring-primary-600 rounded">
+                                    <label for="edit-prod-ativo" class="ml-2 text-sm font-bold text-gray-700">Produto Ativo</label>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <button type="submit" class="flex-1 bg-primary-600 text-white font-bold py-3 rounded-lg hover:bg-primary-700 transition">
+                                    <i class="fas fa-save mr-2"></i> Salvar Alterações
+                                </button>
+                                <button type="button" onclick="closeEditModal()" class="px-6 bg-gray-200 text-gray-700 font-bold py-3 rounded-lg hover:bg-gray-300 transition">
+                                    Cancelar
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </main>
     </div>
 
     <script>
-        // Auth Logic
+        // ============================================
+        // CONFIGURAÇÃO SUPABASE
+        // ============================================
+        const SUPABASE_URL = 'https://vkwczizdjhsejbpaapea.supabase.co';
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZrd2N6aXpkamhzZWpicGFhcGVhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njc4NDU0MzAsImV4cCI6MjA4MzQyMTQzMH0.qvWHxNAhefq253JaoVYG19izClKgLGc4ZkW5y8ladmM';
+        
+        const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+        // ============================================
+        // AUTH LOGIC
+        // ============================================
         const loginForm = document.getElementById('login-form');
         const loginSection = document.getElementById('login-section');
         const dashboardSection = document.getElementById('dashboard-section');
@@ -160,11 +272,15 @@
         loginForm.addEventListener('submit', (e) => {
             e.preventDefault();
             const pass = document.getElementById('password').value;
-            if (pass === '123123') {
+            // ATENÇÃO: Altere essa senha para uma mais segura!
+            if (pass === 'admin123') {
                 sessionStorage.setItem('theikos_auth', 'true');
                 checkAuth();
             } else {
                 document.getElementById('error-msg').classList.remove('hidden');
+                setTimeout(() => {
+                    document.getElementById('error-msg').classList.add('hidden');
+                }, 3000);
             }
         });
 
@@ -175,7 +291,9 @@
 
         checkAuth();
 
-        // Dashboard Tabs
+        // ============================================
+        // DASHBOARD TABS
+        // ============================================
         function showTab(tabName) {
             document.getElementById('view-stats').classList.add('hidden');
             document.getElementById('view-products').classList.add('hidden');
@@ -197,26 +315,28 @@
             if (tabName === 'stats') loadStats();
         }
 
-        // Stats Logic
+        // ============================================
+        // ANALYTICS/STATS LOGIC
+        // ============================================
+        let myChart = null;
+
         function loadStats() {
-            // Updated to handle Array format from index.html
             const rawClicks = JSON.parse(localStorage.getItem('theikos_clicks') || '[]');
             const total = rawClicks.length;
             document.getElementById('total-clicks').innerText = total;
 
-            // Aggregate data (e.g. by Type)
+            // Aggregate by type
             const aggregation = {};
             rawClicks.forEach(c => {
-                const label = c.type === 'conversion' ? 'Conversão (WhatsApp)' : (c.type || 'Outros');
+                const label = c.type === 'conversion' ? 'WhatsApp (Conversão)' : (c.type || 'Navegação');
                 aggregation[label] = (aggregation[label] || 0) + 1;
             });
 
             const ctx = document.getElementById('clicksChart').getContext('2d');
             
-            // Destroy existing chart if expected to refresh dynamic
-            if(window.myChart) window.myChart.destroy();
+            if(myChart) myChart.destroy();
 
-            window.myChart = new Chart(ctx, {
+            myChart = new Chart(ctx, {
                 type: 'bar',
                 data: {
                     labels: Object.keys(aggregation),
@@ -224,81 +344,257 @@
                         label: 'Número de Cliques',
                         data: Object.values(aggregation),
                         backgroundColor: '#F84428',
-                        borderRadius: 5
+                        borderRadius: 8,
+                        borderWidth: 0
                     }]
                 },
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
                     plugins: {
-                        legend: { display: false }
+                        legend: { display: false },
+                        tooltip: {
+                            backgroundColor: '#0E0553',
+                            padding: 12,
+                            titleFont: { size: 14 },
+                            bodyFont: { size: 13 }
+                        }
                     },
                     scales: {
-                        y: { beginAtZero: true }
+                        y: { 
+                            beginAtZero: true,
+                            ticks: { precision: 0 }
+                        }
                     }
                 }
             });
         }
 
-        // Product Logic
-        function loadProductsList() {
-            const products = JSON.parse(localStorage.getItem('theikos_products') || '[]');
+        // ============================================
+        // PRODUCTS CRUD (SUPABASE)
+        // ============================================
+        async function loadProductsList() {
             const container = document.getElementById('products-list');
-            container.innerHTML = '';
+            container.innerHTML = '<div class="col-span-full text-center py-20"><i class="fas fa-spinner fa-spin text-4xl text-primary-600 mb-4"></i><p>Carregando produtos...</p></div>';
 
-            if (products.length === 0) {
-                container.innerHTML = '<p class="col-span-full text-center text-gray-500 py-8">Nenhum produto cadastrado ainda.</p>';
-                return;
-            }
+            try {
+                const { data: products, error } = await supabase
+                    .from('theikos_produtos')
+                    .select('*')
+                    .order('ordem', { ascending: true })
+                    .order('created_at', { ascending: false });
 
-            products.forEach(product => {
-                const card = document.createElement('div');
-                card.className = 'bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition';
-                card.innerHTML = `
-                    <img src="${product.image}" alt="${product.name}" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg mb-2">${product.name}</h3>
-                        <p class="text-gray-600 text-sm mb-3">${product.desc}</p>
-                        <div class="flex justify-between items-center mb-4">
-                            <span class="text-xs bg-primary-100 text-primary-600 px-2 py-1 rounded">${product.speed}</span>
-                            <span class="text-xs bg-secondary-100 text-secondary-900 px-2 py-1 rounded capitalize">${product.category}</span>
+                if (error) throw error;
+
+                container.innerHTML = '';
+
+                if (!products || products.length === 0) {
+                    container.innerHTML = '<p class="col-span-full text-center text-gray-500 py-8">Nenhum produto cadastrado ainda.</p>';
+                    return;
+                }
+
+                products.forEach(product => {
+                    const hasPromo = product.preco_promocional && product.preco_promocional < product.preco;
+                    const card = document.createElement('div');
+                    card.className = 'bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition';
+                    card.innerHTML = `
+                        <div class="relative">
+                            <img src="${product.imagem_url || 'https://via.placeholder.com/400'}" alt="${product.nome}" class="w-full h-48 object-cover">
+                            ${product.destaque ? '<div class="absolute top-2 right-2 bg-yellow-400 text-gray-900 px-2 py-1 rounded-lg text-xs font-bold"><i class="fas fa-star mr-1"></i>DESTAQUE</div>' : ''}
+                            ${!product.ativo ? '<div class="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 rounded-lg text-xs font-bold">INATIVO</div>' : ''}
                         </div>
-                        <button onclick="deleteProduct('${product.id}')" class="w-full bg-red-600 text-white py-2 rounded hover:bg-red-700 transition text-sm font-bold">
-                            <i class="fas fa-trash mr-2"></i> Remover
-                        </button>
-                    </div>
-                `;
-                container.appendChild(card);
-            });
-        }
-
-        function deleteProduct(id) {
-            if (confirm('Tem certeza que deseja remover este produto?')) {
-                let products = JSON.parse(localStorage.getItem('theikos_products') || '[]');
-                products = products.filter(p => p.id != id);
-                localStorage.setItem('theikos_products', JSON.stringify(products));
-                loadProductsList();
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg mb-2 line-clamp-1">${product.nome}</h3>
+                            <p class="text-gray-600 text-sm mb-3 line-clamp-2">${product.descricao || ''}</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="text-xs bg-primary-100 text-primary-600 px-2 py-1 rounded font-semibold">${product.categoria}</span>
+                                <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">Ordem: ${product.ordem}</span>
+                            </div>
+                            <div class="mb-4">
+                                ${hasPromo ? `
+                                    <div class="text-sm text-gray-400 line-through">R$ ${parseFloat(product.preco).toFixed(2)}</div>
+                                    <div class="text-xl font-bold text-primary-600">R$ ${parseFloat(product.preco_promocional).toFixed(2)}</div>
+                                ` : `
+                                    <div class="text-xl font-bold text-gray-900">R$ ${parseFloat(product.preco).toFixed(2)}</div>
+                                `}
+                            </div>
+                            <div class="grid grid-cols-2 gap-2">
+                                <button onclick="openEditModal(${product.id})" class="bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition text-sm font-bold">
+                                    <i class="fas fa-edit mr-1"></i> Editar
+                                </button>
+                                <button onclick="deleteProduct(${product.id}, '${product.nome.replace(/'/g, "\\'")}'))" class="bg-red-600 text-white py-2 rounded hover:bg-red-700 transition text-sm font-bold">
+                                    <i class="fas fa-trash mr-1"></i> Excluir
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                    container.appendChild(card);
+                });
+            } catch (error) {
+                console.error('Erro ao carregar produtos:', error);
+                container.innerHTML = '<p class="col-span-full text-center text-red-500 py-8">Erro ao carregar produtos. Verifique o console.</p>';
             }
         }
 
-        document.getElementById('product-form').addEventListener('submit', (e) => {
+        async function deleteProduct(id, nome) {
+            if (!confirm(`Tem certeza que deseja excluir "${nome}"?`)) return;
+
+            try {
+                const { error } = await supabase
+                    .from('theikos_produtos')
+                    .delete()
+                    .eq('id', id);
+
+                if (error) throw error;
+
+                alert('Produto excluído com sucesso!');
+                loadProductsList();
+            } catch (error) {
+                console.error('Erro ao excluir produto:', error);
+                alert('Erro ao excluir produto: ' + error.message);
+            }
+        }
+
+        // ============================================
+        // ADD PRODUCT
+        // ============================================
+        let specCount = 0;
+
+        function addSpecField() {
+            const container = document.getElementById('specs-container');
+            const div = document.createElement('div');
+            div.className = 'flex gap-2';
+            div.id = `spec-${specCount}`;
+            div.innerHTML = `
+                <input type="text" placeholder="Nome (ex: Rendimento)" class="flex-1 px-3 py-2 border border-gray-300 rounded-lg text-sm spec-key">
+                <input type="text" placeholder="Valor (ex: 3000 páginas)" class="flex-1 px-3 py-2 border border-gray-300 rounded-lg text-sm spec-value">
+                <button type="button" onclick="removeSpecField(${specCount})" class="px-3 text-red-500 hover:text-red-700">
+                    <i class="fas fa-times"></i>
+                </button>
+            `;
+            container.appendChild(div);
+            specCount++;
+        }
+
+        function removeSpecField(id) {
+            document.getElementById(`spec-${id}`).remove();
+        }
+
+        function resetForm() {
+            document.getElementById('product-form').reset();
+            document.getElementById('specs-container').innerHTML = '';
+            specCount = 0;
+        }
+
+        document.getElementById('product-form').addEventListener('submit', async (e) => {
             e.preventDefault();
-            const product = {
-                id: Date.now(),
-                name: document.getElementById('prod-name').value,
-                desc: document.getElementById('prod-desc').value,
-                speed: document.getElementById('prod-speed').value,
-                category: document.getElementById('prod-cat').value,
-                image: document.getElementById('prod-img').value
+
+            // Coletar especificações
+            const specs = {};
+            document.querySelectorAll('#specs-container > div').forEach(div => {
+                const key = div.querySelector('.spec-key').value.trim();
+                const value = div.querySelector('.spec-value').value.trim();
+                if (key && value) {
+                    specs[key] = value;
+                }
+            });
+
+            const productData = {
+                nome: document.getElementById('prod-nome').value.trim(),
+                descricao: document.getElementById('prod-descricao').value.trim(),
+                preco: parseFloat(document.getElementById('prod-preco').value),
+                preco_promocional: document.getElementById('prod-preco-promo').value ? parseFloat(document.getElementById('prod-preco-promo').value) : null,
+                imagem_url: document.getElementById('prod-imagem').value.trim(),
+                categoria: document.getElementById('prod-categoria').value,
+                ordem: parseInt(document.getElementById('prod-ordem').value) || 0,
+                destaque: document.getElementById('prod-destaque').checked,
+                ativo: document.getElementById('prod-ativo').checked,
+                especificacoes: Object.keys(specs).length > 0 ? specs : null
             };
 
-            const products = JSON.parse(localStorage.getItem('theikos_products') || '[]');
-            products.push(product);
-            localStorage.setItem('theikos_products', JSON.stringify(products));
+            try {
+                const { data, error } = await supabase
+                    .from('theikos_produtos')
+                    .insert([productData])
+                    .select();
 
-            alert('Produto cadastrado com sucesso!');
-            e.target.reset();
-            showTab('products');
+                if (error) throw error;
+
+                alert('Produto cadastrado com sucesso!');
+                resetForm();
+                showTab('products');
+            } catch (error) {
+                console.error('Erro ao cadastrar produto:', error);
+                alert('Erro ao cadastrar produto: ' + error.message);
+            }
+        });
+
+        // ============================================
+        // EDIT PRODUCT
+        // ============================================
+        async function openEditModal(id) {
+            try {
+                const { data: product, error } = await supabase
+                    .from('theikos_produtos')
+                    .select('*')
+                    .eq('id', id)
+                    .single();
+
+                if (error) throw error;
+
+                document.getElementById('edit-prod-id').value = product.id;
+                document.getElementById('edit-prod-nome').value = product.nome;
+                document.getElementById('edit-prod-descricao').value = product.descricao || '';
+                document.getElementById('edit-prod-preco').value = product.preco;
+                document.getElementById('edit-prod-preco-promo').value = product.preco_promocional || '';
+                document.getElementById('edit-prod-categoria').value = product.categoria;
+                document.getElementById('edit-prod-ordem').value = product.ordem || 0;
+                document.getElementById('edit-prod-imagem').value = product.imagem_url;
+                document.getElementById('edit-prod-destaque').checked = product.destaque;
+                document.getElementById('edit-prod-ativo').checked = product.ativo;
+
+                document.getElementById('edit-modal').classList.remove('hidden');
+            } catch (error) {
+                console.error('Erro ao carregar produto:', error);
+                alert('Erro ao carregar produto: ' + error.message);
+            }
+        }
+
+        function closeEditModal() {
+            document.getElementById('edit-modal').classList.add('hidden');
+        }
+
+        document.getElementById('edit-product-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const id = parseInt(document.getElementById('edit-prod-id').value);
+            const productData = {
+                nome: document.getElementById('edit-prod-nome').value.trim(),
+                descricao: document.getElementById('edit-prod-descricao').value.trim(),
+                preco: parseFloat(document.getElementById('edit-prod-preco').value),
+                preco_promocional: document.getElementById('edit-prod-preco-promo').value ? parseFloat(document.getElementById('edit-prod-preco-promo').value) : null,
+                imagem_url: document.getElementById('edit-prod-imagem').value.trim(),
+                categoria: document.getElementById('edit-prod-categoria').value,
+                ordem: parseInt(document.getElementById('edit-prod-ordem').value) || 0,
+                destaque: document.getElementById('edit-prod-destaque').checked,
+                ativo: document.getElementById('edit-prod-ativo').checked
+            };
+
+            try {
+                const { error } = await supabase
+                    .from('theikos_produtos')
+                    .update(productData)
+                    .eq('id', id);
+
+                if (error) throw error;
+
+                alert('Produto atualizado com sucesso!');
+                closeEditModal();
+                loadProductsList();
+            } catch (error) {
+                console.error('Erro ao atualizar produto:', error);
+                alert('Erro ao atualizar produto: ' + error.message);
+            }
         });
 
     </script>

@@ -95,7 +95,7 @@
     </style>
 </head>
 
-<body class="bg-gray-50 text-secondary-900 antialiased selection:bg-primary-100 selection:text-primary-900">
+<body class="bg-gray-50 text-secondary-900 antialiased selection:bg-gray-200 selection:text-gray-900">
 
     <!-- Navbar -->
     <header id="main-header" class="fixed top-0 left-0 w-full z-[1000] transition-all duration-500 py-4">
@@ -114,35 +114,35 @@
                         <a href="/#aluguel" class="px-4 py-2 text-sm font-bold transition-all duration-300 text-slate-700 hover:text-slate-900">
                             Impressoras
                         </a>
-                        <div class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-1 rounded-full transition-all duration-300 group-hover:w-4 bg-primary-500"></div>
+                        <div class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-1 rounded-full transition-all duration-300 group-hover:w-4 bg-gray-900"></div>
                     </li>
 
                     <li class="relative group">
                         <a href="/#toners" class="px-4 py-2 text-sm font-bold transition-all duration-300 text-slate-700 hover:text-slate-900">
                             Toners
                         </a>
-                        <div class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-1 rounded-full transition-all duration-300 group-hover:w-4 bg-primary-500"></div>
+                        <div class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-1 rounded-full transition-all duration-300 group-hover:w-4 bg-gray-900"></div>
                     </li>
 
                     <li class="relative group">
                         <a href="/saude.html" class="px-4 py-2 text-sm font-bold transition-all duration-300 text-slate-700 hover:text-slate-900">
                             Saúde
                         </a>
-                        <div class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-1 rounded-full transition-all duration-300 group-hover:w-4 bg-primary-500"></div>
+                        <div class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-1 rounded-full transition-all duration-300 group-hover:w-4 bg-gray-900"></div>
                     </li>
 
                     <li class="relative group">
                         <a href="/educacao.html" class="px-4 py-2 text-sm font-bold transition-all duration-300 text-slate-700 hover:text-slate-900">
                             Educação
                         </a>
-                        <div class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-1 rounded-full transition-all duration-300 group-hover:w-4 bg-primary-500"></div>
+                        <div class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-1 rounded-full transition-all duration-300 group-hover:w-4 bg-gray-900"></div>
                     </li>
                 </ul>
 
                 <div class="hidden lg:block">
                     <a href="https://wa.me/5531975050034?text=Olá!%20Gostaria%20de%20um%20orçamento" target="_blank"
-                        class="flex items-center gap-2 px-6 py-2.5 rounded-full text-white text-sm font-bold shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 hover:shadow-xl bg-gradient-to-r from-primary-500 to-primary-600">
-                        <i class="fab fa-whatsapp"></i>
+                        class="flex items-center gap-2 px-6 py-2.5 rounded-full text-white text-sm font-bold shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 hover:shadow-xl bg-gray-900 hover:bg-gray-800">
+                        <i class="fab fa-whatsapp text-green-500"></i>
                         Orçamento
                     </a>
                 </div>
@@ -153,44 +153,69 @@
                 </button>
             </nav>
         </div>
+
+        <div id="navMenu"
+            class="absolute top-full left-0 w-full px-6 py-4 opacity-0 -translate-y-4 pointer-events-none transition-all duration-300 lg:hidden">
+            <ul
+                class="bg-white/95 backdrop-blur-xl border border-slate-100 rounded-3xl p-6 shadow-2xl flex flex-col gap-4">
+
+                <li>
+                    <a href="/#aluguel"
+                        class="block text-base font-bold text-slate-700 hover:translate-x-2 transition-transform">
+                        Impressoras
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/#toners"
+                        class="block text-base font-bold text-slate-700 hover:translate-x-2 transition-transform">
+                        Toners
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/saude.html"
+                        class="block text-base font-bold text-slate-700 hover:translate-x-2 transition-transform">
+                        Saúde
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/educacao.html"
+                        class="block text-base font-bold text-slate-700 hover:translate-x-2 transition-transform">
+                        Educação
+                    </a>
+                </li>
+
+                <li class="pt-4 border-t border-slate-100">
+                    <a href="https://wa.me/5531975050034?text=Olá!%20Gostaria%20de%20um%20orçamento" target="_blank"
+                        class="flex items-center gap-2 w-full justify-center py-4 rounded-full text-white text-sm font-bold shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 hover:shadow-xl bg-gray-900 hover:bg-gray-800">
+                        <i class="fab fa-whatsapp text-green-500"></i>
+                        Orçamento
+                    </a>
+                </li>
+            </ul>
+        </div>
     </header>
 
     <!-- Hero Section -->
-    <header class="relative min-h-screen flex items-center justify-center overflow-hidden isolate bg-black pt-20 md:pt-12">
-        <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1920&q=80"
-                alt="Clínica Médica Moderna"
-                class="w-full h-full object-cover scale-100 opacity-20"
-                style="filter: blur(10px) brightness(1.1) contrast(1.0);">
-
-            <!-- Blur overlay com cor primária -->
-            <div class="absolute inset-0 backdrop-blur-sm" style="background-color: rgba(239, 68, 68, 0.3);"></div>
-            <div class="absolute inset-0 opacity-25 mix-blend-overlay" style="background-color: #f8b4b4;"></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/40 opacity-60"></div>
-            <div class="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-black/20 opacity-30"></div>
+    <header class="relative min-h-screen flex items-center justify-center overflow-hidden isolate bg-black pt-32 md:pt-24 pb-16">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 40px 40px;"></div>
         </div>
-
-        <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] blur-[150px] rounded-full pointer-events-none mix-blend-screen animate-pulse"
-            style="background-color: #ef4444; opacity: 0.2; animation-duration: 4s;"></div>
-        <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] blur-[130px] rounded-full pointer-events-none mix-blend-overlay"
-            style="background-color: #ef4444; opacity: 0.1;"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
             <div class="inline-flex items-center justify-center mb-6 md:mb-8 mt-4 md:mt-0">
-                <span class="py-1.5 px-4 md:py-2 md:px-6 rounded-full text-[9px] md:text-xs font-black uppercase tracking-[0.3em] md:tracking-[0.4em] backdrop-blur-md bg-white/10 border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.3)]"
-                    style="color: #ef4444;">
+                <span class="py-1.5 px-4 md:py-2 md:px-6 rounded-full text-[9px] md:text-xs font-black uppercase tracking-[0.3em] md:tracking-[0.4em] backdrop-blur-md bg-white/10 border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.3)] text-white">
                     Impressoras para Clínicas
                 </span>
             </div>
 
             <h1 class="text-5xl md:text-7xl lg:text-8xl font-black leading-[1.05] mb-8 tracking-tighter text-white">
                 Revolucione sua <br>
-                <span class="italic font-serif opacity-100 relative inline-block" style="color: #ef4444;">
+                <span class="italic font-serif opacity-100 relative inline-block text-gray-300">
                     Clínica ou Laboratório
-                    <svg class="absolute -bottom-2 left-0 w-full h-2" viewBox="0 0 100 10"
-                        preserveAspectRatio="none" style="color: #ef4444; opacity: 0.4;">
-                        <path d="M0 5 Q 50 10 100 5" stroke="currentColor" stroke-width="2" fill="none"></path>
-                    </svg>
                 </span>
             </h1>
 
@@ -202,25 +227,23 @@
             <!-- Stats -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12">
                 <div class="text-center backdrop-blur-md bg-white/10 rounded-2xl p-6 border border-white/20">
-                    <div class="text-4xl md:text-5xl font-extrabold mb-2" style="color: #ef4444;">+80%</div>
+                    <div class="text-4xl md:text-5xl font-extrabold mb-2 text-white">+80%</div>
                     <div class="text-white font-medium">Mais Produtividade</div>
                 </div>
                 <div class="text-center backdrop-blur-md bg-white/10 rounded-2xl p-6 border border-white/20">
-                    <div class="text-4xl md:text-5xl font-extrabold mb-2" style="color: #ef4444;">-75%</div>
+                    <div class="text-4xl md:text-5xl font-extrabold mb-2 text-white">-75%</div>
                     <div class="text-white font-medium">Menos Trabalho Manual</div>
                 </div>
                 <div class="text-center backdrop-blur-md bg-white/10 rounded-2xl p-6 border border-white/20">
-                    <div class="text-4xl md:text-5xl font-extrabold mb-2" style="color: #ef4444;">100%</div>
+                    <div class="text-4xl md:text-5xl font-extrabold mb-2 text-white">100%</div>
                     <div class="text-white font-medium">Satisfação Garantida</div>
                 </div>
             </div>
 
             <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
                 <a href="https://wa.me/5531975050034?text=Olá!%20Gostaria%20de%20conhecer%20as%20soluções%20para%20clínicas"
-                    target="_blank" class="group relative px-12 py-5 font-black rounded-2xl hover:scale-105 transition-all duration-500 flex items-center justify-center gap-3 shadow-[0_20px_40px_rgba(0,0,0,0.4)] overflow-hidden"
-                    style="background-color: rgb(239, 68, 68); color: rgb(255, 255, 255);">
-                    <div class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:animate-shimmer"></div>
-                    <i class="fab fa-whatsapp text-xl relative z-10"></i>
+                    target="_blank" class="group relative px-12 py-5 font-black rounded-2xl hover:scale-105 transition-all duration-500 flex items-center justify-center gap-3 shadow-2xl overflow-hidden bg-white text-gray-900">
+                    <i class="fab fa-whatsapp text-green-600 text-xl relative z-10"></i>
                     <span class="relative z-10 uppercase tracking-widest text-xs">Falar com Especialista</span>
                 </a>
 
@@ -234,17 +257,14 @@
 
     <!-- Vantagens Section - LAYOUT ALTERNADO -->
     <section id="revolucione" class="py-24 bg-white relative overflow-hidden">
-        <!-- Background decoration -->
-        <div class="absolute top-0 right-0 w-96 h-96 bg-primary-100 rounded-full blur-3xl opacity-30"></div>
-        <div class="absolute bottom-0 left-0 w-96 h-96 bg-secondary-100 rounded-full blur-3xl opacity-20"></div>
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-20">
-                <span class="inline-block px-4 py-2 bg-primary-50 text-primary-500 font-bold uppercase text-sm rounded-full mb-4">
+                <span class="inline-block px-4 py-2 bg-gray-100 text-gray-700 font-bold uppercase text-sm rounded-full mb-4">
                     Por que escolher?
                 </span>
                 <h2 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6">
-                    Transforme sua <span class="gradient-text">Clínica</span>
+                    Transforme sua <span class="text-gray-700">Clínica</span>
                 </h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
                     Descubra como a tecnologia está revolucionando clínicas em todo o Brasil
@@ -257,9 +277,8 @@
                 <div class="flex flex-col lg:flex-row items-center gap-12">
                     <div class="flex-1">
                         <div class="relative">
-                            <div class="absolute -inset-4 bg-gradient-to-r from-primary-500 to-primary-600 rounded-3xl opacity-20 blur-2xl"></div>
-                            <div class="relative bg-gradient-to-br from-primary-50 to-white rounded-3xl p-8 border-2 border-primary-100">
-                                <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center mb-6 shadow-xl">
+                            <div class="relative bg-white rounded-3xl p-8 border-2 border-gray-200 shadow-lg">
+                                <div class="w-20 h-20 bg-gray-900 rounded-2xl flex items-center justify-center mb-6 shadow-xl">
                                     <i class="fas fa-bolt text-white text-3xl"></i>
                                 </div>
                                 <h3 class="text-3xl font-extrabold text-gray-900 mb-4">Velocidade Incomparável</h3>
@@ -268,12 +287,12 @@
                                     manual e burocracia. Sua equipe pode focar no que realmente importa.
                                 </p>
                                 <div class="flex items-center gap-4">
-                                    <div class="bg-white rounded-xl px-6 py-4 shadow-md">
-                                        <div class="text-3xl font-bold text-primary-500">1 min</div>
+                                    <div class="bg-gray-100 rounded-xl px-6 py-4 shadow-md">
+                                        <div class="text-3xl font-bold text-gray-900">1 min</div>
                                         <div class="text-sm text-gray-600">Por laudo</div>
                                     </div>
-                                    <div class="bg-white rounded-xl px-6 py-4 shadow-md">
-                                        <div class="text-3xl font-bold text-primary-500">40h</div>
+                                    <div class="bg-gray-100 rounded-xl px-6 py-4 shadow-md">
+                                        <div class="text-3xl font-bold text-gray-900">40h</div>
                                         <div class="text-sm text-gray-600">Economizadas/mês</div>
                                     </div>
                                 </div>
@@ -291,9 +310,8 @@
                 <div class="flex flex-col lg:flex-row-reverse items-center gap-12">
                     <div class="flex-1">
                         <div class="relative">
-                            <div class="absolute -inset-4 bg-gradient-to-r from-green-500 to-emerald-600 rounded-3xl opacity-20 blur-2xl"></div>
-                            <div class="relative bg-gradient-to-br from-green-50 to-white rounded-3xl p-8 border-2 border-green-100">
-                                <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-6 shadow-xl">
+                            <div class="relative bg-white rounded-3xl p-8 border-2 border-gray-200 shadow-lg">
+                                <div class="w-20 h-20 bg-gray-800 rounded-2xl flex items-center justify-center mb-6 shadow-xl">
                                     <i class="fas fa-piggy-bank text-white text-3xl"></i>
                                 </div>
                                 <h3 class="text-3xl font-extrabold text-gray-900 mb-4">Economia Inteligente</h3>
@@ -302,12 +320,12 @@
                                     atividades mais estratégicas e de maior valor agregado.
                                 </p>
                                 <div class="flex items-center gap-4">
-                                    <div class="bg-white rounded-xl px-6 py-4 shadow-md">
-                                        <div class="text-3xl font-bold text-green-500">-80%</div>
+                                    <div class="bg-gray-100 rounded-xl px-6 py-4 shadow-md">
+                                        <div class="text-3xl font-bold text-gray-900">-80%</div>
                                         <div class="text-sm text-gray-600">Custos com gráfica</div>
                                     </div>
-                                    <div class="bg-white rounded-xl px-6 py-4 shadow-md">
-                                        <div class="text-3xl font-bold text-green-500">R$ 2.8k</div>
+                                    <div class="bg-gray-100 rounded-xl px-6 py-4 shadow-md">
+                                        <div class="text-3xl font-bold text-gray-900">R$ 2.8k</div>
                                         <div class="text-sm text-gray-600">Economia/mês</div>
                                     </div>
                                 </div>
@@ -325,9 +343,8 @@
                 <div class="flex flex-col lg:flex-row items-center gap-12">
                     <div class="flex-1">
                         <div class="relative">
-                            <div class="absolute -inset-4 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-3xl opacity-20 blur-2xl"></div>
-                            <div class="relative bg-gradient-to-br from-blue-50 to-white rounded-3xl p-8 border-2 border-blue-100">
-                                <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-6 shadow-xl">
+                            <div class="relative bg-white rounded-3xl p-8 border-2 border-gray-200 shadow-lg">
+                                <div class="w-20 h-20 bg-gray-700 rounded-2xl flex items-center justify-center mb-6 shadow-xl">
                                     <i class="fas fa-star text-white text-3xl"></i>
                                 </div>
                                 <h3 class="text-3xl font-extrabold text-gray-900 mb-4">Qualidade Profissional</h3>
@@ -337,19 +354,19 @@
                                 </p>
                                 <ul class="space-y-3">
                                     <li class="flex items-center gap-3">
-                                        <div class="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center">
+                                        <div class="w-6 h-6 bg-gray-700 rounded-full flex items-center justify-center">
                                             <i class="fas fa-check text-white text-xs"></i>
                                         </div>
                                         <span class="text-gray-700">Capas personalizadas com sua marca</span>
                                     </li>
                                     <li class="flex items-center gap-3">
-                                        <div class="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center">
+                                        <div class="w-6 h-6 bg-gray-700 rounded-full flex items-center justify-center">
                                             <i class="fas fa-check text-white text-xs"></i>
                                         </div>
                                         <span class="text-gray-700">Grampeamento automático perfeito</span>
                                     </li>
                                     <li class="flex items-center gap-3">
-                                        <div class="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center">
+                                        <div class="w-6 h-6 bg-gray-700 rounded-full flex items-center justify-center">
                                             <i class="fas fa-check text-white text-xs"></i>
                                         </div>
                                         <span class="text-gray-700">Impressão de alta resolução</span>
@@ -372,11 +389,11 @@
     <section id="problemas" class="py-24 bg-gradient-to-br from-gray-50 to-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <span class="inline-block px-4 py-2 bg-red-50 text-red-500 font-bold uppercase text-sm rounded-full mb-4">
+                <span class="inline-block px-4 py-2 bg-gray-100 text-gray-700 font-bold uppercase text-sm rounded-full mb-4">
                     <i class="fas fa-exclamation-triangle mr-2"></i>Atenção
                 </span>
                 <h2 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6">
-                    Problemas que <span class="text-red-500">Custam Caro</span>
+                    Problemas que <span class="text-gray-700">Custam Caro</span>
                 </h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
                     Esses desafios estão prejudicando sua clínica neste exato momento
@@ -386,25 +403,24 @@
             <!-- Bento Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Card Grande 1 -->
-                <div class="lg:col-span-2 lg:row-span-2 bg-gradient-to-br from-red-500 to-red-600 rounded-3xl p-10 text-white relative overflow-hidden group hover:scale-[1.02] transition-transform">
-                    <div class="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full blur-3xl group-hover:opacity-10 transition"></div>
+                <div class="lg:col-span-2 lg:row-span-2 bg-gray-900 rounded-3xl p-10 text-white relative overflow-hidden group hover:scale-[1.02] transition-transform shadow-xl">
                     <div class="relative z-10">
                         <div class="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-6">
                             <i class="fas fa-clock text-4xl"></i>
                         </div>
                         <h3 class="text-3xl font-extrabold mb-4">Tempo Excessivo com Tarefas Manuais</h3>
-                        <p class="text-lg text-red-50 leading-relaxed mb-6">
+                        <p class="text-lg text-gray-300 leading-relaxed mb-6">
                             Seus funcionários gastam 15-20 minutos organizando, grampeando e preparando cada laudo 
                             manualmente. Tempo que poderia ser usado para atender mais pacientes e gerar mais receita.
                         </p>
                         <div class="grid grid-cols-2 gap-4 mt-8">
                             <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4">
                                 <div class="text-3xl font-bold">20 min</div>
-                                <div class="text-sm text-red-100">Por laudo manual</div>
+                                <div class="text-sm text-gray-300">Por laudo manual</div>
                             </div>
                             <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4">
                                 <div class="text-3xl font-bold">40h</div>
-                                <div class="text-sm text-red-100">Perdidas/mês</div>
+                                <div class="text-sm text-gray-300">Perdidas/mês</div>
                             </div>
                         </div>
                     </div>
@@ -412,30 +428,30 @@
 
                 <!-- Card Médio 1 -->
                 <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition group">
-                    <div class="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
-                        <i class="fas fa-money-bill-wave text-red-500 text-2xl"></i>
+                    <div class="w-16 h-16 bg-gray-200 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                        <i class="fas fa-money-bill-wave text-gray-700 text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-4">Custos Ocultos com Gráfica</h3>
                     <p class="text-gray-600">
                         Gastos constantes com gráfica para capas personalizadas e desperdício de papel.
                     </p>
                     <div class="mt-6 pt-6 border-t border-gray-100">
-                        <div class="text-2xl font-bold text-red-500">R$ 2.800</div>
+                        <div class="text-2xl font-bold text-gray-900">R$ 2.800</div>
                         <div class="text-sm text-gray-500">Gasto médio/mês</div>
                     </div>
                 </div>
 
                 <!-- Card Médio 2 -->
                 <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition group">
-                    <div class="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
-                        <i class="fas fa-frown text-red-500 text-2xl"></i>
+                    <div class="w-16 h-16 bg-gray-200 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                        <i class="fas fa-frown text-gray-700 text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-4">Pacientes Insatisfeitos</h3>
                     <p class="text-gray-600">
                         Longos tempos de espera e apresentação pouco profissional que não transmite credibilidade.
                     </p>
                     <div class="mt-6 pt-6 border-t border-gray-100">
-                        <div class="text-2xl font-bold text-red-500">-35%</div>
+                        <div class="text-2xl font-bold text-gray-900">-35%</div>
                         <div class="text-sm text-gray-500">Satisfação média</div>
                     </div>
                 </div>
@@ -460,40 +476,40 @@
 
                 <!-- Card Pequeno 1 -->
                 <div class="bg-white rounded-3xl p-6 shadow-lg hover:shadow-2xl transition text-center group">
-                    <div class="w-14 h-14 bg-red-100 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition">
-                        <i class="fas fa-exclamation-triangle text-red-500 text-xl"></i>
+                    <div class="w-14 h-14 bg-gray-200 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition">
+                        <i class="fas fa-exclamation-triangle text-gray-700 text-xl"></i>
                     </div>
                     <h3 class="text-lg font-bold text-gray-900 mb-2">Erros Frequentes</h3>
                     <p class="text-sm text-gray-600 mb-4">
                         Informações trocadas e páginas faltando
                     </p>
-                    <div class="text-3xl font-bold text-red-500">23%</div>
+                    <div class="text-3xl font-bold text-gray-900">23%</div>
                     <div class="text-xs text-gray-500">Taxa de erro</div>
                 </div>
 
                 <!-- Card Pequeno 2 -->
                 <div class="bg-white rounded-3xl p-6 shadow-lg hover:shadow-2xl transition text-center group">
-                    <div class="w-14 h-14 bg-red-100 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition">
-                        <i class="fas fa-chart-line text-red-500 text-xl"></i>
+                    <div class="w-14 h-14 bg-gray-200 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition">
+                        <i class="fas fa-chart-line text-gray-700 text-xl"></i>
                     </div>
                     <h3 class="text-lg font-bold text-gray-900 mb-2">Dificulda de Crescer</h3>
                     <p class="text-sm text-gray-600 mb-4">
                         Processo manual impede expansão
                     </p>
-                    <div class="text-3xl font-bold text-red-500">-50%</div>
+                    <div class="text-3xl font-bold text-gray-900">-50%</div>
                     <div class="text-xs text-gray-500">Capacidade bloqueada</div>
                 </div>
 
                 <!-- Card Pequeno 3 -->
                 <div class="bg-white rounded-3xl p-6 shadow-lg hover:shadow-2xl transition text-center group">
-                    <div class="w-14 h-14 bg-red-100 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition">
-                        <i class="fas fa-ban text-red-500 text-xl"></i>
+                    <div class="w-14 h-14 bg-gray-200 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition">
+                        <i class="fas fa-ban text-gray-700 text-xl"></i>
                     </div>
                     <h3 class="text-lg font-bold text-gray-900 mb-2">Sem Padrão</h3>
                     <p class="text-sm text-gray-600 mb-4">
                         Cada laudo sai diferente
                     </p>
-                    <div class="text-3xl font-bold text-red-500">0%</div>
+                    <div class="text-3xl font-bold text-gray-900">0%</div>
                     <div class="text-xs text-gray-500">Consistência</div>
                 </div>
             </div>
@@ -501,7 +517,7 @@
             <!-- CTA -->
             <div class="mt-16 text-center">
                 <p class="text-xl text-gray-700 mb-6 font-semibold">Esses problemas têm solução!</p>
-                <a href="#processo" class="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-primary-500 to-primary-600 text-white font-bold rounded-xl hover:scale-105 transition shadow-xl">
+                <a href="#processo" class="inline-flex items-center gap-3 px-8 py-4 bg-gray-900 hover:bg-gray-800 text-white font-bold rounded-xl hover:scale-105 transition shadow-xl">
                     <i class="fas fa-arrow-down"></i>
                     Veja Como Resolver
                 </a>
@@ -511,18 +527,14 @@
 
     <!-- Processo Section - VISUAL TIMELINE -->
     <section id="processo" class="py-24 bg-white relative overflow-hidden">
-        <!-- Background Pattern -->
-        <div class="absolute inset-0 opacity-5">
-            <div class="absolute inset-0" style="background-image: radial-gradient(circle, #F84428 1px, transparent 1px); background-size: 30px 30px;"></div>
-        </div>
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-20">
-                <span class="inline-block px-4 py-2 bg-primary-50 text-primary-500 font-bold uppercase text-sm rounded-full mb-4">
-                    <i class="fas fa-cog mr-2 animate-spin"></i>Como Funciona
+                <span class="inline-block px-4 py-2 bg-gray-100 text-gray-700 font-bold uppercase text-sm rounded-full mb-4">
+                    <i class="fas fa-cog mr-2"></i>Como Funciona
                 </span>
                 <h2 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6">
-                    Do Zero ao <span class="gradient-text">Profissional</span>
+                    Do Zero ao <span class="text-gray-700">Profissional</span>
                 </h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
                     Em 4 passos simples, sua clínica estará operando com máxima eficiência
@@ -532,7 +544,7 @@
             <!-- Timeline Visual -->
             <div class="relative">
                 <!-- Linha conectora central (desktop) -->
-                <div class="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-primary-500 via-purple-500 to-green-500 transform -translate-x-1/2"></div>
+                <div class="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-gray-300 transform -translate-x-1/2"></div>
                 
                 <div class="space-y-16 lg:space-y-32">
                     <!-- Passo 1 -->
@@ -540,7 +552,7 @@
                         <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
                             <!-- Conteúdo Esquerdo -->
                             <div class="lg:w-5/12 lg:text-right">
-                                <div class="inline-block bg-gradient-to-br from-primary-500 to-primary-600 text-white px-4 py-2 rounded-full text-sm font-bold mb-4">
+                                <div class="inline-block bg-gray-900 text-white px-4 py-2 rounded-full text-sm font-bold mb-4">
                                     PASSO 1
                                 </div>
                                 <h3 class="text-3xl font-extrabold text-gray-900 mb-4">Receba a Impressora Konica</h3>
@@ -550,15 +562,15 @@
                                 </p>
                                 <ul class="mt-6 space-y-2 text-gray-600">
                                     <li class="flex items-center lg:justify-end gap-2">
-                                        <i class="fas fa-check text-primary-500"></i>
+                                        <i class="fas fa-check text-gray-700"></i>
                                         <span>Instalação gratuita</span>
                                     </li>
                                     <li class="flex items-center lg:justify-end gap-2">
-                                        <i class="fas fa-check text-primary-500"></i>
+                                        <i class="fas fa-check text-gray-700"></i>
                                         <span>Configuração completa</span>
                                     </li>
                                     <li class="flex items-center lg:justify-end gap-2">
-                                        <i class="fas fa-check text-primary-500"></i>
+                                        <i class="fas fa-check text-gray-700"></i>
                                         <span>Treinamento incluso</span>
                                     </li>
                                 </ul>
@@ -566,10 +578,9 @@
                             
                             <!-- Ícone Central -->
                             <div class="relative flex-shrink-0">
-                                <div class="w-24 h-24 lg:w-32 lg:h-32 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center shadow-2xl z-10 relative">
+                                <div class="w-24 h-24 lg:w-32 lg:h-32 bg-gray-900 rounded-full flex items-center justify-center shadow-2xl z-10 relative">
                                     <i class="fas fa-print text-white text-4xl lg:text-5xl"></i>
                                 </div>
-                                <div class="absolute inset-0 bg-primary-500 rounded-full blur-xl opacity-50 animate-pulse"></div>
                             </div>
                             
                             <!-- Imagem Direita -->
@@ -579,7 +590,7 @@
                                         alt="Konica Bizhub" 
                                         class="rounded-2xl shadow-2xl w-full">
                                     <div class="absolute -bottom-4 -right-4 bg-white rounded-xl px-6 py-3 shadow-lg">
-                                        <div class="text-2xl font-bold text-primary-500">55 ppm</div>
+                                        <div class="text-2xl font-bold text-gray-900">55 ppm</div>
                                         <div class="text-xs text-gray-600">Velocidade</div>
                                     </div>
                                 </div>
@@ -592,7 +603,7 @@
                         <div class="flex flex-col lg:flex-row-reverse items-center gap-8 lg:gap-16">
                             <!-- Conteúdo Direito -->
                             <div class="lg:w-5/12 lg:text-left">
-                                <div class="inline-block bg-gradient-to-br from-purple-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-bold mb-4">
+                                <div class="inline-block bg-gray-800 text-white px-4 py-2 rounded-full text-sm font-bold mb-4">
                                     PASSO 2
                                 </div>
                                 <h3 class="text-3xl font-extrabold text-gray-900 mb-4">Personalize o Sistema</h3>
@@ -601,12 +612,12 @@
                                     sua clínica. Adicione seus conjuntos de capas personalizados.
                                 </p>
                                 <div class="mt-6 grid grid-cols-2 gap-4">
-                                    <div class="bg-gradient-to-br from-purple-50 to-white p-4 rounded-xl border border-purple-100">
-                                        <i class="fas fa-palette text-purple-500 text-2xl mb-2"></i>
+                                    <div class="bg-white p-4 rounded-xl border border-gray-200">
+                                        <i class="fas fa-palette text-gray-700 text-2xl mb-2"></i>
                                         <div class="text-sm font-semibold text-gray-900">Cores</div>
                                     </div>
-                                    <div class="bg-gradient-to-br from-purple-50 to-white p-4 rounded-xl border border-purple-100">
-                                        <i class="fas fa-image text-purple-500 text-2xl mb-2"></i>
+                                    <div class="bg-white p-4 rounded-xl border border-gray-200">
+                                        <i class="fas fa-image text-gray-700 text-2xl mb-2"></i>
                                         <div class="text-sm font-semibold text-gray-900">Logo</div>
                                     </div>
                                 </div>
@@ -614,15 +625,14 @@
                             
                             <!-- Ícone Central -->
                             <div class="relative flex-shrink-0">
-                                <div class="w-24 h-24 lg:w-32 lg:h-32 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center shadow-2xl z-10 relative">
+                                <div class="w-24 h-24 lg:w-32 lg:h-32 bg-gray-800 rounded-full flex items-center justify-center shadow-2xl z-10 relative">
                                     <i class="fas fa-palette text-white text-4xl lg:text-5xl"></i>
                                 </div>
-                                <div class="absolute inset-0 bg-purple-500 rounded-full blur-xl opacity-50 animate-pulse"></div>
                             </div>
                             
                             <!-- Conteúdo Esquerdo -->
                             <div class="lg:w-5/12">
-                                <div class="bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl p-8 text-white">
+                                <div class="bg-gray-800 rounded-2xl p-8 text-white">
                                     <h4 class="text-xl font-bold mb-4">Templates Personalizáveis</h4>
                                     <div class="space-y-3">
                                         <div class="flex items-center gap-3">
@@ -654,7 +664,7 @@
                         <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
                             <!-- Conteúdo Esquerdo -->
                             <div class="lg:w-5/12 lg:text-right">
-                                <div class="inline-block bg-gradient-to-br from-blue-500 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-bold mb-4">
+                                <div class="inline-block bg-gray-700 text-white px-4 py-2 rounded-full text-sm font-bold mb-4">
                                     PASSO 3
                                 </div>
                                 <h3 class="text-3xl font-extrabold text-gray-900 mb-4">Imprima com Um Clique</h3>
@@ -662,10 +672,10 @@
                                     Selecione o exame, escreva o laudo, clique em imprimir. O sistema cuida de 
                                     todo o resto automaticamente - capa, páginas e grampo.
                                 </p>
-                                <div class="mt-6 inline-flex items-center gap-3 bg-blue-50 px-6 py-3 rounded-xl">
-                                    <i class="fas fa-mouse-pointer text-blue-500 text-2xl"></i>
+                                <div class="mt-6 inline-flex items-center gap-3 bg-gray-100 px-6 py-3 rounded-xl">
+                                    <i class="fas fa-mouse-pointer text-gray-700 text-2xl"></i>
                                     <div class="text-left">
-                                        <div class="text-2xl font-bold text-blue-600">1 clique</div>
+                                        <div class="text-2xl font-bold text-gray-900">1 clique</div>
                                         <div class="text-sm text-gray-600">É tudo que você precisa</div>
                                     </div>
                                 </div>
@@ -673,37 +683,36 @@
                             
                             <!-- Ícone Central -->
                             <div class="relative flex-shrink-0">
-                                <div class="w-24 h-24 lg:w-32 lg:h-32 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-full flex items-center justify-center shadow-2xl z-10 relative">
+                                <div class="w-24 h-24 lg:w-32 lg:h-32 bg-gray-700 rounded-full flex items-center justify-center shadow-2xl z-10 relative">
                                     <i class="fas fa-mouse-pointer text-white text-4xl lg:text-5xl"></i>
                                 </div>
-                                <div class="absolute inset-0 bg-blue-500 rounded-full blur-xl opacity-50 animate-pulse"></div>
                             </div>
                             
                             <!-- Imagem Direita -->
                             <div class="lg:w-5/12">
                                 <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 text-white">
                                     <div class="flex items-center gap-3 mb-6">
-                                        <div class="w-3 h-3 bg-red-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                                        <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                                        <div class="w-3 h-3 bg-gray-500 rounded-full"></div>
+                                        <div class="w-3 h-3 bg-gray-400 rounded-full"></div>
+                                        <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
                                     </div>
                                     <div class="space-y-4">
                                         <div class="flex items-center gap-3">
-                                            <i class="fas fa-file-medical text-blue-400 text-xl"></i>
+                                            <i class="fas fa-file-medical text-gray-400 text-xl"></i>
                                             <div>
                                                 <div class="text-sm text-gray-400">1. Selecionar exame</div>
                                                 <div class="font-semibold">Raio-X Tórax</div>
                                             </div>
                                         </div>
                                         <div class="flex items-center gap-3">
-                                            <i class="fas fa-keyboard text-purple-400 text-xl"></i>
+                                            <i class="fas fa-keyboard text-gray-400 text-xl"></i>
                                             <div>
                                                 <div class="text-sm text-gray-400">2. Escrever laudo</div>
                                                 <div class="font-semibold">Sem alterações...</div>
                                             </div>
                                         </div>
                                         <div class="flex items-center gap-3">
-                                            <i class="fas fa-print text-green-400 text-xl"></i>
+                                            <i class="fas fa-print text-gray-300 text-xl"></i>
                                             <div>
                                                 <div class="text-sm text-gray-400">3. Imprimir</div>
                                                 <div class="font-semibold">Pronto! ✓</div>
@@ -720,7 +729,7 @@
                         <div class="flex flex-col lg:flex-row-reverse items-center gap-8 lg:gap-16">
                             <!-- Conteúdo Direito -->
                             <div class="lg:w-5/12 lg:text-left">
-                                <div class="inline-block bg-gradient-to-br from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-bold mb-4">
+                                <div class="inline-block bg-gray-600 text-white px-4 py-2 rounded-full text-sm font-bold mb-4">
                                     PASSO 4
                                 </div>
                                 <h3 class="text-3xl font-extrabold text-gray-900 mb-4">Entregue ao Paciente</h3>
@@ -729,16 +738,16 @@
                                     paciente com qualidade profissional, com dados salvos na nuvem.
                                 </p>
                                 <div class="mt-6 space-y-3">
-                                    <div class="flex items-center gap-3 bg-green-50 px-4 py-3 rounded-xl">
-                                        <i class="fas fa-check-circle text-green-500 text-xl"></i>
+                                    <div class="flex items-center gap-3 bg-gray-100 px-4 py-3 rounded-xl">
+                                        <i class="fas fa-check-circle text-gray-700 text-xl"></i>
                                         <span class="text-gray-700">Laudo grampeado</span>
                                     </div>
-                                    <div class="flex items-center gap-3 bg-green-50 px-4 py-3 rounded-xl">
-                                        <i class="fas fa-check-circle text-green-500 text-xl"></i>
+                                    <div class="flex items-center gap-3 bg-gray-100 px-4 py-3 rounded-xl">
+                                        <i class="fas fa-check-circle text-gray-700 text-xl"></i>
                                         <span class="text-gray-700">Capa personalizada</span>
                                     </div>
-                                    <div class="flex items-center gap-3 bg-green-50 px-4 py-3 rounded-xl">
-                                        <i class="fas fa-check-circle text-green-500 text-xl"></i>
+                                    <div class="flex items-center gap-3 bg-gray-100 px-4 py-3 rounded-xl">
+                                        <i class="fas fa-check-circle text-gray-700 text-xl"></i>
                                         <span class="text-gray-700">Backup em nuvem</span>
                                     </div>
                                 </div>
@@ -746,24 +755,23 @@
                             
                             <!-- Ícone Central -->
                             <div class="relative flex-shrink-0">
-                                <div class="w-24 h-24 lg:w-32 lg:h-32 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center shadow-2xl z-10 relative">
+                                <div class="w-24 h-24 lg:w-32 lg:h-32 bg-gray-600 rounded-full flex items-center justify-center shadow-2xl z-10 relative">
                                     <i class="fas fa-user-check text-white text-4xl lg:text-5xl"></i>
                                 </div>
-                                <div class="absolute inset-0 bg-green-500 rounded-full blur-xl opacity-50 animate-pulse"></div>
                             </div>
                             
                             <!-- Stats Esquerda -->
                             <div class="lg:w-5/12">
                                 <div class="grid grid-cols-2 gap-4">
-                                    <div class="bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl p-6 text-white text-center">
+                                    <div class="bg-gray-900 rounded-2xl p-6 text-white text-center">
                                         <div class="text-4xl font-black mb-2">100%</div>
                                         <div class="text-sm">Satisfação</div>
                                     </div>
-                                    <div class="bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl p-6 text-white text-center">
+                                    <div class="bg-gray-800 rounded-2xl p-6 text-white text-center">
                                         <div class="text-4xl font-black mb-2">< 1min</div>
                                         <div class="text-sm">Por laudo</div>
                                     </div>
-                                    <div class="col-span-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl p-6 text-white text-center">
+                                    <div class="col-span-2 bg-gray-700 rounded-2xl p-6 text-white text-center">
                                         <div class="text-4xl font-black mb-2">∞</div>
                                         <div class="text-sm">Armazenamento em Nuvem</div>
                                     </div>
@@ -776,12 +784,12 @@
 
             <!-- CTA Final do Processo -->
             <div class="mt-20 text-center">
-                <div class="inline-block bg-gradient-to-r from-primary-500 to-purple-600 rounded-3xl p-12 text-white max-w-4xl">
+                <div class="inline-block bg-gray-900 rounded-3xl p-12 text-white max-w-4xl">
                     <h3 class="text-3xl font-extrabold mb-4">Pronto para Transformar sua Clínica?</h3>
-                    <p class="text-xl mb-8 text-white/90">Entre em contato e conheça nossas soluções!</p>
+                    <p class="text-xl mb-8 text-gray-300">Entre em contato e conheça nossas soluções!</p>
                     <a href="https://wa.me/5531975050034?text=Olá!%20Gostaria%20de%20conhecer%20as%20soluções%20para%20clínicas" 
-                        class="inline-flex items-center gap-3 px-8 py-4 bg-white text-primary-500 font-bold rounded-xl hover:scale-105 transition shadow-xl">
-                        <i class="fab fa-whatsapp text-2xl"></i>
+                        class="inline-flex items-center gap-3 px-8 py-4 bg-white text-gray-900 font-bold rounded-xl hover:scale-105 transition shadow-xl">
+                        <i class="fab fa-whatsapp text-green-500 text-2xl"></i>
                         Falar com Especialista
                     </a>
                 </div>
@@ -791,17 +799,14 @@
 
     <!-- Sistema de Laudos - TABS INTERATIVOS -->
     <section id="laudos" class="py-24 bg-gradient-to-br from-gray-50 to-gray-100 relative overflow-hidden">
-        <!-- Background Decoration -->
-        <div class="absolute top-0 right-0 w-96 h-96 bg-primary-100 rounded-full blur-3xl opacity-30"></div>
-        <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-100 rounded-full blur-3xl opacity-30"></div>
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16">
-                <span class="inline-block px-4 py-2 bg-white text-primary-500 font-bold uppercase text-sm rounded-full mb-4 shadow-lg">
+                <span class="inline-block px-4 py-2 bg-white text-gray-700 font-bold uppercase text-sm rounded-full mb-4 shadow-lg">
                     <i class="fas fa-laptop-medical mr-2"></i>Sistema Completo
                 </span>
                 <h2 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6">
-                    Gestão de Laudos <span class="gradient-text">Inteligente</span>
+                    Gestão de Laudos <span class="text-gray-700">Inteligente</span>
                 </h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
                     Mais do que impressão: gerencie todo o ciclo de vida dos laudos médicos
@@ -811,27 +816,26 @@
             <!-- Feature Showcase com 3 Colunas Destacadas -->
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
                 <!-- Feature 1 - DESTAQUE -->
-                <div class="lg:col-span-1 bg-gradient-to-br from-primary-500 to-primary-600 rounded-3xl p-8 text-white relative overflow-hidden group hover:scale-[1.02] transition-transform">
-                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full group-hover:scale-150 transition-transform duration-500"></div>
+                <div class="lg:col-span-1 bg-gray-900 rounded-3xl p-8 text-white relative overflow-hidden group hover:scale-[1.02] transition-transform shadow-xl">
                     <div class="relative z-10">
                         <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mb-6">
                             <i class="fas fa-file-medical text-4xl"></i>
                         </div>
                         <h3 class="text-2xl font-extrabold mb-4">Templates Personalizáveis</h3>
-                        <p class="text-white/90 mb-6">
+                        <p class="text-gray-300 mb-6">
                             Crie modelos únicos para cada especialidade médica mantendo sua identidade visual
                         </p>
                         <ul class="space-y-3">
                             <li class="flex items-center gap-2">
-                                <i class="fas fa-check-circle text-green-300"></i>
+                                <i class="fas fa-check-circle text-gray-400"></i>
                                 <span>Editor visual intuitivo</span>
                             </li>
                             <li class="flex items-center gap-2">
-                                <i class="fas fa-check-circle text-green-300"></i>
+                                <i class="fas fa-check-circle text-gray-400"></i>
                                 <span>Logo e cores personalizadas</span>
                             </li>
                             <li class="flex items-center gap-2">
-                                <i class="fas fa-check-circle text-green-300"></i>
+                                <i class="fas fa-check-circle text-gray-400"></i>
                                 <span>Múltiplos formatos</span>
                             </li>
                         </ul>
@@ -843,7 +847,7 @@
                     <div class="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-shadow border-2 border-gray-100">
                         <div class="flex items-start gap-6">
                             <div class="flex-shrink-0">
-                                <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center">
+                                <div class="w-14 h-14 bg-gray-800 rounded-xl flex items-center justify-center">
                                     <i class="fas fa-history text-white text-2xl"></i>
                                 </div>
                             </div>
@@ -859,7 +863,7 @@
                     <div class="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-shadow border-2 border-gray-100">
                         <div class="flex items-start gap-6">
                             <div class="flex-shrink-0">
-                                <div class="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center">
+                                <div class="w-14 h-14 bg-gray-700 rounded-xl flex items-center justify-center">
                                     <i class="fas fa-search text-white text-2xl"></i>
                                 </div>
                             </div>
@@ -881,21 +885,21 @@
                             <i class="fas fa-user-lock text-4xl"></i>
                         </div>
                         <h3 class="text-2xl font-extrabold mb-4">Controle de Acesso</h3>
-                        <p class="text-white/90 mb-6">
+                        <p class="text-gray-300 mb-6">
                             Permissões granulares para cada profissional da equipe
                         </p>
                         <div class="space-y-4">
                             <div class="flex items-center justify-between bg-white/10 backdrop-blur-sm rounded-xl px-4 py-3">
                                 <span class="text-sm">Médico</span>
-                                <span class="text-xs bg-green-500 px-2 py-1 rounded-full">Acesso Total</span>
+                                <span class="text-xs bg-gray-600 px-2 py-1 rounded-full">Acesso Total</span>
                             </div>
                             <div class="flex items-center justify-between bg-white/10 backdrop-blur-sm rounded-xl px-4 py-3">
                                 <span class="text-sm">Recepção</span>
-                                <span class="text-xs bg-yellow-500 px-2 py-1 rounded-full">Leitura</span>
+                                <span class="text-xs bg-gray-500 px-2 py-1 rounded-full">Leitura</span>
                             </div>
                             <div class="flex items-center justify-between bg-white/10 backdrop-blur-sm rounded-xl px-4 py-3">
                                 <span class="text-sm">Técnico</span>
-                                <span class="text-xs bg-blue-500 px-2 py-1 rounded-full">Edição</span>
+                                <span class="text-xs bg-gray-400 px-2 py-1 rounded-full">Edição</span>
                             </div>
                         </div>
                     </div>
@@ -908,7 +912,7 @@
                 <div class="bg-white rounded-3xl p-10 shadow-xl hover:shadow-2xl transition-all border-2 border-gray-100 group">
                     <div class="flex flex-col md:flex-row items-center gap-8">
                         <div class="flex-shrink-0">
-                            <div class="w-24 h-24 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <div class="w-24 h-24 bg-gray-900 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
                                 <i class="fas fa-chart-bar text-white text-5xl"></i>
                             </div>
                         </div>
@@ -918,22 +922,21 @@
                                 Dashboards com indicadores de produtividade, exames realizados e métricas de desempenho
                             </p>
                             <div class="flex flex-wrap gap-2 justify-center md:justify-start">
-                                <span class="px-3 py-1 bg-green-50 text-green-600 rounded-full text-sm font-semibold">PDF</span>
-                                <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm font-semibold">Excel</span>
-                                <span class="px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-sm font-semibold">Gráficos</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-semibold">PDF</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-semibold">Excel</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-semibold">Gráficos</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Multiplataforma -->
-                <div class="bg-gradient-to-br from-blue-500 to-cyan-600 rounded-3xl p-10 text-white shadow-xl hover:shadow-2xl transition-all relative overflow-hidden group">
-                    <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-white/10 rounded-full group-hover:scale-150 transition-transform duration-500"></div>
+                <div class="bg-gray-800 rounded-3xl p-10 text-white shadow-xl hover:shadow-2xl transition-all relative overflow-hidden group">
                     <div class="relative z-10">
                         <div class="flex flex-col md:flex-row items-center gap-8">
                             <div class="flex-grow text-center md:text-left">
                                 <h3 class="text-2xl font-extrabold mb-3">Acesso Multiplataforma</h3>
-                                <p class="text-white/90 mb-6">
+                                <p class="text-gray-300 mb-6">
                                     Trabalhe de qualquer lugar: desktop, tablet ou smartphone com interface responsiva otimizada
                                 </p>
                                 <div class="flex gap-4 justify-center md:justify-start">
@@ -962,17 +965,14 @@
 
     <!-- Vantagens do Aluguel - COMPARAÇÃO VISUAL -->
     <section id="vantagens" class="py-24 bg-white relative overflow-hidden">
-        <!-- Background Elements -->
-        <div class="absolute top-20 left-0 w-72 h-72 bg-green-100 rounded-full blur-3xl opacity-40"></div>
-        <div class="absolute bottom-20 right-0 w-72 h-72 bg-emerald-100 rounded-full blur-3xl opacity-40"></div>
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16">
-                <span class="inline-block px-4 py-2 bg-green-50 text-green-600 font-bold uppercase text-sm rounded-full mb-4">
+                <span class="inline-block px-4 py-2 bg-gray-100 text-gray-700 font-bold uppercase text-sm rounded-full mb-4">
                     <i class="fas fa-handshake mr-2"></i>Modelo de Aluguel
                 </span>
                 <h2 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6">
-                    Por Que <span class="gradient-text bg-gradient-to-r from-green-500 to-emerald-600 bg-clip-text text-transparent">Alugar</span> é Melhor?
+                    Por Que <span class="text-gray-700">Alugar</span> é Melhor?
                 </h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
                     Compare e veja todas as vantagens do aluguel da Konica Bizhub para sua clínica
@@ -984,7 +984,7 @@
                 <!-- COMPRAR - Lado Negativo -->
                 <div class="bg-gradient-to-br from-gray-100 to-gray-200 rounded-3xl p-8 relative">
                     <div class="absolute top-4 right-4">
-                        <span class="px-3 py-1 bg-red-500 text-white text-xs font-bold rounded-full">NÃO RECOMENDADO</span>
+                        <span class="px-3 py-1 bg-gray-700 text-white text-xs font-bold rounded-full">NÃO RECOMENDADO</span>
                     </div>
                     <div class="text-center mb-8">
                         <i class="fas fa-shopping-cart text-gray-500 text-5xl mb-4"></i>
@@ -992,35 +992,35 @@
                     </div>
                     <div class="space-y-4">
                         <div class="flex items-start gap-3">
-                            <i class="fas fa-times-circle text-red-500 text-xl mt-1"></i>
+                            <i class="fas fa-times-circle text-gray-600 text-xl mt-1"></i>
                             <div>
                                 <h4 class="font-bold text-gray-900 mb-1">Alto investimento inicial</h4>
                                 <p class="text-gray-600 text-sm">R$ 40.000+ para começar</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-3">
-                            <i class="fas fa-times-circle text-red-500 text-xl mt-1"></i>
+                            <i class="fas fa-times-circle text-gray-600 text-xl mt-1"></i>
                             <div>
                                 <h4 class="font-bold text-gray-900 mb-1">Manutenção cara</h4>
                                 <p class="text-gray-600 text-sm">Custos extras imprevisíveis</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-3">
-                            <i class="fas fa-times-circle text-red-500 text-xl mt-1"></i>
+                            <i class="fas fa-times-circle text-gray-600 text-xl mt-1"></i>
                             <div>
                                 <h4 class="font-bold text-gray-900 mb-1">Depreciação do equipamento</h4>
                                 <p class="text-gray-600 text-sm">Perde valor rapidamente</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-3">
-                            <i class="fas fa-times-circle text-red-500 text-xl mt-1"></i>
+                            <i class="fas fa-times-circle text-gray-600 text-xl mt-1"></i>
                             <div>
                                 <h4 class="font-bold text-gray-900 mb-1">Sem atualizações</h4>
                                 <p class="text-gray-600 text-sm">Tecnologia obsoleta em anos</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-3">
-                            <i class="fas fa-times-circle text-red-500 text-xl mt-1"></i>
+                            <i class="fas fa-times-circle text-gray-600 text-xl mt-1"></i>
                             <div>
                                 <h4 class="font-bold text-gray-900 mb-1">Garantia limitada</h4>
                                 <p class="text-gray-600 text-sm">1-2 anos apenas</p>
@@ -1030,11 +1030,10 @@
                 </div>
                 
                 <!-- ALUGAR - Lado Positivo -->
-                <div class="bg-gradient-to-br from-green-500 to-emerald-600 rounded-3xl p-8 text-white relative shadow-2xl">
-                    <div class="absolute -inset-1 bg-gradient-to-br from-green-400 to-emerald-500 rounded-3xl blur opacity-30 animate-pulse"></div>
+                <div class="bg-gray-900 rounded-3xl p-8 text-white relative shadow-2xl">
                     <div class="relative z-10">
                         <div class="absolute top-4 right-4">
-                            <span class="px-3 py-1 bg-yellow-400 text-gray-900 text-xs font-bold rounded-full flex items-center gap-1">
+                            <span class="px-3 py-1 bg-white text-gray-900 text-xs font-bold rounded-full flex items-center gap-1">
                                 <i class="fas fa-star"></i> MELHOR OPÇÃO
                             </span>
                         </div>
@@ -1044,46 +1043,46 @@
                         </div>
                         <div class="space-y-4">
                             <div class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-green-200 text-xl mt-1"></i>
+                                <i class="fas fa-check-circle text-gray-400 text-xl mt-1"></i>
                                 <div>
                                     <h4 class="font-bold mb-1">Sem investimento inicial</h4>
-                                    <p class="text-green-100 text-sm">Comece de imediato com mensalidade fixa</p>
+                                    <p class="text-gray-300 text-sm">Comece de imediato com mensalidade fixa</p>
                                 </div>
                             </div>
                             <div class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-green-200 text-xl mt-1"></i>
+                                <i class="fas fa-check-circle text-gray-400 text-xl mt-1"></i>
                                 <div>
                                     <h4 class="font-bold mb-1">Manutenção totalmente incluída</h4>
-                                    <p class="text-green-100 text-sm">Preventiva e corretiva sem custo extra</p>
+                                    <p class="text-gray-300 text-sm">Preventiva e corretiva sem custo extra</p>
                                 </div>
                             </div>
                             <div class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-green-200 text-xl mt-1"></i>
+                                <i class="fas fa-check-circle text-gray-400 text-xl mt-1"></i>
                                 <div>
                                     <h4 class="font-bold mb-1">Sempre equipamento atualizado</h4>
-                                    <p class="text-green-100 text-sm">Upgrades incluídos no contrato</p>
+                                    <p class="text-gray-300 text-sm">Upgrades incluídos no contrato</p>
                                 </div>
                             </div>
                             <div class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-green-200 text-xl mt-1"></i>
+                                <i class="fas fa-check-circle text-gray-400 text-xl mt-1"></i>
                                 <div>
                                     <h4 class="font-bold mb-1">Suporte técnico dedicado</h4>
-                                    <p class="text-green-100 text-sm">Atendimento prioritário 24/7</p>
+                                    <p class="text-gray-300 text-sm">Atendimento prioritário 24/7</p>
                                 </div>
                             </div>
                             <div class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-green-200 text-xl mt-1"></i>
+                                <i class="fas fa-check-circle text-gray-400 text-xl mt-1"></i>
                                 <div>
                                     <h4 class="font-bold mb-1">Garantia total vitalícia</h4>
-                                    <p class="text-green-100 text-sm">Durante todo o contrato</p>
+                                    <p class="text-gray-300 text-sm">Durante todo o contrato</p>
                                 </div>
                             </div>
                         </div>
                         <div class="mt-8 pt-8 border-t border-white/20">
                             <div class="text-center">
-                                <div class="text-sm uppercase tracking-wider mb-2 text-green-100">Economia Mensal</div>
+                                <div class="text-sm uppercase tracking-wider mb-2 text-gray-300">Economia Mensal</div>
                                 <div class="text-5xl font-black mb-2">R$ 2.800</div>
-                                <div class="text-sm text-green-100">Comparado à compra + manutenção</div>
+                                <div class="text-sm text-gray-300">Comparado à compra + manutenção</div>
                             </div>
                         </div>
                     </div>
@@ -1092,9 +1091,9 @@
             
             <!-- Benefícios Adicionais em Grid -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-gradient-to-br from-green-50 to-white rounded-2xl p-6 border-2 border-green-200 hover:shadow-xl transition-shadow">
+                <div class="bg-white rounded-2xl p-6 border-2 border-gray-200 hover:shadow-xl transition-shadow">
                     <div class="flex items-center gap-4 mb-4">
-                        <div class="w-14 h-14 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <div class="w-14 h-14 bg-gray-900 rounded-xl flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-sync text-white text-2xl"></i>
                         </div>
                         <h3 class="text-lg font-bold text-gray-900">Atualização Garantida</h3>
@@ -1104,9 +1103,9 @@
                     </p>
                 </div>
                 
-                <div class="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-6 border-2 border-blue-200 hover:shadow-xl transition-shadow">
+                <div class="bg-white rounded-2xl p-6 border-2 border-gray-200 hover:shadow-xl transition-shadow">
                     <div class="flex items-center gap-4 mb-4">
-                        <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <div class="w-14 h-14 bg-gray-800 rounded-xl flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-chart-line text-white text-2xl"></i>
                         </div>
                         <h3 class="text-lg font-bold text-gray-900">Alta Disponibilidade</h3>
@@ -1116,9 +1115,9 @@
                     </p>
                 </div>
                 
-                <div class="bg-gradient-to-br from-purple-50 to-white rounded-2xl p-6 border-2 border-purple-200 hover:shadow-xl transition-shadow">
+                <div class="bg-white rounded-2xl p-6 border-2 border-gray-200 hover:shadow-xl transition-shadow">
                     <div class="flex items-center gap-4 mb-4">
-                        <div class="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <div class="w-14 h-14 bg-gray-700 rounded-xl flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-headset text-white text-2xl"></i>
                         </div>
                         <h3 class="text-lg font-bold text-gray-900">Suporte Especializado</h3>
@@ -1132,19 +1131,15 @@
     </section>
 
     <!-- Nuvem Section - FEATURE ICONOGRÁFICO -->
-    <section class="py-24 bg-gradient-to-br from-blue-50 via-cyan-50 to-white relative overflow-hidden">
-        <!-- Background Elements -->
-        <div class="absolute top-0 left-1/4 w-96 h-96">
-            <i class="fas fa-cloud text-blue-100 opacity-20" style="font-size: 24rem;"></i>
-        </div>
+    <section class="py-24 bg-gray-50 relative overflow-hidden">
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-20">
-                <span class="inline-block px-4 py-2 bg-blue-100 text-blue-600 font-bold uppercase text-sm rounded-full mb-4">
+                <span class="inline-block px-4 py-2 bg-gray-100 text-gray-700 font-bold uppercase text-sm rounded-full mb-4">
                     <i class="fas fa-shield-alt mr-2"></i>Segurança Total
                 </span>
                 <h2 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6">
-                    Dados na <span class="gradient-text bg-gradient-to-r from-blue-500 to-cyan-600 bg-clip-text text-transparent">Nuvem</span>
+                    Dados na <span class="text-gray-700">Nuvem</span>
                 </h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
                     Seus exames protegidos, acessíveis e sempre disponíveis com infraestrutura de classe mundial
@@ -1155,27 +1150,26 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
                 <!-- Lado Esquerdo - Destaque Visual -->
                 <div class="relative">
-                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-full blur-3xl opacity-20 animate-pulse"></div>
-                    <div class="relative bg-gradient-to-br from-blue-500 to-cyan-600 rounded-3xl p-12 text-white">
+                    <div class="relative bg-gray-900 rounded-3xl p-12 text-white">
                         <div class="text-center mb-8">
                             <i class="fas fa-cloud text-white text-8xl mb-6 opacity-90"></i>
                             <h3 class="text-3xl font-extrabold mb-4">Armazenamento Ilimitado</h3>
-                            <p class="text-blue-100 text-lg">
+                            <p class="text-gray-300 text-lg">
                                 Todos os exames salvos automaticamente na nuvem sem limite de espaço
                             </p>
                         </div>
                         <div class="grid grid-cols-3 gap-4 mt-8">
                             <div class="bg-white/20 backdrop-blur-sm rounded-xl p-4 text-center">
                                 <div class="text-3xl font-black mb-1">∞</div>
-                                <div class="text-xs text-blue-100">Espaço</div>
+                                <div class="text-xs text-gray-300">Espaço</div>
                             </div>
                             <div class="bg-white/20 backdrop-blur-sm rounded-xl p-4 text-center">
                                 <div class="text-3xl font-black mb-1">99.9%</div>
-                                <div class="text-xs text-blue-100">Uptime</div>
+                                <div class="text-xs text-gray-300">Uptime</div>
                             </div>
                             <div class="bg-white/20 backdrop-blur-sm rounded-xl p-4 text-center">
                                 <div class="text-3xl font-black mb-1">24/7</div>
-                                <div class="text-xs text-blue-100">Acesso</div>
+                                <div class="text-xs text-gray-300">Acesso</div>
                             </div>
                         </div>
                     </div>
@@ -1183,8 +1177,8 @@
                 
                 <!-- Lado Direito - Features Grid -->
                 <div class="space-y-6">
-                    <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow border-2 border-blue-100 flex items-start gap-4">
-                        <div class="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
+                    <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow border-2 border-gray-200 flex items-start gap-4">
+                        <div class="flex-shrink-0 w-14 h-14 bg-gray-900 rounded-xl flex items-center justify-center">
                             <i class="fas fa-lock text-white text-2xl"></i>
                         </div>
                         <div>
@@ -1193,8 +1187,8 @@
                         </div>
                     </div>
                     
-                    <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow border-2 border-cyan-100 flex items-start gap-4">
-                        <div class="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-xl flex items-center justify-center">
+                    <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow border-2 border-gray-200 flex items-start gap-4">
+                        <div class="flex-shrink-0 w-14 h-14 bg-gray-700 rounded-xl flex items-center justify-center">
                             <i class="fas fa-globe text-white text-2xl"></i>
                         </div>
                         <div>
@@ -1203,8 +1197,8 @@
                         </div>
                     </div>
                     
-                    <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow border-2 border-purple-100 flex items-start gap-4">
-                        <div class="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center">
+                    <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow border-2 border-gray-200 flex items-start gap-4">
+                        <div class="flex-shrink-0 w-14 h-14 bg-gray-700 rounded-xl flex items-center justify-center">
                             <i class="fas fa-sync-alt text-white text-2xl"></i>
                         </div>
                         <div>
@@ -1218,7 +1212,7 @@
             <!-- Features Adicionais Grid -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="text-center">
-                    <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6 hover:scale-110 transition-transform">
+                    <div class="w-20 h-20 bg-gray-900 rounded-2xl flex items-center justify-center mx-auto mb-6 hover:scale-110 transition-transform">
                         <i class="fas fa-folder-open text-white text-4xl"></i>
                     </div>
                     <h4 class="text-xl font-bold text-gray-900 mb-3">Histórico Completo</h4>
@@ -1226,7 +1220,7 @@
                 </div>
                 
                 <div class="text-center">
-                    <div class="w-20 h-20 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6 hover:scale-110 transition-transform">
+                    <div class="w-20 h-20 bg-gray-800 rounded-2xl flex items-center justify-center mx-auto mb-6 hover:scale-110 transition-transform">
                         <i class="fas fa-user-shield text-white text-4xl"></i>
                     </div>
                     <h4 class="text-xl font-bold text-gray-900 mb-3">Proteção Avançada</h4>
@@ -1234,7 +1228,7 @@
                 </div>
                 
                 <div class="text-center">
-                    <div class="w-20 h-20 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 hover:scale-110 transition-transform">
+                    <div class="w-20 h-20 bg-gray-700 rounded-2xl flex items-center justify-center mx-auto mb-6 hover:scale-110 transition-transform">
                         <i class="fas fa-database text-white text-4xl"></i>
                     </div>
                     <h4 class="text-xl font-bold text-gray-900 mb-3">Backup Automático</h4>
@@ -1246,17 +1240,14 @@
 
     <!-- Depoimentos - LAYOUT MASONRY/CARTÕES -->
     <section id="depoimentos" class="py-24 bg-white relative overflow-hidden">
-        <!-- Background Decoration -->
-        <div class="absolute top-0 right-0 w-96 h-96 bg-yellow-100 rounded-full blur-3xl opacity-30"></div>
-        <div class="absolute bottom-0 left-0 w-96 h-96 bg-primary-100 rounded-full blur-3xl opacity-30"></div>
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16">
-                <span class="inline-block px-4 py-2 bg-yellow-50 text-yellow-600 font-bold uppercase text-sm rounded-full mb-4">
+                <span class="inline-block px-4 py-2 bg-gray-100 text-gray-700 font-bold uppercase text-sm rounded-full mb-4">
                     <i class="fas fa-star mr-2"></i>Depoimentos
                 </span>
                 <h2 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6">
-                    Clientes <span class="gradient-text bg-gradient-to-r from-yellow-500 to-orange-600 bg-clip-text text-transparent">Satisfeitos</span>
+                    Clientes <span class="text-gray-700">Satisfeitos</span>
                 </h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
                     Descubra como estamos transformando clínicas e laboratórios em todo o Brasil
@@ -1266,10 +1257,7 @@
             <!-- Grid Assimétrico de Depoimentos -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6">
                 <!-- Depoimento 1 - DESTAQUE GRANDE -->
-                <div class="lg:col-span-7 bg-gradient-to-br from-primary-500 to-primary-600 rounded-3xl p-10 text-white relative overflow-hidden">
-                    <div class="absolute top-0 right-0 opacity-10">
-                        <i class="fas fa-quote-right text-white" style="font-size: 15rem;"></i>
-                    </div>
+                <div class="lg:col-span-7 bg-gray-900 rounded-3xl p-10 text-white relative overflow-hidden shadow-xl">
                     <div class="relative z-10">
                         <div class="flex items-center mb-6">
                             <div class="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mr-4">
@@ -1277,7 +1265,7 @@
                             </div>
                             <div>
                                 <div class="font-bold text-xl">Dr. Roberto Almeida</div>
-                                <div class="text-sm text-primary-100">Clínica de Diagnóstico por Imagem</div>
+                                <div class="text-sm text-gray-300">Clínica de Diagnóstico por Imagem</div>
                                 <div class="flex gap-1 mt-1">
                                     <i class="fas fa-star text-yellow-300 text-sm"></i>
                                     <i class="fas fa-star text-yellow-300 text-sm"></i>
@@ -1287,7 +1275,7 @@
                                 </div>
                             </div>
                         </div>
-                        <p class="text-white/95 text-lg italic leading-relaxed mb-6">
+                        <p class="text-gray-300 text-lg italic leading-relaxed mb-6">
                             "Implementamos o sistema há 3 meses e já recuperamos mais de 40 horas de trabalho manual. 
                             Nossa equipe agora foca no atendimento, não em tarefas repetitivas. Os pacientes adoram 
                             a apresentação profissional dos laudos. Foi o melhor investimento do ano!"
@@ -1295,15 +1283,15 @@
                         <div class="grid grid-cols-3 gap-4">
                             <div class="bg-white/10 backdrop-blur-sm rounded-xl p-3 text-center">
                                 <div class="text-2xl font-black">40h</div>
-                                <div class="text-xs text-primary-100">Economizadas/mês</div>
+                                <div class="text-xs text-gray-300">Economizadas/mês</div>
                             </div>
                             <div class="bg-white/10 backdrop-blur-sm rounded-xl p-3 text-center">
                                 <div class="text-2xl font-black">3</div>
-                                <div class="text-xs text-primary-100">Meses de uso</div>
+                                <div class="text-xs text-gray-300">Meses de uso</div>
                             </div>
                             <div class="bg-white/10 backdrop-blur-sm rounded-xl p-3 text-center">
                                 <div class="text-2xl font-black">100%</div>
-                                <div class="text-xs text-primary-100">Satisfação</div>
+                                <div class="text-xs text-gray-300">Satisfação</div>
                             </div>
                         </div>
                     </div>
@@ -1312,7 +1300,7 @@
                 <!-- Depoimento 2 - VERTICAL -->
                 <div class="lg:col-span-5 bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100 hover:shadow-2xl transition-shadow">
                     <div class="flex items-center mb-6">
-                        <div class="w-14 h-14 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mr-4">
+                        <div class="w-14 h-14 bg-gray-800 rounded-full flex items-center justify-center mr-4">
                             <span class="text-white font-bold text-xl">DC</span>
                         </div>
                         <div>
@@ -1332,8 +1320,8 @@
                         que se sentem em um hospital de grande porte. E o melhor: conseguimos atender 35% mais 
                         exames com a mesma equipe."
                     </p>
-                    <div class="bg-green-50 rounded-xl p-4 text-center">
-                        <div class="text-3xl font-black text-green-600">+35%</div>
+                    <div class="bg-gray-100 rounded-xl p-4 text-center">
+                        <div class="text-3xl font-black text-gray-900">+35%</div>
                         <div class="text-sm text-gray-600">Mais exames atendidos</div>
                     </div>
                 </div>
@@ -1341,7 +1329,7 @@
                 <!-- Depoimento 3 -->
                 <div class="lg:col-span-5 bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100 hover:shadow-2xl transition-shadow">
                     <div class="flex items-center mb-6">
-                        <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mr-4">
+                        <div class="w-14 h-14 bg-gray-700 rounded-full flex items-center justify-center mr-4">
                             <span class="text-white font-bold text-xl">AS</span>
                         </div>
                         <div>
@@ -1361,8 +1349,8 @@
                         A integração com nossa Konica foi perfeita - agora o laudo sai impresso e grampeado em 
                         menos de 1 minuto. Revolucionário!"
                     </p>
-                    <div class="bg-blue-50 rounded-xl p-4 text-center">
-                        <div class="text-3xl font-black text-blue-600">R$ 2.8k</div>
+                    <div class="bg-gray-100 rounded-xl p-4 text-center">
+                        <div class="text-3xl font-black text-gray-900">R$ 2.8k</div>
                         <div class="text-sm text-gray-600">Economia mensal</div>
                     </div>
                 </div>
@@ -1400,10 +1388,10 @@
             
             <!-- Call to Action para Depoimentos -->
             <div class="mt-16 text-center">
-                <p class="text-gray-600 mb-6 text-lg">Junte-se a <span class="font-bold text-primary-500">mais de 50 clínicas</span> satisfeitas</p>
+                <p class="text-gray-600 mb-6 text-lg">Junte-se a <span class="font-bold text-gray-900">mais de 50 clínicas</span> satisfeitas</p>
                 <a href="https://wa.me/5531975050034?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20sistema" 
-                    class="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-primary-500 to-primary-600 text-white font-bold rounded-xl hover:scale-105 transition shadow-xl">
-                    <i class="fab fa-whatsapp text-2xl"></i>
+                    class="inline-flex items-center gap-3 px-8 py-4 bg-gray-900 hover:bg-gray-800 text-white font-bold rounded-xl hover:scale-105 transition shadow-xl">
+                    <i class="fab fa-whatsapp text-green-500 text-2xl"></i>
                     Quero Ser o Próximo Case de Sucesso
                 </a>
             </div>
@@ -1423,8 +1411,8 @@
             
             <div class="flex flex-col sm:flex-row justify-center gap-6">
                 <a href="https://wa.me/5531975050034?text=Olá!%20Gostaria%20de%20conhecer%20as%20soluções%20para%20clínicas"
-                    class="inline-flex items-center justify-center px-10 py-5 bg-primary-500 hover:bg-primary-600 text-white font-bold text-lg rounded-xl shadow-2xl transition transform hover:scale-105">
-                    <i class="fab fa-whatsapp text-2xl mr-3"></i>
+                    class="inline-flex items-center justify-center px-10 py-5 bg-gray-900 hover:bg-gray-800 text-white font-bold text-lg rounded-xl shadow-2xl transition transform hover:scale-105">
+                    <i class="fab fa-whatsapp text-green-500 text-2xl mr-3"></i>
                     Solicitar Orçamento
                 </a>
                 <a href="tel:31975050034"
@@ -1459,10 +1447,10 @@
                 <div>
                     <h4 class="font-bold text-gray-900 mb-4">Links Rápidos</h4>
                     <ul class="space-y-2">
-                        <li><a href="/" class="text-gray-600 hover:text-primary-500 transition">Home</a></li>
-                        <li><a href="#revolucione" class="text-gray-600 hover:text-primary-500 transition">Revolução</a></li>
-                        <li><a href="#problemas" class="text-gray-600 hover:text-primary-500 transition">Problemas</a></li>
-                        <li><a href="#vantagens" class="text-gray-600 hover:text-primary-500 transition">Vantagens</a></li>
+                        <li><a href="/" class="text-gray-600 hover:text-gray-900 transition">Home</a></li>
+                        <li><a href="#revolucione" class="text-gray-600 hover:text-gray-900 transition">Revolução</a></li>
+                        <li><a href="#problemas" class="text-gray-600 hover:text-gray-900 transition">Problemas</a></li>
+                        <li><a href="#vantagens" class="text-gray-600 hover:text-gray-900 transition">Vantagens</a></li>
                     </ul>
                 </div>
             </div>
@@ -1478,6 +1466,48 @@
         class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-[#20bd5a] hover:scale-110 transition">
         <i class="fab fa-whatsapp text-3xl"></i>
     </a>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+        const menuIcon = mobileMenuBtn.querySelector('i');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            const isOpen = navMenu.classList.contains('menu-open');
+            
+            if (isOpen) {
+                // Close menu
+                navMenu.classList.remove('menu-open');
+                navMenu.style.opacity = '0';
+                navMenu.style.transform = 'translateY(-1rem)';
+                navMenu.style.pointerEvents = 'none';
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                // Open menu
+                navMenu.classList.add('menu-open');
+                navMenu.style.opacity = '1';
+                navMenu.style.transform = 'translateY(0)';
+                navMenu.style.pointerEvents = 'auto';
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            }
+        });
+
+        // Close menu when clicking on a link
+        const navLinks = navMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('menu-open');
+                navMenu.style.opacity = '0';
+                navMenu.style.transform = 'translateY(-1rem)';
+                navMenu.style.pointerEvents = 'none';
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+    </script>
 
 </body>
 
