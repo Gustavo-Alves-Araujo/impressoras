@@ -34,6 +34,17 @@
             }
         }
     </script>
+    <style>
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+            20%, 40%, 60%, 80% { transform: translateX(10px); }
+        }
+        
+        .animate-shake {
+            animation: shake 0.5s;
+        }
+    </style>
 </head>
 <body class="bg-gray-50 text-secondary-900 font-sans">
 
@@ -45,13 +56,29 @@
                 <h2 class="text-2xl font-bold text-gray-900">Área Restrita</h2>
                 <p class="text-gray-500 text-sm">Digite a senha de administrador</p>
             </div>
+            
+            <!-- Aviso sobre modo anônimo -->
+            <div id="storage-warning" class="hidden mb-4 bg-yellow-50 border-l-4 border-yellow-400 p-4">
+                <div class="flex">
+                    <div class="flex-shrink-0">
+                        <i class="fas fa-exclamation-triangle text-yellow-400"></i>
+                    </div>
+                    <div class="ml-3">
+                        <p class="text-sm text-yellow-700">
+                            <strong>Atenção:</strong> Navegação privada detectada. Por favor, use uma guia normal para acessar o painel.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
             <form id="login-form" class="space-y-4">
                 <div>
-                    <input type="password" id="password" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:outline-none transition" placeholder="Senha de acesso" required>
+                    <input type="password" id="password" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:outline-none transition" placeholder="Senha de acesso (admin123)" required>
                 </div>
                 <button type="submit" class="w-full bg-primary-600 text-white font-bold py-3 rounded-lg hover:bg-primary-700 transition">Entrar</button>
             </form>
             <p id="error-msg" class="text-red-500 text-center mt-4 hidden text-sm font-bold">Senha incorreta!</p>
+            <p id="success-msg" class="text-green-500 text-center mt-4 hidden text-sm font-bold">Senha correta! Aguarde...</p>
         </div>
     </div>
 
@@ -247,12 +274,34 @@
 
     <script>
         // ============================================
+        // DEBUG INFO
+        // ============================================
+        console.log('═══════════════════════════════════════════════════════');
+        console.log('🔐 PAINEL ADMINISTRATIVO THEIKOS');
+        console.log('═══════════════════════════════════════════════════════');
+        console.log('📌 Senha de acesso: admin123');
+        console.log('⚠️  Modo anônimo pode ter restrições no sessionStorage');
+        
+        // Testar se sessionStorage funciona
+        try {
+            sessionStorage.setItem('test', 'test');
+            sessionStorage.removeItem('test');
+            console.log('✅ SessionStorage está funcionando');
+        } catch (e) {
+            console.error('❌ SessionStorage NÃO está funcionando:', e);
+            console.error('⚠️  Use uma guia normal (não anônima) para acessar o painel');
+        }
+        
+        console.log('═══════════════════════════════════════════════════════');
+        
+        // ============================================
         // CONFIGURAÇÃO SUPABASE
         // ============================================
         const SUPABASE_URL = 'https://vkwczizdjhsejbpaapea.supabase.co';
         const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZrd2N6aXpkamhzZWpicGFhcGVhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njc4NDU0MzAsImV4cCI6MjA4MzQyMTQzMH0.qvWHxNAhefq253JaoVYG19izClKgLGc4ZkW5y8ladmM';
         
-        const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+        // Criar cliente Supabase
+        const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
         // ============================================
         // AUTH LOGIC
@@ -260,35 +309,139 @@
         const loginForm = document.getElementById('login-form');
         const loginSection = document.getElementById('login-section');
         const dashboardSection = document.getElementById('dashboard-section');
+        const errorMsg = document.getElementById('error-msg');
+        const successMsg = document.getElementById('success-msg');
+        const storageWarning = document.getElementById('storage-warning');
+
+        // Variável global para controlar autenticação
+        let isAuthenticated = false;
+
+        // Verificar se sessionStorage está disponível
+        function isStorageAvailable() {
+            try {
+                const test = '__storage_test__';
+                sessionStorage.setItem(test, test);
+                sessionStorage.removeItem(test);
+                return true;
+            } catch (e) {
+                console.error('❌ SessionStorage não disponível:', e);
+                storageWarning.classList.remove('hidden');
+                return false;
+            }
+        }
+
+        function showDashboard() {
+            console.log('🎯 Mostrando dashboard...');
+            loginSection.classList.add('hidden');
+            dashboardSection.classList.remove('hidden');
+            isAuthenticated = true;
+            
+            // Tentar salvar no sessionStorage se disponível
+            if (isStorageAvailable()) {
+                try {
+                    sessionStorage.setItem('theikos_auth', 'true');
+                    console.log('✅ Autenticação salva no sessionStorage');
+                } catch (e) {
+                    console.warn('⚠️ Não foi possível salvar no sessionStorage:', e);
+                }
+            }
+            
+            loadStats();
+        }
 
         function checkAuth() {
-            if (sessionStorage.getItem('theikos_auth') === 'true') {
-                loginSection.classList.add('hidden');
-                dashboardSection.classList.remove('hidden');
-                loadStats();
+            console.log('� Verificando autenticação...');
+            
+            // Se já está autenticado na sessão atual
+            if (isAuthenticated) {
+                console.log('✅ Já autenticado nesta sessão');
+                showDashboard();
+                return;
             }
+            
+            // Tentar recuperar do sessionStorage
+            if (isStorageAvailable()) {
+                const authStatus = sessionStorage.getItem('theikos_auth');
+                console.log('Status no sessionStorage:', authStatus);
+                
+                if (authStatus === 'true') {
+                    console.log('✅ Encontrada autenticação salva');
+                    showDashboard();
+                    return;
+                }
+            }
+            
+            console.log('❌ Usuário não autenticado');
         }
 
         loginForm.addEventListener('submit', (e) => {
             e.preventDefault();
+            console.log('📝 Tentativa de login...');
+            
             const pass = document.getElementById('password').value;
-            // ATENÇÃO: Altere essa senha para uma mais segura!
-            if (pass === 'admin123') {
-                sessionStorage.setItem('theikos_auth', 'true');
-                checkAuth();
-            } else {
-                document.getElementById('error-msg').classList.remove('hidden');
+            const correctPassword = 'admin123';
+            
+            console.log('═══════════════════════════════════════');
+            console.log('Senha digitada:', pass);
+            console.log('Senha esperada:', correctPassword);
+            console.log('Comprimento digitado:', pass.length);
+            console.log('Comprimento esperado:', correctPassword.length);
+            console.log('Comparação:', pass === correctPassword);
+            console.log('═══════════════════════════════════════');
+            
+            // Esconder mensagens anteriores
+            errorMsg.classList.add('hidden');
+            successMsg.classList.add('hidden');
+            
+            if (pass === correctPassword) {
+                console.log('✅✅✅ SENHA CORRETA! ✅✅✅');
+                
+                // Mostrar mensagem de sucesso
+                successMsg.classList.remove('hidden');
+                
+                // Aguardar um pouco para o usuário ver a mensagem
                 setTimeout(() => {
-                    document.getElementById('error-msg').classList.add('hidden');
+                    showDashboard();
+                }, 500);
+                
+            } else {
+                console.log('❌ SENHA INCORRETA');
+                errorMsg.classList.remove('hidden');
+                
+                // Vibrar o campo (se suportado)
+                const passwordInput = document.getElementById('password');
+                passwordInput.classList.add('animate-shake');
+                setTimeout(() => {
+                    passwordInput.classList.remove('animate-shake');
+                }, 500);
+                
+                setTimeout(() => {
+                    errorMsg.classList.add('hidden');
                 }, 3000);
             }
         });
 
         function logout() {
-            sessionStorage.removeItem('theikos_auth');
-            window.location.reload();
+            console.log('🚪 Fazendo logout...');
+            isAuthenticated = false;
+            
+            if (isStorageAvailable()) {
+                sessionStorage.removeItem('theikos_auth');
+            }
+            
+            loginSection.classList.remove('hidden');
+            dashboardSection.classList.add('hidden');
+            
+            // Limpar campo de senha
+            document.getElementById('password').value = '';
         }
 
+        // Verificar storage ao carregar
+        console.log('🚀 Inicializando painel...');
+        const storageOk = isStorageAvailable();
+        console.log('Storage disponível:', storageOk);
+        
+        // Verificar auth inicial
         checkAuth();
 
         // ============================================
@@ -378,7 +531,7 @@
             container.innerHTML = '<div class="col-span-full text-center py-20"><i class="fas fa-spinner fa-spin text-4xl text-primary-600 mb-4"></i><p>Carregando produtos...</p></div>';
 
             try {
-                const { data: products, error } = await supabase
+                const { data: products, error } = await supabaseClient
                     .from('theikos_produtos')
                     .select('*')
                     .order('ordem', { ascending: true })
@@ -440,7 +593,7 @@
             if (!confirm(`Tem certeza que deseja excluir "${nome}"?`)) return;
 
             try {
-                const { error } = await supabase
+                const { error } = await supabaseClient
                     .from('theikos_produtos')
                     .delete()
                     .eq('id', id);
@@ -513,7 +666,7 @@
             };
 
             try {
-                const { data, error } = await supabase
+                const { data, error } = await supabaseClient
                     .from('theikos_produtos')
                     .insert([productData])
                     .select();
@@ -534,7 +687,7 @@
         // ============================================
         async function openEditModal(id) {
             try {
-                const { data: product, error } = await supabase
+                const { data: product, error } = await supabaseClient
                     .from('theikos_produtos')
                     .select('*')
                     .eq('id', id)
@@ -581,7 +734,7 @@
             };
 
             try {
-                const { error } = await supabase
+                const { error } = await supabaseClient
                     .from('theikos_produtos')
                     .update(productData)
                     .eq('id', id);
