@@ -357,92 +357,12 @@
             </div>
 
             <!-- Products Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Toner TN711 -->
-                <div
-                    class="group bg-white border-2 border-gray-100 rounded-2xl overflow-hidden hover:border-gray-900 hover:shadow-xl transition-all duration-300">
-                    <div class="relative h-64 bg-gray-50 flex items-center justify-center p-6">
-                        <img src="https://theikossolucoes.com.br/tn711.jpg" alt="Toner TN711"
-                            class="h-full object-contain transform group-hover:scale-105 transition-transform duration-300">
-                        <div
-                            class="absolute top-4 right-4 bg-gray-900 text-white px-3 py-1 rounded-full text-xs font-bold">
-                            Original
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="text-sm font-semibold text-gray-500 mb-1">Alta Capacidade</div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Toner TN711</h3>
-                        <p class="text-gray-600 text-sm mb-4">Para bizhub 600 / 750</p>
-                        <a href="https://wa.me/5531975050034?text=Olá,%20gostaria%20de%20orçamento%20para%20Toner%20TN711"
-                            class="block w-full text-center bg-gray-900 hover:bg-gray-800 text-white font-semibold py-3 rounded-xl transition-colors">
-                            Solicitar Orçamento
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Toner TN627 -->
-                <div
-                    class="group bg-white border-2 border-gray-100 rounded-2xl overflow-hidden hover:border-gray-900 hover:shadow-xl transition-all duration-300">
-                    <div class="relative h-64 bg-gray-50 flex items-center justify-center p-6">
-                        <img src="https://theikossolucoes.com.br/tonerkonicaminolta627.jpeg" alt="Toner TN627"
-                            class="h-full object-contain transform group-hover:scale-105 transition-transform duration-300">
-                        <div
-                            class="absolute top-4 right-4 bg-gray-900 text-white px-3 py-1 rounded-full text-xs font-bold">
-                            Original
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="text-sm font-semibold text-gray-500 mb-1">Produção</div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Toner TN627</h3>
-                        <p class="text-gray-600 text-sm mb-4">Para BizHub C12000/C14000</p>
-                        <a href="https://wa.me/5531975050034?text=Olá,%20gostaria%20de%20orçamento%20para%20Toner%20TN627"
-                            class="block w-full text-center bg-gray-900 hover:bg-gray-800 text-white font-semibold py-3 rounded-xl transition-colors">
-                            Solicitar Orçamento
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Toner TN622 -->
-                <div
-                    class="group bg-white border-2 border-gray-100 rounded-2xl overflow-hidden hover:border-gray-900 hover:shadow-xl transition-all duration-300">
-                    <div class="relative h-64 bg-gray-50 flex items-center justify-center p-6">
-                        <img src="https://www.theikossolucoes.com.br/uploads/1755279322-TN622.JPG" alt="Toner TN622"
-                            class="h-full object-contain transform group-hover:scale-105 transition-transform duration-300">
-                        <div
-                            class="absolute top-4 right-4 bg-gray-900 text-white px-3 py-1 rounded-full text-xs font-bold">
-                            Original
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="text-sm font-semibold text-gray-500 mb-1">Digital Press</div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Toner TN622</h3>
-                        <p class="text-gray-600 text-sm mb-4">Bizhub Press C1085/C1100</p>
-                        <a href="https://wa.me/5531975050034?text=Olá,%20gostaria%20de%20orçamento%20para%20Toner%20TN622"
-                            class="block w-full text-center bg-gray-900 hover:bg-gray-800 text-white font-semibold py-3 rounded-xl transition-colors">
-                            Solicitar Orçamento
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Toner TN620 -->
-                <div
-                    class="group bg-white border-2 border-gray-100 rounded-2xl overflow-hidden hover:border-gray-900 hover:shadow-xl transition-all duration-300">
-                    <div class="relative h-64 bg-gray-50 flex items-center justify-center p-6">
-                        <img src="https://www.theikossolucoes.com.br/uploads/1755867759-tn620.jfif" alt="Toner TN620"
-                            class="h-full object-contain transform group-hover:scale-105 transition-transform duration-300">
-                        <div
-                            class="absolute top-4 right-4 bg-gray-900 text-white px-3 py-1 rounded-full text-xs font-bold">
-                            Original
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="text-sm font-semibold text-gray-500 mb-1">AccurioPrint</div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Toner TN620</h3>
-                        <p class="text-gray-600 text-sm mb-4">C3070L e similares</p>
-                        <a href="https://wa.me/5531975050034?text=Olá,%20gostaria%20de%20orçamento%20para%20Toner%20TN620"
-                            class="block w-full text-center bg-gray-900 hover:bg-gray-800 text-white font-semibold py-3 rounded-xl transition-colors">
-                            Solicitar Orçamento
-                        </a>
+            <div id="products-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Produtos serão carregados dinamicamente do Supabase -->
+                <div class="col-span-full flex items-center justify-center py-20">
+                    <div class="text-center">
+                        <i class="fas fa-spinner fa-spin text-4xl text-primary-500 mb-4"></i>
+                        <p class="text-gray-600">Carregando produtos...</p>
                     </div>
                 </div>
             </div>
@@ -1643,9 +1563,6 @@
             // ...
         });
     </script>
-
-    <!-- Products Script -->
-    <script src="/produtos.js"></script>
 
     <!-- Supabase Products Loader -->
     <script src="/produtos-supabase.js"></script>

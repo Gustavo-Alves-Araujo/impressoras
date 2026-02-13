@@ -46,37 +46,16 @@ function createProductCard(product) {
                 ${product.nome}
             </h3>
             
-            <p class="text-sm text-gray-600 mb-4 line-clamp-2 min-h-[2.5rem]">
+            <p class="text-sm text-gray-600 mb-6 line-clamp-2 min-h-[2.5rem]">
                 ${product.descricao || 'Produto de alta qualidade'}
             </p>
             
-            <div class="flex flex-col gap-2 mb-6">
-                ${hasPromo ? `
-                    <div class="flex items-center gap-2">
-                        <span class="text-sm text-gray-400 line-through">
-                            ${formatPrice(product.preco)}
-                        </span>
-                        <span class="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-bold">
-                            ECONOMIZE ${formatPrice(product.preco - product.preco_promocional)}
-                        </span>
-                    </div>
-                    <div class="text-3xl font-black text-primary-600">
-                        ${formatPrice(product.preco_promocional)}
-                    </div>
-                ` : `
-                    <div class="text-3xl font-black text-gray-900">
-                        ${formatPrice(product.preco)}
-                    </div>
-                `}
-                <span class="text-xs text-gray-500">ou 12x de ${formatPrice((hasPromo ? product.preco_promocional : product.preco) / 12)}</span>
-            </div>
-            
             <div class="flex flex-col gap-2">
-                <a href="https://wa.me/5531975050034?text=Olá!%20Gostaria%20de%20comprar%20${encodeURIComponent(product.nome)}"
+                <a href="https://wa.me/5531975050034?text=Olá!%20Gostaria%20de%20solicitar%20orçamento%20para%20${encodeURIComponent(product.nome)}"
                    target="_blank"
-                   class="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-primary-500 to-primary-600 text-white font-bold rounded-xl hover:from-primary-600 hover:to-primary-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105">
-                    <i class="fab fa-whatsapp text-lg"></i>
-                    Comprar Agora
+                   class="w-full inline-flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-green-500 to-green-600 text-white font-bold rounded-xl hover:from-green-600 hover:to-green-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105">
+                    <i class="fab fa-whatsapp text-xl"></i>
+                    Solicitar Orçamento
                 </a>
                 <button onclick="toggleProductDetails(${product.id})"
                         class="w-full px-6 py-3 bg-gray-100 text-gray-700 font-semibold rounded-xl hover:bg-gray-200 transition-all">
@@ -126,7 +105,7 @@ async function loadProducts(category = 'toner', containerId = 'products-grid') {
         `;
 
         // Buscar produtos do Supabase
-        const { data: products, error } = await supabase
+        const { data: products, error } = await supabaseClient
             .from('theikos_produtos')
             .select('*')
             .eq('categoria', category)
