@@ -280,69 +280,69 @@
     </header>
 
     <!-- Hero Section - Layout Horizontal -->
-    <section class="relative min-h-screen bg-white flex items-center pt-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-12 lg:py-20">
-                
-                <!-- Lado Esquerdo - Conteúdo -->
-                <div class="space-y-8">
-                    <div>
-                        <span class="inline-block px-4 py-2 bg-gray-100 text-gray-700 font-bold uppercase text-sm rounded-full mb-6">
-                            <i class="fas fa-print mr-2"></i>Impressoras Konica Minolta
-                        </span>
-                    </div>
-
-                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 leading-tight">
-                        A Melhor Impressão<br>
-                        para <span class="text-gray-600">seu negócio</span>
-                    </h1>
-
-                    <p class="text-xl md:text-2xl text-gray-600 leading-relaxed">
-                        Aluguel de impressoras de alta performance com toners de qualidade e finalizadores profissionais
-                        para seu escritório. Entrega rápida em todo Brasil.
-                    </p>
-
-                    <!-- Stats Cards -->
-                    <div class="grid grid-cols-3 gap-4 py-6">
-                        <div class="text-center">
-                            <div class="text-4xl font-black text-gray-900 mb-1">500+</div>
-                            <div class="text-sm text-gray-600">Clientes</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-4xl font-black text-gray-900 mb-1">24h</div>
-                            <div class="text-sm text-gray-600">Entrega</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-4xl font-black text-gray-900 mb-1">100%</div>
-                            <div class="text-sm text-gray-600">Original</div>
-                        </div>
-                    </div>
-
-                    <!-- Botões -->
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="https://wa.me/5531975050034?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20aluguel%20de%20impressoras."
-                            class="group inline-flex items-center justify-center px-8 py-4 bg-gray-900 text-white font-bold text-lg rounded-xl hover:bg-gray-800 transition hover:scale-105 shadow-xl">
-                            <i class="fab fa-whatsapp text-green-400 text-2xl mr-3"></i>
-                            Solicitar Orçamento
-                        </a>
-                        <a href="#vantagens"
-                            class="inline-flex items-center justify-center px-8 py-4 bg-gray-100 text-gray-900 font-bold text-lg rounded-xl hover:bg-gray-200 transition">
-                            <i class="fas fa-play-circle mr-3"></i>
-                            Conheça as Vantagens
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Lado Direito - Imagem -->
-                <div class="relative lg:h-[600px] h-[400px] rounded-3xl overflow-hidden shadow-2xl">
-                    <img src="https://comerceall.com.br/wp-content/uploads/2024/08/impressoras-comerceall.png" 
-                        alt="Impressoras profissionais Konica Minolta" 
-                        class="w-full h-full object-contain">
-                </div>
-                
+    <div id="component-hero-overlay-1">
+        <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-black pt-20">
+            <!-- Background Image with Overlay -->
+            <div class="absolute inset-0">
+                <img src="https://www.3ex.com.br/wp-content/uploads/2022/02/impressora.png" 
+                    alt="Impressoras profissionais Konica Minolta" 
+                    class="w-full h-full object-cover opacity-40 blur-sm">
+                <div class="absolute inset-0 bg-black/50"></div>
             </div>
-        </div>
-    </section>
+
+            <!-- Background Pattern -->
+            <div class="absolute inset-0 opacity-5">
+                <div class="absolute inset-0" style="background-image: radial-gradient(circle, #ffffff 1px, transparent 1px); background-size: 30px 30px;"></div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center py-20">
+                <div class="mb-8">
+                    <span class="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-bold uppercase text-sm rounded-full">
+                        <i class="fas fa-print mr-2"></i>Impressoras Konica Minolta
+                    </span>
+                </div>
+
+                <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight">
+                    A Melhor Impressão<br>
+                    para <span class="text-gray-300">seu negócio</span>
+                </h1>
+
+                <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto">
+                    Aluguel de impressoras de alta performance com toners de qualidade e finalizadores profissionais
+                    para seu escritório. Entrega rápida em todo Brasil.
+                </p>
+
+                <!-- Stats Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
+                    <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6">
+                        <div class="text-4xl font-black text-white mb-2">500+</div>
+                        <div class="text-gray-300">Clientes Satisfeitos</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6">
+                        <div class="text-4xl font-black text-white mb-2">24h</div>
+                        <div class="text-gray-300">Entrega Rápida</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6">
+                        <div class="text-4xl font-black text-white mb-2">100%</div>
+                        <div class="text-gray-300">Garantia Original</div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="https://wa.me/5531975050034?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20aluguel%20de%20impressoras."
+                        class="group relative inline-flex items-center justify-center px-8 py-4 bg-white text-gray-900 font-bold text-lg rounded-xl overflow-hidden transition hover:scale-105 shadow-xl">
+                        <i class="fab fa-whatsapp text-green-500 text-2xl mr-3"></i>
+                        Solicitar Orçamento
+                    </a>
+                    <a href="#vantagens"
+                        class="inline-flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white font-bold text-lg rounded-xl hover:bg-white/20 transition">
+                        <i class="fas fa-play-circle mr-3"></i>
+                        Conheça as Vantagens
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <!-- Rental Section - COMPLETELY NEW DESIGN -->
     <section id="toners" class="py-20 bg-white">
