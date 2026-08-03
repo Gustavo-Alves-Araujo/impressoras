@@ -4,49 +4,174 @@
 
 Sistema completo de landing page com painel administrativo para Theikos Soluções - empresa especializada em aluguel de impressoras profissionais Konica Minolta e venda de toners para clínicas, laboratórios e escolas.
 
-## 📁 Estrutura de Arquivos
+## � Navegação do Site (IDs das Seções)
+
+Use estes links para navegar diretamente para cada seção:
+
+### Página Principal (index.html)
+
+| Seção | ID | URL Direta | Descrição |
+|-------|----|-----------:|-----------|
+| 🏠 **Hero** | - | `https://theikossolucoes.com.br/` | Topo da página com título e CTA principal |
+| 📦 **Toners** | `#toners` | `https://theikossolucoes.com.br/#toners` | Catálogo de toners originais Konica Minolta |
+| 🖨️ **Aluguel de Impressoras** | `#aluguel` | `https://theikossolucoes.com.br/#aluguel` | Planos de aluguel corporativo |
+| 📋 **Nosso Processo** | `#processo` | `https://theikossolucoes.com.br/#processo` | Como funciona o aluguel (passo a passo) |
+| ⭐ **Vantagens** | `#vantagens` | `https://theikossolucoes.com.br/#vantagens` | Aluguel vs Compra - Comparação |
+| 🏥 **Saúde** | `#saude` | `https://theikossolucoes.com.br/#saude` | Soluções para hospitais e clínicas |
+| 🎓 **Escolas** | `#escolas` | `https://theikossolucoes.com.br/#escolas` | Soluções para instituições de ensino |
+| 🏢 **Nosso Espaço** | `#espaco` | `https://theikossolucoes.com.br/#espaco` | Tour virtual pela sede |
+| ❓ **FAQ** | `#faq` | `https://theikossolucoes.com.br/#faq` | Perguntas frequentes |
+| 📞 **Contato** | `#contato` | `https://theikossolucoes.com.br/#contato` | Formulário e informações de contato |
+
+### Páginas Específicas por Segmento
+
+| Página | URL | Descrição |
+|--------|-----|-----------|
+| 🏥 **Saúde Completa** | `/saude.html` | Landing page completa para o setor de saúde |
+| 🎓 **Educação Completa** | `/educacao.html` | Landing page completa para instituições de ensino |
+| 🔐 **Admin** | `/admin.html` | Painel administrativo (senha: `admin123`) |
+
+### Exemplos de Uso
+
+**Para o cliente usar no site:**
+```html
+<!-- Link no menu -->
+<a href="#toners">Ver Toners</a>
+
+<!-- Link externo -->
+<a href="https://theikossolucoes.com.br/#processo">Como Funciona</a>
+
+<!-- Botão CTA -->
+<a href="https://theikossolucoes.com.br/#contato">Fale Conosco</a>
+```
+
+**Para marketing e redes sociais:**
+- Instagram Bio: `theikossolucoes.com.br/#toners` (link direto para produtos)
+- Google Ads: `theikossolucoes.com.br/#aluguel` (captura interesse em aluguel)
+- Email Marketing: `theikossolucoes.com.br/#vantagens` (educação do cliente)
+- WhatsApp Status: `theikossolucoes.com.br/#saude` (segmento específico)
+
+---
+
+## �📁 Estrutura de Arquivos
 
 ```
 /home/axolutions/projetos/impressoras/
-├── index.html              # Landing page principal
-├── admin.html              # Painel administrativo
-├── produtos.json           # Catálogo de produtos (impressoras e toners)
-├── produtos.js             # Script para carregar produtos dinamicamente
-├── sitemap.xml             # Mapa do site para SEO
-├── robots.txt              # Arquivo robots para buscadores
-├── image.png               # Logo da empresa
-└── README.md              # Este arquivo
+├── index.html                    # Landing page principal
+├── saude.html                    # Landing page setor saúde
+├── educacao.html                 # Landing page setor educação
+├── admin.html                    # Painel administrativo
+├── produtos-supabase.js          # Script para carregar produtos do Supabase
+├── produtos.js                   # Script legado (não usado)
+├── produtos.json                 # Catálogo legado (não usado)
+├── inserir-produtos.sql          # Script SQL para popular banco
+├── inserir-produtos.js           # Script JS para popular banco
+├── supabase_setup.sql            # Setup inicial do Supabase
+├── sitemap.xml                   # Mapa do site para SEO
+├── robots.txt                    # Arquivo robots para buscadores
+├── WhatsAppVideo20260218at113956AM.mp4  # Vídeo setor educação
+├── test-admin.html               # Página de teste de login
+└── README.md                     # Este arquivo
 ```
 
 ## 🚀 Funcionalidades
 
-### Landing Page (index.html)
-- ✅ **Hero Section** com call-to-action compelling
-- ✅ **Seção de Aluguel Corporativo** - impressoras Konica Minolta
-- ✅ **Seção de Linha Médica** - vídeo demonstrativo
-- ✅ **Seção de Toners** - produtos para venda
-- ✅ **Aluguel vs Compra** - comparação interativa
-- ✅ **Desafios & Soluções** - layout enxuto com duas colunas
-- ✅ **Seção Escolas** - problemas e soluções específicas
-- ✅ **Depoimentos** - feedback de clientes
-- ✅ **Características** - diferenciais da empresa
-- ✅ **Botão WhatsApp flutuante** - conversão em tempo real
-- ✅ **Tracking de cliques** - analítica integrada
-- ✅ **SEO completo** - meta tags, schema JSON-LD, sitemap
+### Landing Page Principal (index.html)
+- ✅ **Hero Section** - Layout horizontal com imagem à direita
+- ✅ **Seção Toners (#toners)** - Produtos dinâmicos do Supabase
+- ✅ **Aluguel de Impressoras (#aluguel)** - Planos corporativos
+- ✅ **Nosso Processo (#processo)** - Timeline visual do processo
+- ✅ **Vantagens (#vantagens)** - Comparação Aluguel vs Compra
+- ✅ **Setor Saúde (#saude)** - Vídeo e soluções para hospitais
+- ✅ **Setor Educação (#escolas)** - Vídeo e soluções para escolas
+- ✅ **Nosso Espaço (#espaco)** - Tour virtual
+- ✅ **FAQ (#faq)** - Perguntas frequentes
+- ✅ **Contato (#contato)** - Formulário de contato
+- ✅ **Botão WhatsApp flutuante** - Conversão em tempo real
+- ✅ **SEO completo** - Meta tags, schema JSON-LD, sitemap
+
+### Landing Pages Segmentadas
+- ✅ **Saúde (saude.html)** - Página completa para hospitais e clínicas
+- ✅ **Educação (educacao.html)** - Página completa para escolas e universidades
 
 ### Painel Administrativo (admin.html)
-- ✅ **Autenticação** - senha protegida (123123)
-- ✅ **Dashboard de Estatísticas** - gráfico de cliques
-- ✅ **Gerenciamento de Produtos** - cadastro e exclusão
-- ✅ **Visualização de Produtos** - lista de itens cadastrados
-- ✅ **Armazenamento Local** - localStorage para persistência
-- ✅ **Interface moderna** - design responsivo com Tailwind
+- ✅ **Autenticação** - Senha protegida (`admin123`)
+- ✅ **Dashboard de Estatísticas** - Gráfico de cliques (em desenvolvimento)
+- ✅ **Gerenciamento de Produtos** - CRUD completo via Supabase
+- ✅ **Visualização de Produtos** - Lista de itens cadastrados
+- ✅ **Cadastro de Produtos** - Formulário com especificações JSON
+- ✅ **Interface moderna** - Design responsivo com Tailwind
+
+### Integração Supabase
+- ✅ **Banco de dados** - PostgreSQL na nuvem
+- ✅ **Produtos dinâmicos** - Carregamento automático na página
+- ✅ **API REST** - Endpoints automáticos
+- ✅ **Categorias** - Toners, Impressoras, Suprimentos
+- ✅ **Especificações** - Campos JSON customizáveis
 
 ## 🔐 Credenciais
 
-### Admin Panel
-- **URL:** `/admin.html`
-- **Senha:** `123123`
+### Painel Administrativo
+- **URL:** `https://theikossolucoes.com.br/admin.html`
+- **Senha:** `admin123`
+- **Funcionalidades:** Gerenciar produtos, visualizar estatísticas
+
+### Banco de Dados Supabase
+- **URL:** `https://vkwczizdjhsejbpaapea.supabase.co`
+- **Tabela:** `theikos_produtos`
+- **Acesso:** Via painel admin ou SQL Editor do Supabase
+
+---
+
+## 📞 Informações de Contato no Site
+
+- **WhatsApp:** +55 31 97505-0034
+- **Email:** contato@theikossolucoes.com.br (configurar)
+- **Endereço:** [A definir - atualizar no footer]
+
+---
+
+## 🎯 Como Usar os Links de Seção
+
+### Para o Cliente Compartilhar:
+
+**Em Bio do Instagram:**
+```
+🖨️ Aluguel de impressoras profissionais
+👉 theikossolucoes.com.br/#aluguel
+```
+
+**Em Stories/Posts:**
+```
+🏥 Soluções para hospitais
+Link: theikossolucoes.com.br/#saude
+
+🎓 Soluções para escolas  
+Link: theikossolucoes.com.br/#escolas
+```
+
+**Em Email Marketing:**
+```
+Assunto: Economize 70% com aluguel de impressoras
+
+Olá [Nome],
+
+Conheça nosso processo de aluguel:
+👉 https://theikossolucoes.com.br/#processo
+
+Veja nossos toners originais:
+👉 https://theikossolucoes.com.br/#toners
+```
+
+**No Google Meu Negócio:**
+```
+Website: https://theikossolucoes.com.br
+Catálogo: https://theikossolucoes.com.br/#toners
+Saúde: https://theikossolucoes.com.br/saude.html
+Educação: https://theikossolucoes.com.br/educacao.html
+```
+
+---
 
 ## 📊 Dados de Produtos
 
